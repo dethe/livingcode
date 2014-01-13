@@ -1,0 +1,16 @@
+from vanpyz import cannon
+
+#published: 2008-03-03
+#tags: Python, Meeting
+#type: Journal Post
+#uuid: 0b122f6f-cdf9-418c-8750-cd991fbec0c8
+
+The March Vancouver Python and Zope User Group meeting snuck up on me.  It is tomorrow night, March 4th, in the conference room of the Bentall Five building.  Same location for three months in a row, that's got to be some kind of a record!  For anyone who has not attended recently and would like to, there is a map on the <a href="http://vanpyz.org/">VanPyZ website</a>. Tomorrow's talk will be by Brett Cannon:<br />
+
+> The once and future Import: How import works in Python 2.6 and beyond, and what it means for you.
+
+This should be interesting. The import mechanism has some interesting hooks, and Brett has been re-working it for some time now. Also, the recent meetings have had a great turnout with lots of good conversation, both during the meeting itself, and afterwards at the pub. So come on out, if you're in Vancouver.  And if you're not in Vancouver, well `from whereeveryouare import yourself`.  See you there!
+
+
+
+

@@ -1,0 +1,24 @@
+Not dead yet
+
+#published: 2005-01-20
+#tags: Python, PyObjC, Update
+#type: Journal Post
+#uuid: a236d64a-7726-4db1-88ac-fc0ee0fc0d34
+
+I'm still here. I'm going to post the previous examples .dmg with some corrections pointed out by Bob Ippolito (4-space indents, don't modify data directly in the Bundle). I've been quiet because a) I've been hitting some walls with Renaissance and investigating work-arounds and alternatives, and b) my coding/blogging time is pretty much between the time I get the kids to bed and the time my wife comes home from tutoring.
+
+I'm investigating the PyGUI and Wax APIs, to see if they are worth porting to run on top of Cocoa (PyGUI runs on Carbon, Wax runs on top of wxPython). Both are attempts to make GUI creation more "Pythonic," which is a **Good Thing(tm)**. I have figured out how to get the menus initialized using pure Python (on top of PyObjC, of course), or maybe the newer pyobjc/py2app has fixed the problem, but it is possible to build applications in Python with no Nib file (or Renaissance .gsmarkup file) at all. My earlier inability to do that is what drove me to Renaissance in the first place.
+
+I've also discovered the nibtool utility, which I did not know about. This allows you to see a textual representation of the nibs created by Interface Builder, search and replace strings (class names, etc.). This is a major discovery. Now if you could take the textual representation and put it back… I'm going to have to investigate this further.
+
+In other news, I will be giving a presentation on Tuesday, February 1 at the Vancouver Zope and Python Users Group (<a href="http://www.vanpyz.org/news">VanPyZ</a>) at 7:00 p.m. It will be a variation on the talk I gave in December to the XML users group, updated with what I've been exploring since then. Specifically I will show a simple (Hello World) application built three different ways, with Renaissance, with Interface Builder, and in pure Python. I'll also show some apps written in other toolkits (wxPython, tkinter) for comparison. I hope some of my readers are close enough to make it.
+
+I'll also be attending the <a href="http://www.northernvoice.ca/">Northern Voice</a> blogging conference here in Vancouver on Saturday, February 19th. I'm looking forward to meeting some fellow bloggers face to face, rather than RSS to RSS.
+
+Finally, I managed to install Python 2.4 today, and so far nothing has been obviously screwed up, so I'll be exploring some of the crunchy new features here in the near future.
+
+More posts coming soon. Honest!
+
+
+
+

@@ -1,0 +1,13 @@
+SpaceWar
+
+#type: Project
+#format: markdown
+#tags: Projects, Games, Javascript, Tutorial, Programming
+#tagline: Recreating a classic game
+
+### Recreating a classic game
+
+SpaceWar may be the first graphic computer game ever programmed. I used to play it on an arcade machine, in all its vector glory. Here is a simple version that I originally wrote in Python using the LiveWires framework over PyGame, now in Javascript using the gameQuery wrapper over jQuery.
+
+<script src="/assets/spacewar/jquery.gamequery-0.4.0.js"></script>
+<script src="/assets/spacewar/spacewar.js"></script>

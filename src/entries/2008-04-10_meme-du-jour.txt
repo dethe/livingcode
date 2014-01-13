@@ -1,0 +1,29 @@
+Meme du jour
+
+#published: 2008-04-10
+#tags: Python, Update
+#type: Journal Post
+#uuid: 7faf19c0-85e9-4c66-9af4-110964867fd1
+
+Just for fun, and because I'm trying out two things:
+
+1. Using Ecto for posting again
+2. Blogging more often
+
+Here are my results from the latest craze:
+
+    $ history|awk '{a[$2]++} END{for(i in a){printf "%5d\t%s\n",a[i],i}}'|sort -rn|head
+
+    139 ls
+    87 cd
+    54 python
+    43 /usr/bin/python
+    38 less
+    21 vim
+    16 clear
+    12 mate
+    11 rm
+    10 ssh
+
+The first python is the one I built from source so I can include it in applications packaged with py2app, the second is the built-in python for Leopard. Both are version 2.5. The mate program is used to open files in TextMate from the command line.
+

@@ -1,0 +1,22 @@
+The Sky is Falling
+
+#published: 2005-06-08
+#tags: News, Mac, Microsoft
+#type: Journal Post
+#uuid: 5417ab74-6d2d-4270-b049-a10bd81dc3c9
+
+Is it just me, or has the world gone crazy?
+
+First, Microsoft announces that the next version of Office will use XML file formats as the default. Now, Apple announces that (after all these years of denial) they are moving to Intel chips.
+
+Vuja Dey (Vuja dey is the strange feeling you've never been here before).
+
+Years ago I was in Boston for MacWorld and the <a href="http://www.beincorporated.com/">BeOS</a> developer's conference when <a href="http://www.bedope.com/qjlg/jlgquotes-sigs.txt.zip">Jean-Louis</a> unveiled BeOS running on Intel processors (because Steve Jobs wouldn't give Be specs to the PowerPC Macs). Yesterday's announcement felt a little like that (even a similar presentation, hmmm). Intel is very motivated to have something besides windows running on their chips–they loaned Be a couple of engineers for the port. Of course, BeOS started on IBM "Hobbit" CPUs, then the PowerPC BeBox, then the PowerPC Mac, then Intel, now PalmPilots. OS X started on Intel and wasn't ported to PowerPC until Apple bought them, so it's not as much of a stretch. Now if Microsoft started to build stuff on PowerPC, that would be crazy.
+
+Oh, wait, <a href="http://www.extremetech.com/article2/0,3973,1371393,00.asp">never mind</a>.
+
+The thing that really gets me is that I have to wait another year before I can buy a PowerBook with good battery life which doesn't sear my lap.
+
+
+
+

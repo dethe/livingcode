@@ -1,0 +1,59 @@
+DOM back to XML in Python
+
+#published: 2004-09-17
+#tags: Python, XML, DOM, Example Code, Tutorial
+#type: Journal Post
+#uuid: f64f43de-5866-49e3-be38-480950ff9b8c
+
+
+
+OK, time to crank up to speed, it's been a lot longer than I intended between posts.
+
+In the last episode we learned how to initialize many of the DOMs and DOM-like tools for Python from an XML document. Today we're going to see how to convert these back to XML from the DOM. So fasten your seatbelts and let's go.
+
+    import domParse
+    from xml.dom.ext.c14n import Canonicalize
+
+    def stringMinidom(filename):
+        return Canonicalize(domParse.parseMinidom(filename))
+
+    def string4Dom(filename):
+        return Canonicalize(domParse.parse4Dom(filename))
+
+    def stringDomlette(filename):
+        return Canonicalize(domParse.parseDomlette(filename))
+
+    def stringLibXml(filename):
+        # pretty-printed, which may not be what you want,
+        # depending on the XML in question
+        return domParse.parseLibXml(filename).serialize(encoding='utf-8', format=True)
+        # 4DOM c14n breaks because libXML doesn't give you a DOM
+        # return Canonicalize(domParse.parseLibXml(filename))
+
+    def stringPxDom(filename):
+        import pxdom
+        serializer = pxdom.LSSerializer()
+        return serializer.writeToString(domParse.parsePxDom(filename))
+        #return Canonicalize(domParse.parsePxDom(filename))
+
+    def main(filename):
+        print '4DOM:', string4Dom(filename)
+        print 'Domlette:', stringDomlette(filename)
+        print 'MiniDom:', stringMinidom(filename)
+        print 'LibXml:', stringLibXml(filename)
+        print 'PxDom:', stringPxDom(filename)
+
+    if __name__ == '__main__': main(domParse.small_filename)
+
+As you can see, there's not much to it. This codes does require that you've installed the PyXML package, but if you're serious about XML in Python, that will already be the case. In our next outing we can explore some of the less DOM-like, but more Pythonic ways to play with XML.
+
+PyXML: <a href="http://pyxml.sourceforge.net/">http://pyxml.sourceforge.net/</a>
+
+4Suite: <a href="http://4suite.org/index.xhtml ">http://4suite.org/index.xhtml </a>
+
+libxml: <a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a> (instructions for the python bindings are linked from this page)
+
+pxdom: <a href="http://www.doxdesk.com/software/py/pxdom.html ">http://www.doxdesk.com/software/py/pxdom.html </a>
+
+You may now return your trays to their upright positions.
+

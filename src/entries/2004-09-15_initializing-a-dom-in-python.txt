@@ -1,0 +1,88 @@
+Initializing a DOM in Python
+
+#published: 2004-09-15
+#tags: Python, XML, DOM, Example Code, Tutorial
+#type: Journal Post
+#uuid: 749a488c-57e5-4b00-975f-0d4e7dfd1d65
+
+There are many DOM options in Python, and I have trouble remembering how to load a document into the various DOMs. Here are a few common ones, although there are many variations on them (loading from URL or string, different configurations, etc.). This should provide a starting point.
+
+    # Examples for reading in various DOMs from an XML file
+
+    # MiniDOM
+
+    def parseMinidom(filename):
+
+        try:
+            from xml.dom.minidom import parse
+            doc = parse(filename)
+            return doc
+        except Exception, e:
+            return 'parseMinidom() failed with exception %s' % e
+
+    # 4DOM
+
+    def parse4Dom(filename):
+
+        try:
+            from xml.dom.ext.reader.Sax2 import Reader
+            f = file(filename)
+            reader = Reader(validate=0, keepAllWs=0, catName=None)
+            doc = reader.fromStream(f) # slow!
+            f.close()
+            return doc
+        except Exception, e:
+            return 'parse4Dom() failed with exception %s' % e
+
+    # Domlette
+
+    def parseDomlette(filename):
+
+        try:
+            from Ft.Xml.Domlette import NonvalidatingReader as reader
+            f = file(filename)
+            uri = 'file:///%s' % filename # suppress warning
+            doc = reader.parseStream(f, uri)
+            f.close()
+            return doc
+        except Exception, e:
+            return 'parseDomlette() failed with exception %s' % e
+
+    # libXml
+
+    def parseLibXml(filename):
+
+        try:
+            import libxml2
+            f = file(filename)
+            data = f.read()
+            f.close()
+            doc = libxml2.parseDoc(data)
+            return doc
+        except Exception, e:
+            return 'parseLibXml() failed with exception %s' % e
+
+    # pxDom
+
+    def parsePxDom(filename):
+        try:
+            import pxdom
+            doc = pxdom.parse(filename)
+            return doc
+        except Exception, e:
+            return 'parsePxDom() failed with exception %s' % e
+
+    def main():
+        import sys
+        filename = sys.argv[1]
+        print '4DOM:', parse4Dom(filename)
+        print 'Domlette:', parseDomlette(filename)
+        print 'MiniDom:', parseMinidom(filename)
+        print 'LibXml:', parseLibXml(filename)
+        print 'PxDom:', parsePxDom(filename)
+
+    if __name__ == '__main__': main()
+
+
+
+

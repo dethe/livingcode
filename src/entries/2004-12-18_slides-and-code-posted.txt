@@ -1,0 +1,19 @@
+Slides and code posted
+
+#published: 2004-12-18
+#tags: Python, PyObjC, XML, Renaissance, Meeting, Presentation
+#type: Journal Post
+#uuid: fe946acd-745d-49b3-baa9-2c34d1278279
+
+
+My talk at <a href="http://vanx.org/">VanX</a> last night was a success. Not many people showed (too close to Xmas), but the ones who did seemed to enjoy my presentation on Cocoa, Python, and Renaissance. Gerald was a great host, <a href="http://schemasoft.com/">SchemaSoft</a> provided a good (and convenient!) venue, <a href="http://prescod.net/">Paul</a> came to show support, and <a href="http://blastradius.com/">BlastRadius</a> (my employer) sponsored the snacks. After we went to Mira in Yaletown for beers and tech talk, had the whole place to ourselves, and a musician playing Flamenco guitar, then I walked across the bridge to home. A great end to a great evening.
+
+I've posted my slides at <a href="/assets/2005/renaissance.html">livingcode.org/assets/2005/renaissance.html</a> using Eric Meyer's neat S5 tool to put the whole slideshow into one HTML file.
+
+I've also built a new .dmg containing all the source code and built, runnable examples (seven of them now), although they're not all fully functional yet. More example gsmarkup to view, improved setup scripts, and they all have icons now. The file is <a href="http://sourceforge.net/project/showfiles.php?group_id=19654">examples 2004-12-17</a> on SourceForge.
+
+I've been working hard to put this all together, which hasn't left much time for posting, but I will have a lot more to say real soon now.
+
+
+
+

@@ -1,0 +1,14 @@
+PyObjC at VanPyZ
+
+#published: 2006-10-02
+#tags: Python, Meeting, Presentation
+#type: Journal Post
+#uuid: 38de109e-3aed-456b-a7c0-bfabd75e0ec7
+
+On Tuesday, October 3rd, at 7 pm, the Vancouver Python and Zope user's group (<a href="http://www.vanpyz.org/index_html_wiki">VanPyZ</a>) will be hosting two speakers. Paul Prescod will be discussing full-stack web frameworks in Python, and I will be presenting OS X programming in Python. This will probably not be a repeat of my presentation at the Vancouver Python Workshop (<a href="/assets/2006/vanpyw_2006-08-05.pdf">PDF slides</a>, for anyone who is interested) but using <a href="/projects/drawingboard">Drawing Board</a> and the <a href="/entries/2006-08-30_tab-dumping-in-safari">InputManager hack</a> to show how you can use <a href="http://pyobjc.sourceforge.net/">PyObjC</a> to build new applications in Python quickly and extend existing Cocoa applications easily. My focus these days is on how to take control of your computer and make it work for you, rather than the other way around.
+
+The VanPyZ meeting will be at the <a href="http://www.uniserve.com/">Uniserve</a> office, where Paul and I now work, Suite 1550, 1055 West Hastings Street, in Vancouver, BC. <a href="http://www.vmunix.com/mark/blog/archives/2006/09/18/announcing-chlo-mayo/">Mark Mayo</a> took time out from his new baby (congratulations, Mark!) to create an Upcoming <a href="http://upcoming.org/event/111453">event</a> for it. We'll be going out for drinks afterwards, so come hang out with the Vancouver pythoneers.
+
+
+
+

@@ -1,0 +1,92 @@
+Aspect-oriented Python
+
+#published: 2009-02-24
+#tags: Python, Tutorial, Example Code
+#type: Journal Post
+#uuid: 21f7c2d4-139b-4b04-919f-0d2404312a31
+
+*[AOP]: Aspect-Oriented Programming
+
+A friend asked me for an example of AOP in Python.  I started to write up my response, then realized it might be worth sharing more widely.
+
+Briefly, <a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming">AOP</a> is about separating out *Aspects* which are are interspersed throughout your code (in AOP lingo, cross-cutting).  The canonical example is logging, but there are others.
+
+For Python, as long as you're content with before/after aspects, the situation is good.  In Python 2.5 and up there are two main tactics: decorators and context managers.  Decorators use the `@` syntax and context managers are used with the `with` keyword.
+
+### Decorators
+
+Decorators are only usable on functions and methods in 2.4 and 2.5, but in 2.6, 3.0 and beyond they can be used on classes as well.  Essentially they are callables (functions, methods, objects) that accept a function object and return a function object.  They are called when the function is defined, so they get a chance to have their way with it: annotate it, replace it, or wrap it.  The common case is to wrap it.
+
+**Quick example:**
+
+    import logging
+
+    def before(fn):
+        def wrapped(*args, **kws):
+            logging.warn('about to call function %s' % fn.func_name)
+            return fn(*args, **kws)
+        return wrapped
+
+    def after(fn):
+        def wrapped(*args, **kws):
+            retVal = fn(*args, **kws)
+            logging.warn('just returned from function %s' % fn.func_name)
+            return retVal
+        return wrapped
+
+OK, those are three basic wrappers, you can use them like so:
+
+    @before
+    def foo():
+        logging.warn('inside foo')
+
+    @after
+    def bar():
+        logging.warn('inside bar')
+
+    @before
+    @after
+    def baz():
+        logging.warn('inside baz')
+
+    foo()
+    bar()
+    baz()
+
+This will result in the following output:
+
+    WARNING:root:about to call function foo
+    WARNING:root:inside foo
+    WARNING:root:inside bar
+    WARNING:root:just returned from function bar
+    WARNING:root:about to call function wrapped
+    WARNING:root:inside baz
+    WARNING:root:just returned from function baz
+
+You will note that when we use two decorators on baz, the name of the function called by `before` is "wrapped." This is because what `before` is called on is the result of `after`.  The `functools.update_wrapper` function is useful in this case to make a wrapped function look more like the original function.
+
+For more, please see <a href="http://www.python.org/dev/peps/pep-0318/#examples">PEP 318 Decorators for Functions and Methods: Examples</a> and <a href="http://www.python.org/dev/peps/pep-3129/">PEP 3129 Class Decorators</a>. For convenience when creating new decorators, see the standard library functions <a href="http://docs.python.org/library/functools.html#functools.update_wrapper">functools.update_wrapper</a> and <a href="http://docs.python.org/library/functools.html#functools.wraps">functools.wraps</a>.
+
+### Context Managers
+
+Context Managers are used with the `with` statement, and are handy for resource aquisition and release.  In Python 2.5 you have to "from __future__ import with_statement" to use them, but they are built-in in Python versions later than that. Also, objects such as files and locks are context managers now, so you can use patterns like
+
+    with open('example.txt') as example:
+        for line in example:
+            do_something(line)
+
+This will automatically close the file when leaving the `with` block. And for locks the pattern is similar:
+
+    with myThreadingLock:
+        do_something_threadsafely()
+
+It is important to note that the lock will be release properly, or the file closed, even if an exception is thrown inside the ` with` block.
+
+If you want to create your own context managers, you can add two methods to your objects: `__enter__(self)` and `__exit__(self, exception_type, exception_value, traceback)`.  The return value from `__enter__` will be passed to the optional `as` variable (seen in the file example). The `__exit__` method will be called with exception info if there was an exception.  If no exception is raised in the `with` block, then all three arguments will be `None`.  If `__exit__` returns `True` then any exception will be "swallowed", otherwise the exception will be re-raised after any cleanup.
+
+For more info, see <a href="http://www.python.org/dev/peps/pep-0343/">PEP 343 The "with" Statement</a>, especially the examples section, and also the helper functions in the standard library <a href="http://docs.python.org/library/contextlib.html">contextlib</a>.
+
+### AOP and 80/20
+
+Full-on aspect-oriented programming is beyond the scope of this post and involves join-points, code weaving, and other such arcanery.  There are multiple Python libraries which target aspect-oriented coding styles, but for my money, the simplicity of the methods in the standard library, coupled with my impression that they cover at least 80% of the uses of AOP, make me favour these built-in techniques over any of the special purpose tools.
+

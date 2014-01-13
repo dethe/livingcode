@@ -1,0 +1,18 @@
+XML Article without the XML
+
+#published: 2006-08-04
+#tags: Python, XML, Lightweight Markup, developerWorks, Article
+#type: Journal Post
+#uuid: edf707e6-624c-4ebd-8356-5c0588f51093
+
+My latest article for <a href="http://gnosis.cx/dW/">David Mertz's </a>column <a href="http://www.ibm.com/developerworks/views/xml/libraryview.jsp?search_by=xml+matters">XML Matters</a> is up at <a href="http://www.ibm.com/developerworks">IBM developerWorks</a>: <a href="http://www-128.ibm.com/developerworks/library/x-matters46/">Lighter than microformats: Picoformats</a> *Ajax without X, Microformats without angle brackets* went live a couple of days ago. It isn't so much about XML as how to avoid XML. My feelings towards XML are that it is useful and good, but overused and not a panacea. By providing some alternatives, maybe some of the backlash against the "XML everywhere for everything" meme can be averted.
+
+I've been meaning to post about the article, but I keep getting caught up preparing my presentation for the <a href="http://www.vanpyz.org/conference">Vancouver Python Workshop</a> on Saturday (the workshop starts Friday August 3rd and goes through Sunday August 5th). My talk this year is on using [PyObjC] to create applications and plugins for OS X using Python. I'll get the slides up after, as soon as I can. I'm also planning on doing a shorter version of this talk at <a href="http://upcoming.org/event/87852">Bar Camp Vancouver</a> which is 6 pm Friday, August 25 to 6 pm Saturday, August 26.
+
+And I should have mentioned the Google talk at the<a href="http://www.bcgsc.ca/vanhpc/"> Vancouver High Performance Computing User Group</a> before it happened on July 27th. Narayanan `Shiva' Shivakumar came up from their Seattle office to present mostly old information from their published papers such as The <a href="http://labs.google.com/papers/gfs.html">Google File System</a>, <a href="http://labs.google.com/papers/mapreduce.html">MapReduce</a>, and <a href="http://video.google.com/videoplay?docid=7278544055668715642">BigTable</a> (video). The talk over beers after was fun, and it was good to see my friend <a href="http://www.vmunix.com/mark/">Mark</a> and find out he has a <a href="http://www.vmunix.com/mark/blog/">blog</a>, even if it's over my head much of the time.
+
+Well, that's my update dump. More stuff on actually using PyObjC coming Real Soon Now.
+
+
+
+

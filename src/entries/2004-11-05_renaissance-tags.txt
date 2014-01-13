@@ -1,0 +1,114 @@
+Renaissance Tags
+
+#published: 2004-11-05
+#tags: Python, PyObjC, XML, Reference, Renaissance
+#type: Journal Post
+#uuid: 3ca0b7b0-970c-487a-a29b-a507d2f25160
+
+Nicola Pera has done a great job building Renaissance, and has worked hard to document it well. The <a href="http://www.gnustep.it/Renaissance/Manual/index.html">manual</a> is clear and easy to follow, but is not complete yet. He invited me to help with the documentation, and I've found the source code easy enough to read that I might do that (Objective-C is actually quite Pythonic), but it's been years since I've hacked LaTeX and I'd rather spend my time posting examples of working code. So for now I'll just stick my notes here about the Renaissance elements which have not yet been documented in the manual.
+
+    <browser />
+        titled="yes|no" (default: no)
+        allowsBranchSelection="yes|no" (default: yes)
+        allowsEmptySelection="yes|no" (default: no)
+        allowsMultipleSelection="yes|no" (default: no)
+        takesTitleFromPreviousColumn="yes|no" (default: yes)
+        separatesColumns="yes|no" (default: yes)
+        acceptsArrowKeys="yes|no" (default: yes)
+        hasHorizontalScrollbars="yes|no" (default: no)
+        doubleAction="[selector]"
+        minColumnWidth="[number]"
+        maxVisibleColumns="[number]"
+        matrixClass="[subclass of NSMatrix]"
+        cellClass="[subclass of NSCell]"
+
+    <colorwell/>
+        color="[Color]" (See section 2.3.3.6 of the manual for info on Color attributes)
+
+    <form/>
+        titleFont="[Font]" (See section 2.3.3.7 of the manual for info on Font attributes)
+        titleAlignment="left|right|center"
+
+    <label/>
+        color="[Color]"
+        backgroundColor="[Color]"
+        font="[Font]"
+        align="left|right|center"
+
+    <matrix/> (contains matrixRow elements)
+        doubleAction="[Selector]"
+
+    <matrixRow/> (contains matrixCell elements)
+
+    <matrixCell/>
+        title="[String]"
+        action="[Selector]"
+        editable="yes|no"
+        selectable="yes|no"
+        tag="(???)" (I'm not sure how tags are used yet)
+
+    <outlineView/>
+        outlineColumn="[Number]"
+
+    <popupButton/> (contains popupButtonItems)
+        title="[String]"
+        pullsDown="yes|no"
+        autoenabledItems="yes|no" (default: yes)
+
+    <popupButtonItems/>
+        tag="(???)"
+        action="[Selector]"
+        key="(???)"
+        title="[String]"
+
+    <scrollView/>
+        hasHorizontalScroller="yes|no"
+        hasVerticalScroller="yes|no"
+        borderType="none|line|bezel|groove"
+
+    <secureTextField/>
+
+    <splitView/>
+        vertical="yes|no"
+
+    <tableColumn/>
+        identifier="(???)"
+        editable="yes|no"
+        title="[String]"
+        minWidth="[Number]"
+        maxWidth="[Number]"
+        width="[Number]"
+        resizable="yes|no"
+
+    <tableView/> (contains tableColumns)
+        dataSource="[Outlet]"
+        delegate="[Outlet]"
+        doubleAction="[Selector]"
+        allowsColumnReordering="yes|no"
+        allowsColumnResizing="yes|no"
+        allowsMultipleSelection="yes|no"
+        allowsEmptySelection="yes|no"
+        backgroundColor="[Color]"
+        drawsGrid="yes|no"
+        gridColor="[Color]"
+        autosaveName="[String]"
+
+    <textField/>
+        editable="yes|no"
+        selectable="yes|no"
+        align="left|right|center"
+
+    <textView/> **(Note: Always put a textView inside a scrollView!)**
+        editable="yes|no"
+        selectable="yes|no"
+        richText="yes|no"
+        usesFontPanel="yes|no"
+        allowsUndo="yes|no"
+        usesRuler="yes|no"
+        importGraphic="yes|no"
+
+Well, that's what I have so far. I will try to keep this updated as I learn more, or simply point to the manual as it becomes more complete.
+
+
+
+

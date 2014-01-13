@@ -1,0 +1,92 @@
+The importance of visual programming
+
+#published: 2008-02-20
+#tags: Python, Art, Projects, Graphics, Programming
+#type: Journal Post
+#uuid: a3abe2fb-559a-46ef-9f94-26d418dd129b
+
+<img src="/assets/2008/kudzu1.png" alt="Kudzu flower manipulated with NodeBox"/>
+
+Python has a well-earned reputation for being easy to use and to learn, at least for people who have learned programming in other languages first.  Lately my kids have been very interested in programming, and I've found that Python doesn't come as easily to 6-11 year olds as it does to adult programmers.
+
+So I see two approaches to this problem, if it is a problem.  One, let them use other languages than Python. Two, find (or make) ways for Python to be more approachable.  Let's look at both of these.
+
+<a href="/assets/2008/scratch_hexes.png" title="Scratch Screenshot"><img src="/assets/2008/scratch_hexes_thumb.png" alt="Scratch Screenshot"/></a>
+
+### Scratch
+
+For languages other than Python, there are some really good choices.  The best language for getting kids interested and up to speed quickly that I've found is <a href="http://scratch.mit.edu/">Scratch</a>, which is a visual, drag-and-drop programming language for games and animations based on <a href="http://squeak.org/">Squeak</a> Smalltalk. Scratch allows kids to program without worrying about the syntax, so they can drag blocks together, use the built-in drawing program to create sprites or import images from the library that comes with the environment.  They can also share their creations on the web, projects get automatically converted to Java applets when shared on the Scratch website, and the kids can vote for and comment on each others projects.
+
+<applet id='ProjectApplet' style='display:block' code='ScratchApplet' codebase='http://scratch.mit.edu/static/misc' archive='ScratchApplet.jar' height='387' width='482'><param name='project' value='../../static/projects/delza/2671.sb'></applet> <a href='http://scratch.mit.edu/projects/delza/2671'>Learn more about this project</a>
+
+<a href="http://scratch.mit.edu/projects/delza/2671">Learn more about this project</a>
+
+Scratch is great for learning and for sharing.  My seven-year-old can download someone else's project and generally is able to read it to see what is going on, so it is good for building basic programming literacy.  It also has some pretty severe limitations: no user-defined blocks, no return values, no file interaction (so no high scores), no network interaction, no dynamic object creation, the program cannot draw on sprites (only on the background), no string variables or any real string handling. It is a great environment for learning to think creatively within its constraints, but my kids also bump up against its limits pretty quickly.
+
+One option that is often suggested as a step up from Scratch is GameMaker, which apparently is a very nice commercial system that lets kids build games.  Besides being commercial, it is also Windows-only, which makes it a non-starter in my household.  Scratch runs on both Windows and OS X, with a port to Linux being worked on, but as a Windows-free household, GameMaker is right out.
+
+<a href="/assets/2008/quartz_composer.png" title="Quartz Composer Screenshot"><img src="/assets/2008/quartz_composer_thumb.png" alt="Quartz Composer Screenshot" /></a>
+
+### Quartz Composer
+
+Another interesting system we've been playing around with lately is Quartz Composer.  This is a program that comes with Apple's free Developer Tools.  Rather than snap-together blocks, as in Scratch, it is a patch-based environment (there are many of these for working with audio): You drag patches onto a workspace, then wire them up by dragging from the output of one patch to the input of another.  Different patches have different numbers of connectors and there are a wide variety of patches to choose from, along with template starter projects for screen savers, audio visualizers, and more.  This is a popular tool with VJs, and there is a community around it for sharing custom patches and compositions.  A composition can be saved and used in various Cocoa programs that take *.qtz files as plugins, such as the Screen Saver or iChat.
+
+While my seven-year-old can create some effects by playing around with the patches and randomly wiring them up, the system as a whole has been too abstract for him and he doesn't *get* it the way he gets Scratch.  There is a steeper learning curve to literacy with Quartz Composer.
+
+<a href="/assets/2008/etoys.png" title="eToys Screenshot"><img src="/assets/2008/etoys_thumb.png" alt="eToys Screenshot" /></a>
+
+### eToys
+
+One more tool we've begun to explore is Squeak/eToys.  I have tried in the past to understand the Squeak environment, and to grasp eToys.  I was amazed how impenetrable this system, ostensibly designed for children, was to me. A while back I read on <a href="http://www.sauria.com/blog/education/1457">Ted</a> and <a href="http://www.julieleung.com/archives/002073.html">Julie</a> Leung's respective blogs I read about <a href="http://www.amazon.com/gp/product/1590594916?ie=UTF8&amp;tag=rethbo0f9-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1590594916">Squeak: Learn Programming with Robots</a><img src="http://www.assoc-amazon.com/e/ir?t=rethbo0f9-20&amp;l=as2&amp;o=1&amp;a=1590594916" style="border: medium none  ! important; margin: 0px ! important" border="0" height="1" width="1" />.  This book finally gave me a good starting point for learning Squeak, and an introduction to eToys I could understand.  Familiarity with Scratch helps too, since I think Scratch came about in part as a way to make eToys more accessible.  So far, while I like the ideas behind Smalltalk, I haven't been able to muster much enthusiasm for Squeak.  It's always been slow on the Mac (the Macs I have now are finally fast enough to make it bearable), and the UI for it is downright ugly.
+
+I realize there are lots of other visual environments out there we could try.  Alice and StarLogo are on our radar, for instance.  But that is enough to give a sample of both what is available and the journey my kids and I have taken so far.
+
+### Turtles
+
+Turning now to Python.  Python has some visual tools built in: Tkinter for building a GUI and the turtle library that is built on top of Tkinter. I actually built a turtle library on top of Tkinter once, not knowing that Python came with one.  I added a few things: Turtles could follow mouse clicks, and they looked like turtles, not like triangles.  There is also the rather more advanced <a href="http://ada.rg16.asn-wien.ac.at/~python/xturtle/">xturtle</a> library, which is quite cool (also built on top of Tkinter). Besides adding more direct manipulation to turtle drawing (point to move, drag to reposition, etc.) I wanted to have the turtles able to write out the resulting scripts, so kids could learn by modifying those starter scripts.  Other projects came along though, and I still haven't finished either my turtle program or my port of xturtle to run on top of PyObjC on the Mac.
+
+### Programming for Artists
+
+Speaking of PyObjC, there have been several tools which take advantage of the powerful graphics capabilities of OS X, using the PyObjC bridge to access Cocoa classes and Quartz graphics from Python.  The first of these (that I know of) was <a href="http://drawbot.com/">DrawBot</a>, by Just van Rossum which is now at version 2.0.  The 0.9 version of DrawBot was forked to add additional GUI capabilities, but was not differentiated well from the main DrawBot to avoid confusion.  Another fork of DrawBot is <a href="http://www.nodebox.net/code/index.php/Home">NodeBox</a>, which also continues on as a current project today and has gathered an ecosystem to it of artists, designers, and many powerful plugin extensions. All of the DrawBot family of tools are inspired by <a href="http://processing.org/">Processing</a>, which is a similarly stripped-down language for graphics processing.  While I use NodeBox extensively, and work with the kids with it (my 11-year-old created the logo for her weblog with it), Processing has its advantages too.  NodeBox is focussed on creating art works in PDF or Quicktime movies and focuses on making these easy (including very easy to get started with animation).  Processing is built on Java rather than Python, and you can embed the resulting tools as interactive art or games directly in a web page as applets. So while the core languages used by both are nearly identical, they diverge quickly based on their extensions or the desired end result.  I recommend looking at the galleries for both <a href="http://www.nodebox.net/code/index.php/Gallery">NodeBox</a> and <a href="http://processing.org/exhibition/index.html">Processing</a> to get a feel for what they can do. *The key goal of these projects is that they are written for artists, not for programmers.*
+
+Another tool which is inspired by DrawBot and Processing, but is a separate, cross-platform project, is Winston Wolff's <a href="http://stratolab.com/misc/makebot/">MakeBot</a>. Besides being the only tool here which works across Windows and Macintosh, MakeBot has games as the end-goal, and is specifically designed with teaching kids in mind (Winston uses it for his <a href="http://stratolab.com/courses/lunarrepair/">Lunar Repair Yard </a>course in NYC). Winston has also started the <a href="http://stratolab.com/wiki/doku.php?id=CommandBlocks">Command Blocks</a> project to bring some of the drag-and-drop programming ideas from Scratch into Python (and which I'm hoping to contribute to as well).
+
+### Graphics for Physicists
+
+The first tool on our tour which handles 3D is <a href="http://vpython.org/">VPython</a> (formerly Visual Python, but changed because there was already a Visual Python project, but it's good to know the history because it still starts as "import visual").  Like the Processing-inspired tools, VPython is designed for non-programmers, although in this case it is designed for physics students to create simple simulations easily, although the possibilities for games and art projects still exist.  I love the simple API of this library, if you want a sphere the code is "ball = sphere()" That gets you a grey unit sphere centered on 0,0,0.  If you want it a different size, color, or position you can pass them as arguments to sphere or change the properties afterwards.  If there isn't a window yet, one will be created automatically, but of course you can create a window yourself (or more than one). To give a more concrete example, here is a complete, animated program from the VPython examples:
+
+<a href="/assets/2008/vpython_paddle.png" title="VPython Screenshot"><img src="/assets/2008/vpython_paddle_thumb.png" alt="VPython Screenshot" /></a>
+
+    from visual import *
+
+    floor = box(length=4, height=0.5, width=4, color=color.blue)
+    ball = sphere(pos=(0,4,0), color=color.red)
+    ball.velocity = vector(0,-1,0)
+    dt = 0.01
+    while 1:
+        rate(100)
+        ball.pos = ball.pos + ball.velocity*dt
+        if ball.y &amp; 1:
+            ball.velocity.y = -ball.velocity.y
+        else:
+            ball.velocity.y = ball.velocity.y - 9.8*dt
+
+One of the projects I would like to explore is using Python to generate/work with <a href="http://www.povray.org/">POV-Ray</a> for more advanced 3D rendering than what I can get with VPython, but a good starting point is that there is an extension to VPython that can export its models to POV-Ray.
+
+### Taking the Red PIL
+
+The <a href="http://www.pythonware.com/products/pil/">Python Image Library</a> (PIL) is more or less the standard tool for creating non-interactive graphics, but it has its place in interactive graphics as well. I often rely on it for importing and exporting images from PyGame, and it can be used off-line for creating or manipulation graphics to use in an animation or game. It is perhaps a measure of my geekiness that I often find it easier to write a program to create or manipulate some graphics than I do to figure out how to perform the same task in Photoshop or any of the other half-dozen or so graphics programs I have at hand. Lately NodeBox has been my tool of choice for these scripts, but I still use PIL a lot when I'm working in Linux.
+
+<a href="/assets/2008/quipu.png" title="Pygame Screenshot"><img src="/assets/2008/quipu_thumb.png" alt="Pygame Screenshot" /></a>
+
+The Once and Future PyGame
+
+<a href="http://pygame.org/news.html">PyGame</a> is a great success story for Python. There are real, polished games created with it, like <a href="http://www.pygame.org/shredwheat/solarwolf/">SolarWolf</a> and <a href="http://pathological.sourceforge.net/">Pathological</a>. It is also used for teaching (as in the <a href="http://www.livewires.org.uk/python/home">LiveWires</a> course), and in game creation contests such as <a href="http://www.imitationpickles.org/ludum/">Ludum Dare</a> and <a href="http://www.pyweek.org/">PyWeek</a>. My own experience with PyGame has been something of a love/hate relationship.  On the love side, it is easy to set up, works virtually anywhere (on my tiny Nokia N800, for instance) and is quite good at moving pixels around. On the hate side, it is very low-level, and I either have to learn one (of several possible) libraries that add necessary abstractions for events, input, collisions, etc., or I have to roll my own. It feels like programming the Mac, back in the '80s. Lately I have been trying to do some work with PyGame targeting the OLPC XO and the aforementioned N800, and have been hampered by the fact that many of the really cool extensions to PyGame rely on OpenGL, which neither of those devices have.
+
+There are other cool Python libraries for graphics: Pyglet, PyOpenGL, PyGame.  I've written stuff for the kids with PyGame, but I think it is still too much for them to manage themselves.  And I'm not cruel enough to have thrown OpenGL (which includes Pyglet) at them yet. Let them think the world is kinder than that for awhile yet.
+
+Overall there is a lot of promise in the world of graphics for Python.  There is still plenty of work to be done, too.  I guess I'd better get coding.
+
+
+
+

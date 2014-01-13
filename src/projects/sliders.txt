@@ -1,0 +1,29 @@
+Sierra Sliders 2.0
+
+#type: Project
+#format: markdown
+#tags: Projects, Creativity, Brainstorming
+#tagline: Equalizer Brainstorming Tool
+
+### Equalizer Brainstorming Tool
+
+An example page for using an equalizer as a visualization tool, 
+as described by <a href="http://headrush.typepad.com/creating_passionate_users/2005/11/how_to_come_up_.html">Kathy Sierra</a>, using images from her 
+site (with permission).
+
+<div id="equalizer"></div>
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/blitzer/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="/assets/sliders/sliders.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<script>
+$.query = {
+    suffix: true,
+    separator: ';',
+    hash: true
+};
+</script>
+<script src="/javascripts/jquery.query.2.1.7.js"></script>
+<script src="/assets/sliders/sliders.js"></script>
+

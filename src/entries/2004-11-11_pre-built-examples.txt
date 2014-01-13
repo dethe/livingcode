@@ -1,0 +1,18 @@
+Pre-built examples
+
+#published: 2004-11-11
+#tags: Python, PyObjC, Cocoa, Renaissance
+#type: Journal Post
+#uuid: 3dbd9f60-ad02-4f02-86d7-61db8713485c
+
+
+
+I've been requested to make binary packages of the applications for people who haven't been following along at home. The first application I've made available is the GMarkup Browser, so you'll need some GMarkup files to browse with it, either from the example here, the Renaissance site (the source package has lots of examples in the Examples folder) or by writing your own (the whole point is that that it isn't hard to do). It's available from the <a href="http://sourceforge.net/projects/livingcode">Living Code</a> project on SourceForge.
+
+I'll make others available as I get the chance, now that I've figured out the SourceForge release system (sort of) and the steps for making a disk image for distribution. Soon I need to figure the Mac Package Manager and Installer (which py2app supports) so folks who want to install several apps don't end up with multiple copies of Renaissance too. Baby steps for now, there's a lot to learn.
+
+Mac OS 10.3 only. Feedback appreciated. Coming soon: applications that I can post meaningful screenshots of.
+
+
+
+

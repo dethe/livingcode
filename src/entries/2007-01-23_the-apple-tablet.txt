@@ -1,0 +1,12 @@
+The Apple Tablet
+
+#published: 2007-01-23
+#tags: Mac, News, Newton
+#type: Journal Post
+#uuid: 74d37e67-4449-4e40-9ca5-68c45eb06499
+
+So last year I got tired of waiting for Apple to come out with a tablet computer (which Jobs will never purposely do, even though Ink Services are built right into OS X). I also got sentimental for the Newton that I outlined my thesis on, lo these many years ago. My sentimental reflections were enhanced by this article by <a href="http://www.makezine.com/blog/archive/2005/12/make_your_own_100_laptop.html">Phillip Torrone</a> on building a sub-$100 laptop out of an old eMate from eBay. I had never used eBay, so as an experiment (one of two: I also picked up a copy of the long out of print Avalon Hill board game Dune) I found myself a Newton MessagePad 110. Which, by and large, does nothing.It boots OK, but I'm reluctant to use it for anything besides a conversation piece unless I can get my data back off of it (and it would be nice to load new apps on it as well). Since none of my Macs have AppleTalk serial ports, I'm not sure how to get the Newton talking to them. I've checked the Newton sites, but what instructions there are appear to be dated and complex (perhaps it just is complex, I'm not ruling that out). So, LazyWeb, I invoke thee! What is the best way to get an OS X box talking with a Newton?My email is below. I'll quote from (and credit) responses unless requested not to. Any help in reifying my nostalgia is appreciated.
+
+
+
+

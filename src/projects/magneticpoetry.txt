@@ -1,0 +1,23 @@
+Magnetic Poetry
+
+#type: Project
+#format: markdown
+#tags: Projects, Games, Poetry, Creativity
+#tagline: Bookmarkable Magnetic Poems
+
+## Magnetic Scrabble Poetry
+### Example Scrabble Poems:
+
+<a href="?words=ether+angel+tumor+penny+loan+fa+icier/oval+zero+fossils+wider/adobe+fare+slut+indexes/mops+quieted+clown+fang/+towing+arena+both+chairmen/duke+zero+jaunty+bare+dive+or">ether angel</a> | <a href="?words=rough+sojourn+emu+square+divided+knelt/simple+each+sheet+feat+pilots+dream/rainy+faery+ray+renown+orbs/+beg+blazing+voice+guided+wife/visit+it+tax+tat+woe">rough sojourn</a> | <a href="?words=urgent+fable+vapor+orb+affix+axle/cabal+alarm+haunt+whiner+thinks/stowed+hints+joint+seige+dozer/pyramid+energy+sneezed+cove/stove+tint+cools+squid+door">urgent fable</a>
+
+<form action="" method="GET">
+<b>Words:</b> (separate lines by "/")
+<input name="words" size="60"/> (Note: you can bookmark the results) 
+</form>
+
+<div id="magnetic_poem"></div>
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/blitzer/jquery-ui.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<script src="/assets/poetry/poetry.js"></script>
+<link rel="stylesheet" href="/assets/poetry/poetry.css" />

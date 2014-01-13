@@ -1,0 +1,16 @@
+Slides up
+
+#published: 2005-02-10
+#tags: Python, Presentation, Cocoa, PyObjC
+#type: Journal Post
+#uuid: 597088ca-b682-4482-9b87-94b324eb92ce
+
+After much delay, my slides are finally up from the VanPyZ talk last week.
+
+<a href="/assets/2005/cocoa.html">Using Python and Cocoa on OS X</a>
+
+Again I'm using Eric Meyer's S5 tool for HTML slides, but it still ends up being a large download because it includes a completely unneccesary quicktime movie. My son and I have been playing with iStopMotion and this was one of our first forays into claymation.
+
+The reason it's in the slideshow, is that movie making is now completely accessible to an eight-year-old, and I want to writing games and other programs equally accessible to him.
+
+Still a ways to go…

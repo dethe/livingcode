@@ -1,0 +1,29 @@
+Life after Wordpress
+
+#published: 2010-03-13
+#tags: Python, Sandcastle, Projects, Blogging
+#type: Journal Post
+#uuid: abb059fe-0141-40c9-9169-c8e567d8d662
+
+<img src="/assets/2010/sketchy_flower.png" width="498" height="415" alt="sketchy flower" />
+
+*Flower graphic drawn using <a href="http://mrdoob.com/projects/harmony/#sketchy">Harmony</a>*
+
+# One hack too many
+
+This is a post that took more than a year to write, working off and on for many nights and weekends.
+
+I have had a love/hate relationship with Wordpress ever since I transitioned to it from blogger (after from my earlier homebrew solution, and after Manilasites). I like how easy it makes the simple things, but then it frustrates me whenever I try to put source code in my entries (largely what I blog about) or embed an applet, or embed some custom javascript.  Then I got hacked, and cleaned it up, starting being more careful to upgrade to the latest version continuously, then I got hacked again. And so I quit.
+
+I first used Maciej Cegłowski's tips in <a href="http://idlewords.com/2009/09/">Using WordPress to generate flat files</a> to restore my blog without the hacker-inserted spam links, as static files.  Unlike his tip, I had no desire to run Wordpress locally and push static files to the site. Once I'd gone this far, I wanted to finish the job.
+
+My old, home-grown blog scripts (code-named Sandcastle) were still around. I had started that project a little too ambitiously. It was going to be a native OS X desktop app, a server-side component, etc.  But there were some pieces that more or less worked, so I took those and started building a blog library from them.  I had to do a lot of data cleanup, and a lot of recoding some of the projects on my site. Some had been broken for a long time already because of changes I had made, other thing had broken in one of the Wordpress upgrades or another. So in addition to fixing my tools for blogging, I wanted to make sure there were no broken projects on my site.  I will be discussing these projects in an upcoming post.
+
+A lot of what I did was rip things out, make the tools simpler and more understandable, and to use components others had written to reduce the amount of code I had to write and maintain.  I moved to Python2.6, which has library routines for UUIDs and ISO-8601 formatted dates, so I could eliminate my own versions of those. There is still more clean up to do, and I'm not completely happy with the stylesheet I've written, but for now I think it is good enough to start using and I can revisit to make changes once I see how it's working.
+
+Once I remove a bit more of the uglier bits, I will open source Sandcastle, in case anyone is interested. I don't recommend it as a general purpose blogging engine--it is very specific to how I like to work. But I still run several Wordpress blogs for my family, so I may generalize it enough to serve their needs too at some point.
+
+In addition to fixing up old projects, I've moved my external links from Del.icio.us to <a href="http://pinboard.in/u:dethe">Pinboard</a>, also by Maciej Cegłowski, and I wrote my own twitter widget. It's actually been a lot of fun pulling all these pieces together and thinking about the best ways to snap them in place.  For instance, there is a script to trigger building the site from text files, but it is still served as static files without a server process exposed to the web (no more Wordpress hacks!).
+
+There's still a bunch of work I'd like to do on it, but for now it is good to be able to blog again.
+

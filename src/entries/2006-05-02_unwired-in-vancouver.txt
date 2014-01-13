@@ -1,0 +1,16 @@
+Unwired in Vancouver
+
+#published: 2006-05-02
+#tags: Vancouver, Community
+#type: Journal Post
+#uuid: 78a10e25-ff3f-4be8-b9af-8e54ec48dab9
+
+The BC Wireless project is a project to bring free community networks to communities throughout British Columbia.
+
+<a href="http://www.bcwireless.net/about/?menu=About+Us">BC Wireless</a>
+
+There's a great resource for finding network connectivity in Vancouver, by cafe, neighbourhood, or main street. There's even a <a href="http://vancouver.wifimug.org/map.html">map</a>. <a href="http://vancouver.wifimug.org/">Coffee and Wireless in Vancouver</a>
+
+
+
+

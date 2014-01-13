@@ -1,0 +1,24 @@
+The Browser Files
+
+#published: 2008-09-07
+#tags: Javascript, Critique
+#type: Journal Post
+#uuid: ccd87b06-14bb-4352-94a2-a1227ccf9c9e
+
+<img src="/assets/2008/arrow_slit.jpg" alt="Arrow slit at Prague Castle" />
+
+I've been slinging Javascript and HTML for a good long time now, more or less as long as each one has existed.  I was using the techniques commonly known as Ajax since way before Microsoft invented XMLHTTPRequest.  I wrote a shared, collaborate bookmarking tool for my own use about ten years before del.icio.us existed, and I built a web-based dynamic outliner for my thesis project using IE4 (first browser to support XML).
+
+So the current crop of browsers, and great libraries like <a href="http://jquery.com/">JQuery</a> have been very inspiring to me.  Rather than struggle against the browsers, I can just get work done (most of the time).  It's refreshing, and Javascript has never been so much fun. I'm still learning new twists and turns of HTML that I hadn't explored, or hadn't worked in earlier browsers, still learning new CSS tricks after all these years, and of course I have to unlearn a lot of my acquired wisdom that simply ain't so anymore.  With the upcoming <a href="http://www.w3.org/html/wg/html5/">HTML5</a> and <a href="http://ejohn.org/blog/ecmascript-harmony/">ECMAScript Harmony</a> things promise to get even more interesting.
+
+With all that context out of the way, I'm pleased to note that there are at least four browsers on the way that promise to make my web life better (and adoption of new browsers has sped up due to automatic updates, so hopefully we won't have to wait ten years to be able to rely on the features of new browsers.  Microsoft's IE8 is in its second beta, with full CSS 2.1 at last and many more improvements to Javascript and DOM compliance, and we can at least hope that someday they will accept HTML 5, CSS 3, and all the other goodies that arose on the web while they were sleeping. There is a beta of Safari 4 available to registered Apple developers, with lots of new goodies.  Mozilla has an alpha out for Firefox 3.1, with a beta due by the end of the month, and they are planning their 4.0 version.  And Google has entered the arena, with their long-rumoured GBrowser: Chrome (the nearly chrome-less browser).
+
+Aside from IE, which is still trying to catch up with state of the art in the late '90s, the new browsers all boast lightning-fast Javascript engines, SVG and Canvas for 2D graphics, and cutting-edge features from CSS 3 and HTML 5 on top of their (mostly) rock-solid foundations of existing web standards.  All of this is great, and makes me very happy, but one thing would make me happier.  One thing still stands in the way of every web app I've worked on and continues to hold the web back. One thing forces sites to fall back to ugly, broken halfway-solutions in Flash or Java. One thing that could be fixed in browsers to make everyone's experience better.
+
+File uploads (&lt;input type="file" /&gt;)
+
+The browsers currently do not allow you to style the file input in any meaningful way, without resorting to insane hacks. You can't start in a user's home or documents directory.  You can't filter to only allow graphic files to be uploaded to a graphics site.  You can't choose multiple files.  You can't choose a directory to upload the files in it. You definitely cannot drag files and drop them on your webapp.
+
+More and more, the webapps are the applications users interact with the most.  Webapps are used as word processors, calendars, spreadsheets, presentation builders, photo editors, photo albums, and more.  And as it stands, every browser that I am aware of is fundamentally broken in this one regard.
+
+Who wants to be the first to fix it and make Dethe happy?

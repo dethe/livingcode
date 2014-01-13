@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Creating OS X Cocoa Applications Using XML and Python</title>
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.0" />
+<meta name="presdate" content="20041216" />
+<meta name="author" content="Dethe Elza" />
+<meta name="company" content="Blast Radius" />
+<link rel="stylesheet" href="ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="ui/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="ui/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+	<h1>VanX &#8226; 2004-12-16 &#8226; Dethe Elza</h1>
+	<h2>Creating OS X Cocoa Applications Using XML and Python</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+<div class="presentation">
+
+<div class="slide">
+	<h3>Creating OS X Cocoa Applications Using XML and Python</h3>
+	<h4>Dethe Elza</h4>
+	<h4><a href="http://blastradius.com/">Blast Radius</a></h4>
+	<ul>
+		<li>Project Site: <a href="/projects">livingcode.org/projects</a></li>
+	<li>Blog: <a href="http://livingcode.org/">livingcode.org</a></li>
+	<li>Source and Apps: <a href="http://livingcode.sf.net/">livingcode.sf.net</a></li>
+</ul>
+</div>
+
+
+<div class="slide">
+  <h1>Some Elementary Background</h1>
+  <p style="text-align:center">
+  <img src="pix/no-adults.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>OS X, How and Why</h1>
+<ul>
+	<li>BSD Unix with a nice UI</li>
+	<li>Apple OS with a robust underpinning</li>
+	<li>GUI based on OpenGL, very fast, flexible, and powerful</li>
+	<li>Many other nice features: powerful search tools, graphics manipulation, network autodiscovery (Rendezvous)</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Cocoa: What and Why</h1>
+<ul>
+	<li>NextStep Object-Oriented GUI toolkit</li>
+	<li>Coded in Objective-C</li>
+<li>Flexible, powerful, fast, beautiful</li>
+<li>Open-source version: GNUstep, based on OpenStep specification</li>
+<li>Kind of a steep learning curve</li>
+<li>Can require a lot of code to set up the UI</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Python: What and Why</h1>
+<ul>
+	<li>A powerful high-level programming language</li>
+<li>Strongly, but dynamically typed</li>
+<li>Great integration with other languages: C, .Net, Java, and Objective-C (among others)</li>
+<li>Great libraries, less verbose, memory managed</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Renaissance: What and Why</h1>
+<ul>
+<li>XML language for building GNUstep and Cocoa application UIs</li>
+<li>Alternative to binary NIB files</li>
+<li>Declarative, simple, and powerful</li>
+<li>Easy to create, maintain, modify, read</li>
+<li>Good for teaching: Can specify applications without resorting to screenshots of Interface Builder</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>Mac Snobbery for Fun and Profit</h1>
+  <p style="text-align:center">
+  <img src="pix/gasprices.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>What makes a complete OS X application?</h1>
+<ul>
+<li>Menus, including special Apple menu, Services sub-menu, Windows menu</li>
+<li>Handle cut-and-paste, drag-and-drop across applications</li>
+<li>Minimize, zoom, hide behaviours</li>
+<li>Standard shortcuts for menus and commands</li>
+<li>Follow Apple's UI Guidelines</li>
+</ul>
+</div>
+
+
+<div class="slide">
+  <h1>21st Century Renaissance</h1>
+  <p style="text-align:center">
+  <img src="pix/sars_danders.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>Renaissance: The Missing Manual</h1>
+<p>Renaissance is somewhat XUL-like, but not as thoroughly developed or documented</p>
+<ul>
+	<li><a href="http://www.gnustep.it/Renaissance/Manual/index.html">http://www.gnustep.it/Renaissance/Manual/index.html</a></li>
+	<li><a href="http://livingcode.blogspot.com/2004/11/renaissance-tags.html">http://livingcode.blogspot.com/2004/11/renaissance-tags.html</a></li>
+	<li>Still needs more work: &lt;button/&gt;, &lt;box/&gt;, &lt;hbox/&gt;, &lt;vbox/&gt;, &lt;hspace/&gt;, &lt;vspace/&gt;</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Missing Widgets</h1>
+	<table width="100%">
+		<tr>
+			<td><ul>
+			<li>NSlider</li>
+			<li>NSProgressIndicator</li>
+			<li>NSStepper</li>
+			<li>NSCombobox</li>
+			<li>NSDrawer</li>
+			<li>NSTabView</li>
+			</ul></td>
+			<td><ul>
+			<li>NSSearchField</li>
+			<li>NSDateFormatter</li>
+			<li>NSNumberFormatter</li>
+			<li>NSWebView</li>
+			<li>NSOpenGLView</li>
+			<li>NSMovieView</li>
+			</ul></td>
+		</tr>
+	</table>
+</div>
+
+
+<div class="slide">
+<h1>Missing Attributes</h1>
+<ul>
+<li>Alignment not working as well as it should</li>
+<li>ID could be exposed to the application</li>
+<li>Make it easier to add and remove elements at runtime (more dynamic)</li>
+<li>Tooltips</li>
+<li>More font control, in more widgets</li>
+<li>Some of the special menu types</li>
+<li>Allow &lt;view/&gt; and &lt;panel/&gt; to have child views</li>
+<li>Best-effort pass-through of unrecognized attributes using key-value binding</li>
+<li>Inter-file references</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Other Limitations of Renaissance</h1>
+<ul>
+	<li>Not designed for dynamic updates</li>
+	<li>Inexplicable crashes</li>
+	<li>Tricky to add new tags from Python (but it can be done)</li>
+</ul>
+</div>
+
+
+<div class="slide">
+  <h1>Do-It-Yourself</h1>
+  <p style="text-align:center">
+  <img src="pix/altoid-radio.gif" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>Projects</h1>
+<ul>
+<li>Hello World</li>
+<li>Hillegass Ch. 02 (Lottery Picker)</li>
+<li>Hillegass Ch. 04 (RaiseMan)</li>
+<li>Oblique Strategies</li>
+<li>GMarkup Browser</li>
+<li>Renaissance Editor</li>
+<li>ZenEdit (the 15-minute text editor)</li>
+<li>Tutorials and exploration ongoing on blog</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Example: The 15 Minute Editor</h1>
+	<ul>
+		<li>Built using InterfaceBuilder and Objective-C</li>
+		<li>Built again using Renaissance and Python</li>
+		<li>Took a little longer than 15 minutes, mostly due to immaturity of tool</li>
+		<li>I learned a lot more about OS X and Cocoa the second time</li>
+		<li>Less "magic" going on, explicit is better than implicit</li>
+		<li>Result is more extensible, more reusable</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+  <h1>Did I mention it's XML?</h1>
+  <p style="text-align:center">
+  <img src="pix/close_your_tag.gif" height="300" />
+  </p>
+</div>
+
+
+<div class="slide">
+	<h1>Is that it for XML?</h1>
+	<ul>
+		<li>This is just the beginning</li>
+		<li>Using Python makes XML much more accessible</li>
+		<li>OS X uses XML idiosyncratically and doesn't expose much in the way of standard APIs</li>
+		<li> Python has very rich XML support out of the box and much, much more available as downloadable libraries</li>
+		<li>Still waiting on good SVG support in OS X though</li>
+	</ul>
+</div>
+
+<div class="slide">
+  <h1>Enough knowledge to be dangerous</h1>
+  <p style="text-align:center">
+  <img src="pix/somethingbad.jpg" height="400" />
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Thank you for inviting me here</h1>
+  <h3>Any questions?</h3>
+</div>
+
+</div>
+
+</body>
+</html>

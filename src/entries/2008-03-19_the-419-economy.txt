@@ -1,0 +1,34 @@
+The 419 Economy
+
+#published: 2008-03-19
+#tags: Fiction, Humour, Python
+#type: Journal Post
+#uuid: a8a770c7-4fe1-4bf0-a5c8-05ca60c60bc2
+
+Hello, my name is Sergio Arragones and I am writing to you for assistance in a matter that will be of great economic benefit to us both.
+
+My late father was VICE PRESIDENT of the large American investment bankerage of Bear Stearns and he managed to put aside over two billion US dollars of bailout money from the puppet government of Mr. George Bush.
+
+Unfortunately, he was killed in a incident of ROAD RAGE when his bullet-proof Mercedes convertible was driven into the bomb barricade of the New York UN Building by the SUV of an off-duty Police Officer.
+
+While my family is still grieving over his tragic death, and attempting to get the suspicious circumstances investigated, I must act quickly to move these funds to your Nation for safekeeping. As a Citizen of the Monarchy of Canada, you may receive these funds for me until I may cross from New York State to the Province of Quebec, at which time you will transfer the funds over to me, keeping 10% (TEN PERCENT) for yourself, along with my Gratitude.
+
+In order for me to transfer the Fund to you, you will need to create a PayPal account for this purpose.  Do not use an existing PayPal account, as it may already have been compromised by nefarious hackers and BotNets. Also, you will need to download the Python libraries which allow you to code to PayPal directly.  In addition, you will need libraries for Google Checkout the Atom Publishing Protocol.
+
+On a server under your control (the server must be physically located in the Sovereignty of Canada.  THIS IS IMPORTANT) you must set up a WSGI server.  You may use Django or TurboGears for this, or use the reference WSGI implementation.  I recommend you use PYTHON 2.5 or greater as many of the tools you need will be part of the STANDARD LIBRARY. 
+
+Once you have the Foundations of a Web2.0 server administered, contact me at the return address of this message and I will give you instructions on how to proceed for the transfer of funds.
+
+My family thanks you.
+
+Sincerly,
+
+Dr. Rev. Sergio Arragones, Esq.
+
+New York, NY
+
+United States of America
+
+
+
+

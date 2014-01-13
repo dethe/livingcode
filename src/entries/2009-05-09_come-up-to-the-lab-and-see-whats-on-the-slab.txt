@@ -1,0 +1,13 @@
+Come up to the lab, and see what's on the slab
+
+#published: 2009-05-09
+#tags: Humour
+#type: Journal Post
+#uuid: f0d34923-db8c-48ee-bb7f-541b236f9457
+
+There is no truth to the rumor that PostgreSQL has been acquired by TransMeta to be renamed TrangreSQL. It is a further baseless rumor that they will build a new web framework on this, based on a suite of custom applications. Finally, it is patently untrue that their new motto will be the following.
+
+> Just a suite TransWebSite from TrangreSQL, TransMeta
+
+Dr. Frank N. Furter declined to comment on any of these unsubstantiated rumors, saying only (and with emphasis, "Ha ha!"
+

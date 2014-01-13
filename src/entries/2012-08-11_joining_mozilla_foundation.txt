@@ -1,0 +1,21 @@
+Joining Mozilla Foundation
+
+#published: 2012-08-11
+#tags: Job, Open Source, Mozilla
+#type: Journal Post
+#uuid: da3dd28c-d950-4341-bb66-bee5b8a04edc
+
+<img src="/assets/2012/mozilla.jpg" />
+
+I'm happy to announce that next Tuesday (August 14, 2012) I will be starting work at the <a href="http://mozilla.org/">Mozilla Foundation</a>.
+
+Not everyone realizes that there are two Mozillas. There is <a href="http://mozilla.com">Mozilla Corporation</a>, which develops the <a href="http://getfirefox.com">Firefox</a> browser (among <a href="http://www.mozilla.org/en-US/products/">many other things</a>) and there is the Mozilla Foundation, the non-profit branch of the Mozilla mission. And it is a mission, one which both branches share, and which is summed up in the Mozilla <a href="http://www.mozilla.org/about/manifesto.en.html">Manifesto</a>. Yes, I will be working for a company that has a manifesto rather than a marketing mission statement.
+
+After many years of working on open source projects in one way or another, I'm happy to be dedicating my working day to open source, open data, and education entirely. I will initially be working on the <a href="https://www.mozilla.org/en-US/collusion/">Collusion</a> plugin for Firefox (see this video on <a href="http://www.ted.com/talks/lang/en/gary_kovacs_tracking_the_trackers.html">Collusion at TED</a>). Collusion is a tool for tracking who is tracking you as you navigate the web, which includes a surprising number of sites that you've never navigated to. I will be working with other Mozillans, privacy advocates, user experience designers, and the teams who work on the ports of Collusion to other browsers on this project to help make surfing the web a safe, and private, activity.
+
+After working for startups for the past 12 years or so, I feel like the time is right to move more fully into the open source world, and I couldn't be happier to have found a place with Mozilla. I will also be spending some more time talking about my existing open source projects, and opening up code that was intended to be open source, but I had not gotten around to moving to github yet.
+
+Oh, and I will be working out of the Vancouver office in Gastown, not relocating.
+
+Living la vida abierto!
+

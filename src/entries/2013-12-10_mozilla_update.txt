@@ -1,0 +1,152 @@
+Mozilla Update
+
+#published: 2013-12-10
+#tags: Job, Open Source, Mozilla
+#type: Journal Post
+#uuid: d235e8c9-f204-4a0b-af93-aea3d2d42156
+
+![Image of crowd at MozFest](http://dougbelshaw.com/blog/wp-content/uploads/2012/10/mozfest.jpg Crowd at MozFest, image by Doug Belshaw)
+
+As the holiday break rolls around I realize I haven't blogged since starting at Mozilla, so I'm going to correct that now because it has been an exciting year and a bit. Mozilla, even just the bits I've had the good fortune to be involved with, is doing an amazing amount of stuff, and I'll talk about a lot of it.
+
+Warning: This will be a long post, and a lot more personal than most of my web writing.
+
+*What is Mozilla?*
+
+A lot of folks, when I say I work for [Mozilla](http://www.mozilla.org/en-US/), think of Firefox, if they recognize it at all. The Firefox browser is what Mozilla is best known for, and one of the biggest things going on, but even there people are confused about why we build Firefox. I hear a lot that we develop Firefox to compete with Google Chrome (which is funny since Firefox pre-dates Chrome by more than a decade). But Firefox, and Mozilla itself, don't exist as normal business to compete with anyone, they exist to keep the web open. This is kind of a big deal, as there was a very real chance of one company taking over and owning the web. And Mozilla moves to where the threat is greatest: FirefoxOS, an open platform for smart phones launched this year because there is a risk of people's experience of the web being locked in to their phone vendor. Mozilla is an open source, non-profit company that has the open web baked deeply into its DNA. We have a Manifesto, not a bullshit corporate "Mission Statement." And while there are technically two Mozillas (the Foundation and the Corporation) with somewhat different focus, we're all One Mozilla and working toward the same overall aim: to empower everyone to have access to the open web, be literate about the web, and be empowered to create whatever they want on the web.
+
+*August 2012*
+
+![Lightbeam Graphic](http://mozorg.cdn.mozilla.net/media/img/lightbeam/Lightbeam-UpdatedGraphImageLandscape2.png?2013-11)
+
+My main gig at Mozilla, what I was hired for and have spent the majority of my time there on, is the Lightbeam add-on for Firefox which we relaunched last month. It was formerly known as Collusion, created by Atul Varma, and I was brought in to help get it to 1.0. Lightbeam is a tool to help visualize what goes on in the browser when you visit a site, and that site loads content from various third parties. This simple behaviour can be a huge problem for privacy and is normally invisible to the user, so Lightbeam is about making it visible.
+
+There has been a lot written about Lightbeam, we just came off a big promotional push for it, and aside from reassuring people that there is a fix coming shortly for the cases where it doesn't seem to initialize the visualization properly, that's not the main thing I want to talk about now, except to say it was awesome to ship something that got more downloads and use than everything I've worked on in startups for the previous 13 years.
+
+*September 2012*
+
+An important part of that process for building Lightbeam was a partnership that Mozilla had formed with [Emily Carr University](http://www.ecuad.ca/) before I started. Emily Carr is a school of art and design in Vancouver, and the person on their side of the project was [Amber Frid-Jimenez](http://www.amberfj.com/), who started at Emily Carr about the same time as I started at Mozilla. We interviewed and chose four students to work on Lightbeam to help rethink the visualizations, improve the usability, and generally make it a more useful tool. During the course of this, I put together a one-day session to [introduce the students to JavaScript](http://dethe.github.io/jstutorial/). Overall, the collaboration went so well that we ended up hiring one of the students after graduation to continue working on Lightbeam, and anyone who has visited the Vancouver office in the past year has seen a bunch of posters we put together from the work the students did that term.
+
+*October 2012*
+
+Right after I started working at Mozilla last year was the Mozilla Foundation all-hands conference, which I missed because Daniela had already booked a trip to visit her parents that week, so I stayed home with the kids. Being such a distributed company, the all-hands is important for getting to know all of our co-workers. But I was about to get a second chance at that, because MozFest was coming.
+
+*November 2012*
+
+[MozFest](http://2012.mozillafestival.org/) is the biggest thing the Mozilla Foundation does each year. We take over the Ravensbourne College of Art & Design in London for 8 floors of loosely organized creative chaos. This is where I met most of my co-workers, learned to play Werewolf and Turtle Wushu, and missed a great deal of sleep. It was amazing. There are roughly four time-slots that events go into, organized into tracks for each floor. I ended up being scheduled to present or co-present something during every slot: Lightbeam and privacy, how should we approach teaching JavaScript or programming, my own Waterbear project. There were so many things going on that I wanted to see them all. It was here that I finally got to meet in person my long-time collaborator on Waterbear, [Martyn](http://edumake.org/author/martyn/). Meeting and getting to know my co-workers during all of this was overwhelming and fun, and confirmed that I was working with a great group of people.
+
+*Flashback*
+
+![Image of CULC](http://4.bp.blogspot.com/-TAqu5lQyOB0/US7a2IBTnkI/AAAAAAAAAHQ/PzF-zuGVUYw/s270/culcgroup.jpg)
+
+I'm going to take a step back now to talk about where I come from. I was raised by a single mom in the late 1960s and 1970s. My dad died in a car accident when I was six, but I'd never known him. We travelled a lot, mom was a nurse and could find work just about anywhere, but (I think) was always looking for a better place to raise her kids. By the time I started high school I had attended thirteen schools in five states: inner-city public schools, rich suburban public school, deep south private school, hippie free school, even Catholic school. I was always an outsider, always the new kid, painfully shy and awkward. And by high school I was also starting to flunk out from just not caring anymore.
+
+Just before I started high school, we moved from Seattle, where I had friends, to Cleveland. At the time this felt like the end of the world. In Cleveland we found a funky little alternative school, the Cleveland Urban Learning Community (CULC), the School Without Walls. It was in a few rooms in the back of the YMCA in the red light district, and my stepfather's truck got broken into and all his tools stolen when we first visited. There were no teachers and no classes, you had to write your own courses and keep a journal of what you were doing, what you were learning, and how you felt about what you were learning. One thing it did have, was acceptance.
+
+CULC was the first place in my life I can remember feeling like I fit in. It wasn't a 100% perfect fit, the kids were more into drugs and music than into role playing games and science fiction, but overall I think finding CULC probably saved my life. It was so obviously where I needed to be that when my family moved to southeastern Ohio to buy some land and homestead, they let me stay in Cleveland, at first with some friends of the family (we'd been neighbours in Seattle), then on my own. Which is why I haven't lived at home since I was 15. I was living on Social Security cheques, until Reagan was elected. When Reagan became president, one of the first things he did was to cut social security, so when I turned 18 I had to find work fast. All funding for alternative education dried up at the same time and CULC, which had always been hanging by a thread, went under. So less than three years after my parents ran away from home, my school dropped out on me. I've always done things a bit backwards.
+
+All of that backstory is just to say, when I was caught up in the creative frenzy of MozFest and hanging out with this great group of people who are Mozillians, that was the second time in my life where I felt like I fit in.
+
+*January 2013*
+
+Firefox OS Apps Day. My younger (age 12) kid and I attended Apps Day to get up to speed with programming for the new Firefox OS. Because all the apps are built using HTML, CSS, and Javascript, we were already relatively famililar with it, but wanted to see what we could realistically do with it. He had no trouble getting the [simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) installed, while I struggled for a bit (I think an older install was interfering). He was playing with the Three.js library and got a scene where you could move around a cube, while I worked on cleaning up my [Baffle](http://sketchdance.com/baffle/) app and making sure it worked in the simulator. He starts high school in the fall, and I asked if he'd rather have an iPhone or a Firefox OS phone and he was pretty clear he'd rather have a Firefox OS phone.
+
+*May 2013*
+
+May was a busy month of travel, first to New York City for the Tribeca Hacks [Storytelling Innovation Lab](https://tribecafilminstitute.org/blog/detail/storytelling_innovation_lab) with Mozilla's Brett Gaylor, Gregory Trowbridge and S&eacute;bastien Brothier from [Upian](http://www.upian.com/), back to Vancouver long enough to do laundry and re-pack, then to Toronto for my first Mozilla Foundation All-Hands meeting (finally).
+
+The Tribeca Storytelling Innovation Lab was a hack jam, but instead of just being a bunch of software hackers, it was a bunch of documentary filmmakers, with a sprinkling of software hackers for support, and the goal of making a web-enabled interactive documentary in three days. It was intense and fun, and I met some amazing people there, some of whom I continue to collaborate with (hi Willow!). For Brett's vision we shot and developed the documentary "A Morning Cup of Coffee" about privacy and tracking on the web, using an early version of the Lightbeam public database and a simplified version of the same visualization code used in Lightbeam, overlaying live data based on the viewer's input right on top of the video. There was also time to explore New York a little, which had changed a bit since I was last there around 1970 or so, and I got to connect with NYC-based Mozillians Atul and Cloe.
+
+Having missed my first Foundation all-hands meeting, I was excited to finally get to one and reconnect with the folks I had met at MozFest. It was also my first visit to Toronto, so I got to meet a bunch of Toronto-based Mozillians who weren't at MozFest, like Greg Wilson, whose work I'd been following for many years. One of the purposes of the all-hands meeting is to get everyone up to speed with all of the various projects going on at the Foundation, of which there are many, and I'm going to switch gears now to talk about some of those projects.
+
+
+*WebMaker*
+
+[Webmaker](https://webmaker.org/) is a set of tools (Xray Goggles, Thimble, Popcorn Maker) to help users create for the web, a place (the Make API) to publish those creations on the web, and a large and growing set of starter projects and tutorials to help get started making things for the web. Every Webmaker project comes with a Remix button, so others can take an existing project and modify a copy of it to make it their own. Xray Goggles is a bookmarklet to make any page editable, which gets used for everything from kids making their school website look like Hogwarts to political commentary. Once you have edited a page you can publish your version of it to the MakeAPI and share the link with your friends. Thimble is a tool for editing HTML and CSS (and more recently Javascript) with features to help folks new to these technologies learn them as they go. Popcorn Maker brings video and audio as full-fledged participants on the web by giving you a timeline, a tool for adding media objects to it, and events along the way for triggering other actions in the page (i.e., show a map at 1:15 in this video, pull up content from Wikipedia at 2:20, etc.). Powerful tools made easy to use to enable everyone.
+
+
+*The Hive Learning Network*
+
+[The Hive](http://hivelearningnetwork.org/) is a collection of city-based umbrella organization to promote [connected learning](http://connectedlearning.tv/), linking non-profit learning organizations (museums, libraries, after-school clubs and informal learning spaces) to guide and support teen and pre-teen kids through non-traditional learning pathways. Given my own educational history and my experience at CULC, this is a hugely inspiring project, and it resonates with what I've read on learning theory in Illich's "Tools for Conviviality" and Postman's "Teaching as a Subversive Activity" and "The End of Education."
+
+Hives exist now in Chicago, New York City, Pittsburgh, among many other places, and I am deeply interested in bringing one to Vancouver and more broadly to British Columbia. I was on the board of directors of an organization that I had hoped would be this kind of bridge between various learning organizations in the city, but it was caught up with poor financial planning and internal politics that dominated its activities and eventually forced the board to shut it down. So I have been once-burned, twice-shy about throwing myself into taking on actually organizing the hive here myself, but having been out in the city talking with educators, librarians, community centre coordinators, parents, etc., I have become more interested in taking this on, in lieu of anyone else stepping forward to do it. Talking with others in the local Mozilla community, there seems to be a lot of interest in helping out, so I look forward to exploring this further.
+
+*Open News*
+
+[Open News](http://opennews.org/) has two main branches. On the one hand it provides Fellowships which embed programmers into newsrooms around the world, on the other hand it sponsors open source code and the [Source](http://source.opennews.org/en-US/) repository for projects from newsrooms around the world. Many awesome projects like [Tabula](http://source.opennews.org/en-US/articles/introducing-tabula/), for extracting tabular data from PDF documents, have come from this model.
+
+*Mozilla Science Lab*
+
+The [Science Lab](http://mozillascience.org/) is about helping working scientists bring their work to the web, use and support open data, and help the web be a better platform for science. A big part of the Lab is the long-running [Software Carpentry](http://software-carpentry.org/) program, which is a bootcamp program to teach basic software skills to researchers in science, engineering, and medicine. I had the opportunity to mentor at one of these bootcamps where we taught the basics of using and coding in the Bash shell, using Git for version control and collaboration, and using Python for data processing. It's an intesive program, but really emphasizes the importance of having replicable results and re-usable tools for practicing science.
+
+*Open Badges*
+
+[Badges](http://openbadges.org/) are an alternate form of credentialling and acknowlegement for skill learning and accomplishments. They can be used to recognize learning and activities from both traditional education and non-traditional learning pathways (like the Hive Learning Network). Badges themselves are not just simple images, but have metadata baked in to show what the learner is being recognized for, how they were evalutated, who awarded the badge, etc. The Open Badges project includes open source infrastructure, example badge systems, partnerships, systems for displaying badges (the Badge Backpack), open APIs, and more, for a complete ecosystem around badge creation, earning, and awarding.
+
+*Web Literacy Standard*
+
+The [Web Literacy Standard](https://webmaker.org/standard) is a list of the high level skills needed to effectively use and build the web. It is part of an ongoing conversation to help make the web a better place and help ourselves know what to build to make the web easier to use (like Webmaker).
+
+*Open Games*
+
+Mozilla does a lot of work around games, but there isn't really one project that encompasses all of it. The best source I know for following what is going on with Open Games in Mozilla is [Cloe's Blog](http://chloeatplay.tumblr.com/). While Open Games aren't an official Mozilla track of development, I'm including it because we do keep coming back to it, and because I think games are hugely important. A couple of my own forays into open games include a [JavaScript tutorial](http://dethe.github.io/jstutorial/adventure.html) based around text adventure games and the in-progress [Weird Wide Web](https://github.com/dethe/weirdwideweb/blob/gh-pages/index.md) roleplaying game.
+
+All the above descriptions are my own (though I've borrowed a few phrases from their respective websites) and any errors in description are also my own. Any attempt to summarize so many large projects in a small space is perilous, and I'm sure I've left out some important details. Suffice it to say, there is a lot going on. Now, back to the timeline.
+
+*June 2013*
+
+Returning to Vancouver from the All-Hands, I dove into organizing Mozilla's participation at the [Vancouver Mini Maker Faire](http://www.vancouvermakerfoundation.org/events-and-programs/vancouver-mini-maker-faire/). Emma Irwin and Helen Lee initiated a Mozilla presence at the Faire, and I jumped in to do what I could to help, and pulled a bunch of other Mozillians from the Vancouver office in to volunteer. Because we were demoing Webmaker tools at our booth, we first had a Webmaker hack night at the office to get all the volunteers up to speed with the tools themselves. This was a great time for bringing the two parts of Mozilla together.
+
+In the run-up to Maker Faire, we had offered our meeting room to the event organizers. Yvan had scheduled the meeting, but had a scheduling conflict and couldn't make it, so I offered to host. I don't think either of us knew what to expect, thinking this was just a meeting for organizing the Faire itself. Instead, it was the first [Maker Education Meetup](http://www.meetup.com/Vancouver-Maker-Education-Meetup/) in Vancouver and was attended by makers, teachers, school adminstrators, community centre coordinators, librarians, parents, and kids. What united all of them was the desire to get tools like 3D printers into the hands of kids, and to get kids more involved in their own learning. There was an incredible energy in the room, and it felt like the beginning of something huge. There have been two follow-up meeting held at the local Hack Space, and at every one I make a point of attending to tell folks about Webmaker, the Hive, Open Badges, and the Web Literacy Standard.
+
+*August 2013*
+
+Wherever I go I end up being an ambassador for Mozilla. At a Neil Gaiman reading we were surrounded by librarians, and I ended up talking to them about Firefox OS, the Web Literacy Standard, Webmaker, and Open Badges. Got invited to speak at the BC Libraries Cooperative Open Data Camp in November, and the BCLA Conference next April.
+
+*Open Lunches*
+
+Throughout the year we've had a bunch of guest's at our Wednesday lunches, including our neighbours the [Vancouver Community Network](http://www2.vcn.bc.ca/) who provide internet access, technical training, and paid internships for residents of Vancouver's Downtown East Side, [Open Media](http://openmedia.ca/), Dallas Luther of [Maker Labs](http://www.makerlabs.ca/) and more.
+
+*September 2013*
+
+Mike Hoye invited me to pitch Waterbear to the [Undergraduate Capstone Open Source Projects](http://ucosp.ca/) (UCOSP) and it was accepted. Mozilla is a sponsor, and the initial sprint was held in Toronto office, so I made another trip to Toronto for that. Had a great sprint with 4 CS students who managed in one weekend to get up to speed with hacking on Waterbear, find bugs, fix bugs, add new features, completely rewrite the Sprite blocks, and build games with it. They have continued to work on it over the course of the term, and the UCOSP folks asked me to continue on next term, when the sprint will be held at Facebook headquarters and there will be up to 8 students from around the world (this term was limited to Canadian universities). Each week I've had a 1-hour "office hours" irc + etherpad meeting to mentor, check on progress, and help with blockers, the rest was coordinated through github and email. This is a great program, and it's been very helpful to see how others approach the project.
+
+Also in September, Amber Frid-Jimenez of Emily Carr University and I picked up the next thread in the Emily Carr-Mozilla collaboration by co-teaching a course called [What's Next: Art and the Future Web](http://www.ecuad.ca/programs/courses/DESN/312/F001S), with the goal of giving design students the web as a medium of expression. This was a full term course for third-year design students, most of whom had no previous experience with HTML or programming. Amber and I will finish writing up our notes and the full experience over the holidays to make this more re-usable, but my notes for the class [are online](http://dethe.github.io/presentation/), and we used a combination of Etherpad and JSBin for student work, and most of the students will be coming to the Vancouver office next week to showcase some of what they accomplished in the course.
+
+*October 2013*
+
+![Dethe at MozSummit](http://pbs.twimg.com/media/BVx-QYGCYAAXHso.jpg Photo by Will Barkis)
+
+Used Thimble to publish my rewrite of Emily Dickenson for Halloween: [Because I could not hack for Death](https://mozdethe.makes.org/thimble/a-poem-for-halloween). I may start putting all my poems into Thimble.
+
+This was another month of intensive travel, starting with the Mozilla Summit. This is an event for all staff of Mozilla, and an equal number of volunteers and contributors, and was large enough that it was spread across three locations worldwide. The core Lightbeam team was split among the three locations, and I went to the conference in Santa Clara, California. I presented Lightbeam there, and we signed up folks to beta-test it before its upcoming release. There were a lot of great sessions at this, and I got to meet lots of Mozillians from around the world, but the highlight was getting to spend some more time with the Badges team and get up to date with what they're doing.
+
+Just a couple of weeks after the Summit was MozFest, again at Ravensbourne in London. While this time I had a better idea of what to expect, I still managed to be even more over-committed than last year. First, I agreed to be the "Space Wrangler" to coordinate activities for the Make the Web Physical track, because it sounded too cool to pass up. Second, because we decided to launch Lightbeam 1.0 at MozFest and I had no idea going into it how much of my time and energy that would take up. Once it became clear (as should have been obvious earlier if I'd let myself realize it), there was no-way I could do both, I asked Rory Petty from Labs and Jon Buckley from Webmaker to help wrangle the track. I wasn't planning on dumping the whole thing on them, but that is the way it turned out once we got to London and the Lightbeam launch took over.
+
+I arrived early to start planning how the space would be laid out with different tracks and woke up the first day with my voice gone, so spent the next few days of press conferences, demos, interviews, and a keynote presentation just trying to croak loud enough to be heard. Continuing the theme from last year of meeting in person people I had long corresponded with on the net, this time I got to meet [Vinay Gupta](http://vinay.howtolivewiki.com/blog/about). Overall the launch went well, including the last-minute addition of a Reddit AMA (which thankfully didn't require me to speak). It feels very good to finally have Lightbeam out in the world and people using it.
+
+*November 2013*
+
+Attended the BC Libraries Cooperative Open Data Camp with Mozilla reps/mentors Helen Lee and Cynthia Ng. We focussed mostly on talking about Badges and Web Literacy Project, but also mentioned Webmaker, Hive, Open News. Librarians really get Badges, also open data librarians have a lot in common with open data journalists, they loved Tabula.
+
+I was invited to give a talk for [Rogue Curiousity](http://www.pechakucha.org/channels/powered-by-pechakucha/events/523821a9dbdd203d30000008), this was a "powered by Pecha Kucha" talk, so 20 slides for 20 seconds. My theme was "Should we teach children to code?" and anyone who knows me knows already what my conclusion was. The video should be live any time now.
+
+Also gave a talk to SFU first year CS students about life after graduation and what they can expect out in the workforce. On the one hand, my experience is probably atypical, but on the other hand I've gotten to experience many different types of jobs, from working for the university Network Services at Ohio University to working at Lucent Technologies, through 13 years of startups, and now Mozilla. We had a good talk and there were lots of questions afterwards, my favourite of which was (about the transitoriness of tech jobs), "does it ever get less scary?"
+
+No, not really.
+
+*December 2013*
+
+This month I'm readying an update for Lightbeam to fix some problems folks have encountered. I've also been helping out with [Appmaker](https://appmaker.mozillalabs.com/), which I think is a very exciting project using Web Components and a UI for drag-and-drop assembly so anyone can build a mobile webapp. I've been waiting for Web Components to be supported in a standard way across browsers since Microsoft introduced [Custom Elements](http://msdn.microsoft.com/en-us/library/bb250396%28v=vs.85%29.aspx) in IE 5.5. Those were under-documented, buggy, and horribly implemented (each element created an ActiveX control), but had all the right pieces: properties, attributes, events, methods, templates. I think Web Components (and an evolved JavaScript) are the future of the web, and will be an even bigger deal than HTML5 in the long run. Appmaker is building the tools now that will help a generation of new makers and builders create applications to solve their needs, without waiting for a company to solve some portion of their problems while introducing others. I can't wait to see where it goes.
+
+Later this month, on Friday the 13th, I'll be helping Super-Rep Emma Irwin, and a bunch of other Mozillians, out at [Discover Techtoria](http://discovertectoria.com/) in Victoria, BC. We'll be introducing Webmaker tools at two sessions, each with 350 kids in the audience. It will be a little different from our usual hands-on approach, but Emma has a good plan for handling it.
+
+*2014*
+
+In March I'm scheduled to talk about Lightbeam and security at [BSides Vancouver](http://www.securitybsides.com/w/page/27811926/BSidesVancouver).
+
+And on April Fool's Day, Cynthia Ng and I are schedule to present Webmaker tools at the [BCLA Conference](http://bclaconnect.ca/2014-conference/).
+
+*And that's all*
+
+It has been quite a year (and a bit). I'm grateful to all my co-workers and to the Ford Foundation (sponsors of Lightbeam) for making this possible.

@@ -1,0 +1,14 @@
+Bar Camp Tomorrow
+
+#published: 2006-08-25
+#tags: News, Conference, Python
+#type: Journal Post
+#uuid: d625c303-39e1-4c5a-98ca-9188d511010c
+
+Tomorrow, from 6PM to Saturday at 6PM will be the <a href="http://barcamp.org/BarCampVancouver">Bar Camp Vancouver</a>. I'll be heading over there with my neighbor, former co-worker, and original member of Pluto, John Ounpuu, currently of <a href="http://sutori.com/">Sutori</a> fame. I'm planning on ducking out to sleep at home rather than camping there, but I'm sure it will be a great time. If there is time I may reprise my presentation on Python, OS X, and Kids from the Vancouver Python Workshop. If time is short I may still be able to demo Drawing Board. If time is really short I'll still try to squeeze in a demo of the new hack I figured out last night (see next post). I'm also hoping to find some time to hack on turtle graphics for OS X, since I'm so close to having a working port of the standard library turtle graphics in PyObjC. But the main thing I'm excited about is meeting folks, it's going to be a <a href="http://barcamp.org/BarCampVancouverRegistry">great crowd</a>.
+
+Vancouver is such a great place. There's the standard stuff: Great weather, beautiful beaches, forests and mountains. Then there is all the rest: lots of interesting geeks of various stripes, cool places to work, small conferences to attend. I've had so much more fun at the Vancouver Python Workshop and Northern Voices than at big anonymous events like JavaOne and OOPSLA. There's just no contest. And BarCamp is all about being a small, intimate event–that appears to be its whole entire purpose. I can hardly wait.
+
+
+
+

@@ -1,0 +1,30 @@
+Reflecting on the past, looking to the future
+
+#published: 2006-01-01
+#tags: Essay, Critique, Vapourware
+#type: Journal Post
+#uuid: 54b3ba28-e73f-488a-816d-044e4e6d19cf
+
+Programming is the art of telling stories to the computer in such a way that the computer can tell us interesting stories back. At its best, these stories help us to write even better stories, and to share them with each other.
+
+I see computers as not ready yet. People buy them, they're interesting toys. They help in some ways, make things more difficult in others. But we have bought into the mythology of computers. Meanwhile, the state of the art in computing has moved backwards in important ways[1], even though computers are getting cheaper and faster. Innovation crawl during the dotcom boom[2]. Tools get more complicated[3], resulting in less freedom of expression, wasting the time of the people who use them.
+
+The idea behind Living Code is that software is not a thing that is finished, it is more like a conversation. Like telling a story that someone will make better. We are trying to take steps to move to a new model of software, one in which we don't "write programs," but instead play the computer like a musician plays jazz. This model should be accessible to children, and yes, even to adults.
+
+Empowering.
+
+A rather large goal.
+
+But just as software is never finished, the goal isn't there to be achieved. We have a goal in order to make focused, achievable steps while learning from history and aware of our limitations. In this conversation our goals become prototypes, experiments which are contantly evolving as they are tested in use.
+
+Happy New Year!
+
+[1] For examples of the promise that computers have thus far failed to live up to, see the wikipedia articles for <a href="http://en.wikipedia.org/wiki/Sketchpad">Sketchpad</a>, <a href="http://en.wikipedia.org/wiki/Dynabook">Dynabook</a>, <a href="http://en.wikipedia.org/wiki/OpenDoc">OpenDoc</a>, <a href="http://en.wikipedia.org/wiki/Seymour_Papert">Seymour Papert</a> or <a href="http://en.wikipedia.org/wiki/Douglas_Engelbart">Douglas Englebart</a>.
+
+[2] For examples of how computer innovation has stalled, check out one of many <a href="http://tinyurl.com/lut3n">patents</a> holding the field back, or check out this <a href="http://www.nimh.org/microsoft/">summary</a> of Microsoft's innovations.
+
+[3] For an example of how tools are getting too complicated, see Charles Petzold's article, <a href="http://www.charlespetzold.com/etc/DoesVisualStudioRotTheMind.html">Does Visual Studio Rot the Mind?</a>
+
+
+
+

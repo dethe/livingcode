@@ -1,0 +1,11 @@
+Unit Testing in Vancouver
+
+#published: 2009-02-02
+#tags: Python, Meeting
+#type: Journal Post
+#uuid: cf4247b1-e3f8-482a-ac45-2c6a49298ddf
+
+Just a quick reminder: Henry Prêcheur will be presenting Unit Testing in Python at the <a href="http://vanpyz.org/">VanPyZ</a> meeting tomorrow, February 3rd. The meeting will be at Workspace in Gastown (see map on VanPyZ page).  Meetings are from 7-8:30, then we head out for beers afterwards.
+
+Hope to see you there!
+

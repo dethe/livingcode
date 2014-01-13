@@ -1,0 +1,66 @@
+Bar Camp: Aesthetic programming for kids of all ages
+
+#published: 2008-11-06
+#tags: Kids, Presentations, Python, Web
+#type: Journal Post
+#uuid: 5c85fd43-cdec-4f2b-a366-2de07799a05f
+
+<canvas id="turtle_canvas" width="450" height="200" style="border:1px solid #000"></canvas>
+
+<script src="http://lcminiproject.googlecode.com/svn/trunk/webturtle/webturtle.js"></script>
+
+<textarea id="user_script" style="width: 450px; height: 200px;"></textarea><br />
+
+<script type="text/turtlescript" id="turtlescript">
+// You can create global turtles either way
+
+turtle1 = new Turtle({x: 350, y: 50}, 180);
+turtle2 = new Turtle(); // defaults to 100,100 at 0 degrees
+
+// One way to add functionality
+
+function hex(turtle, length){
+	for (var i = 0; i < 6; i++){
+		turtle.left(60);
+		turtle.forward(length);
+	}
+}
+
+hex(turtle1, 30);
+hex(turtle2, 20);
+turtle1.penup(); turtle2.penup();
+turtle1.forward(200); turtle2.forward(200);
+turtle1.pendown(); turtle2.pendown();
+turtle1.hide(); turtle2.hide();
+
+// Another way to add functionality
+
+Turtle.prototype.triangle = function(length){
+	for (var i = 0; i < 3; i++){
+		this.right(120);
+		this.forward(length);
+	}
+};
+
+turtle1.triangle(30);
+turtle2.triangle(45);
+turtle1.show();turtle2.show();
+</script>
+
+<button style="width: 250px; margin-left: 100px;">Run</button><br />
+
+<script>
+var user_script = document.getElementById("user_script");
+var sample_script = document.getElementById("turtlescript");
+user_script.value = sample_script.innerHTML;
+</script>
+
+OK, Bar Camp was over a month ago and I'm finally getting around to posting my second set of slides.  I've included notes right in the PDF this time, summarizing what I think I was talking about at the time.  
+
+<a href="/assets/2008/aesthetic-programming-for-kids-of-all-ages.pdf" title="Aesthetic Programming for kids of all ages">Aesthetic Programming for kids of all ages</a> (PDF)
+
+The reason this took so long is that I wanted to illustrate the concepts I was exploring out loud by embedding a programming environment into this blog post. So, what you see above is a tiny turtle language for Javascript and some examples of how to use it.  When you click the Run button, you should see the script run by having some drawing going on in the frame above it.  I've used Google's <a href="http://excanvas.sourceforge.net/">excanvas</a>, which hopefully will let it run in IE, but I haven't tested it much beyond Safari and have no idea if it will survive transliteration into Atom and beyond.  Let me know if it doesn't work for you, or if you have ideas for how to improve it.  I will be putting some more thought into these ideas soon.
+
+
+
+

@@ -1,0 +1,107 @@
+Hello Renaissance
+
+#published: 2004-11-03
+#tags: Python, PyObjC, Example Code, Cocoa, Tutorial, Renaissance
+#type: Journal Post
+#uuid: cb423747-7e8f-494f-8337-1ad3aaa76da5
+
+
+
+In my last post I promised a Hello World program for PyObjC + Renaissance. If you haven't got those installed, or aren't sure, please check out the [prerequisites](/entries/2004-11-03_a-new-renaissance).
+
+We'll be creating four files, each of which will be a template for upcoming examples. The menus will be defined in `MainMenu.gsmarkup`, the application window will be in `MainWindow.gsmarkup`, the application code will be in `hello.py`, and the py2app build script will be in `setup.py`. There is no reason that the menus and window have to be separated this way, but it will serve as an example for later, more complex applications, when you'll want to load in code from multiple files.
+
+**MainMenu.gsmarkup **
+
+    <?xml version="1.0"?>
+    <!DOCTYPE gsmarkup>
+    <gsmarkup>
+        <objects>
+            <menu type="main">
+                <menu title="Hello World" type="apple">
+                    <menuItem title="About Hello World"
+                    action="orderFrontStandardAboutPanel:"/>
+                    <menuSeparator/>
+                    <menu title="Services" type="services"/>
+                    <menuSeparator/>
+                    <menuItem title="Hide Hello World" action="hide:" key="h"/>
+                    <menuItem title="Hide Others" action="hideOtherApplications:"/>
+                    <menuItem title="Show All" action="unhideAllApplications:"/>
+                    <menuSeparator/>
+                    <menuItem title="Quit Hello World" action="terminate:" key="q"/>
+                </menu>
+                <menu title="Edit">
+                    <menuItem title="Cut" action="cut:" key="x"/>
+                    <menuItem title="Copy" action="copy:" key="c"/>
+                    <menuItem title="Paste" action="paste:" key="v"/>
+                    <menuItem title="Delete" action="delete:"/>
+                    <menuItem title="Select All" action="selectAll:" key="a"/>
+                </menu>
+                <menu title="Window" type="windows">
+                    <menuItem title="Minimize Window" action="performMiniatureize:" key="m"/>
+                    <menuSeparator/>
+                    <menuItem title="Bring All to Front" action="arrangeInFront:"/>
+                </menu>
+            </menu>
+        </objects>
+    </gsmarkup>
+
+**MainWindow.gsmarkup **
+
+    <?xml version="1.0"?>
+    <!DOCTYPE gsmarkup>
+    <gsmarkup>
+        <objects>
+            <window title="Hello World" closable="NO" >
+                <vbox>
+                    <label>Hello World!</label>
+                    <button title="Click this button to quit" action="terminate:"/>
+                </vbox>
+            </window>
+        </objects>
+    </gsmarkup>
+
+**hello.py **
+
+    from Foundation import *
+    from AppKit import *
+    from Renaissance import *
+    class MyApplicationDelegate(NSObject):
+
+        def cut_(self, sender):
+            pass
+
+        def applicationDidFinishLaunching_(self, notification):
+            NSBundle.loadGSMarkupNamed_owner_('MainWindow', self)
+
+    def main():
+        app = NSApplication.sharedApplication()
+        delegate = MyApplicationDelegate.alloc().init()
+        app.setDelegate_(delegate)
+        NSBundle.loadGSMarkupNamed_owner_('MainMenu', delegate)
+        NSApp().run()
+
+    if __name__ == '__main__': main()
+
+**setup.py **
+
+    '''
+    Minimal setup.py example, run with:
+    % python setup.py py2app
+    '''
+
+    from distutils.core import setup
+    import py2app
+    
+    setup(
+        data_files = ['MainMenu.gsmarkup', 'MainWindow.gsmarkup'],
+        app = ['hello.py'],
+    )
+
+**Commentary**
+
+OK, so 80 lines of code may seem excessive for a Hello World program. We could certainly do it in less, perhaps 20 total lines of Python and Renaissance. But what we have here is a complete working Cocoa application which behaves properly to standard keyboard shortcuts, supports services, etc. And that's not bad for 80 lines of code.
+
+
+
+

@@ -1,0 +1,15 @@
+Watershed du jour -- 3D coming of age
+
+#published: 2009-07-26
+#tags: Mac, Web, 3D, X3D, Collada
+#type: Journal Post
+#uuid: 40bb5f15-9ef2-4b20-9e07-29e202a993e3
+
+While software and hardware have made great strides, some things still remain in the realm of specialized software. One way to look at this is, what can you still *not* do on the web?  I can think of a few things: 3D, sound synthesis, video editing.  I have hopes for all of these, but 3D in particular looks to be on the edge of a real breakthrough, and not necessarily from where I expected it.
+
+For years I have been tracking X3D, the XML-based 3D specification that is the successor to VRML. I've been watching and working with the open-source <a href="http://freewrl.sourceforge.net/">FreeWRL</a> tool, and it has been making good progress. However, the Age of Plugins appears to be on the decline.  If it isn't built-in to the browser (or ubiquitous, like Flash, and I have doubts about the long-term viability of Flash), there is little chance of getting viewers to install a plugin for your media format. That's why I'm excited to see that Firefox is experimenting with a <a href="https://wiki.mozilla.org/Canvas:3D">3D context</a> for the &lt;canvas/&gt; element, which will base its API on <a href="http://www.khronos.org/opengles/">OpenGL ES</a>, and significantly will support import of <a href="http://www.khronos.org/news/permalink/firefox_with_canvas_3d_allows_loading_of_collada_models/">Collada models</a> (presumably Collada Digital Asset Exchange, or .dae files).
+
+But Firefox alone does not make a viable ecosystem.  The other things I have come across recently that have convinced me that Collada models are going to springboard 3D into the hands of ordinary users are that <a href="http://www.spore.com/patch">Spore patch 5</a> (available now for PC, coming soon for Mac) supports exporting creatures (with textures and ready for animation) in Collada format, so you <a href="http://oceanquigley.blogspot.com/2009/07/how-to-export-spore-creatures-to-maya.html">can work with them</a> in the 3D tool of your choice, and that the next major release of Mac OS X, Snow Leopard, will support <a href="http://www.apple.com/macosx/refinements/enhancements-refinements.html">Collada as a built-in file type</a> (scroll down to "Digital Asset Exchange support"). Collada has kept pretty quiet, at least in my world, but the support for it is <a href="https://collada.org/mediawiki/index.php/Portal:Products_directory">pretty widespread</a>, including open-source tools such as Blender and OGRE, plus all the usual suspects such as Maya and 3dsMax. Sadly, my editor of choice, Cheetah3D does not yet support it, but I understand they're working on it.
+
+I, for one, welcome our new 3D asset exchange overlords. Along with improved user creation tools like Spore, SecondLife, and SketchUp, 3D is almost ready for prime time.
+

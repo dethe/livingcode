@@ -1,0 +1,21 @@
+Useful Javascript References
+
+#published: 2008-09-13
+#tags: Javascript, Reference
+#type: Journal Post
+#uuid: b52343e5-0451-45dc-8cc6-2ad1cb5ac270
+
+I've been getting more Javascript questions, both at work and elsewhere, so I thought I'd post some of the resources I rely on, in case it is helpful to others, and so I have something to point folks to.
+
+Mozilla Developer Center is hard to navigate or search to find useful information, which is too bad, because there are some gems hidden away in it.  One of the ones I come back to again and again is the <a href="http://developer.mozilla.org/en/Core_JavaScript_1.5_Reference">Core Javascript Reference 1.5</a>.  Javascript 1.5 is out of date now, but in this case it just means this reference is useful across more browsers.
+
+I have become a major fan of jQuery, so the <a href="http://docs.jquery.com/">docs</a> for it have found a place on my bookmark bar as well.
+
+A key site for looking up web standards info is <a href="http://w3schools.com/">W3Schools</a>, and their <a href="http://w3schools.com/js/default.asp">Javascript</a> section is sometimes helpful, although their <a href="http://w3schools.com/htmldom/default.asp">HTML DOM</a> section is even better, especially for the semi-standard DOM Level 0 stuff like <code>window</code> and <code>location</code>.
+
+For questions about the DOM, I still go back to the <a href="http://www.w3.org/TR/DOM-Level-3-Core">W3C DOM Spec</a>, especially <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/ecma-script-binding.html">Appendix H</a>, which is the ECMAScript (Javascript) Binding, or API.
+
+Finally, I sometimes find that the Microsoft <a href="http://msdn.microsoft.com/en-us/library/ms533050(vs.85).aspx">documentation</a> for IE is helpful.  They often reorganize their site, and their search isn't very helpful, so the best way I've found to find information is to use google search with the term <code>site:msdn.microsoft.com </code>in addition to your search term(s). I don't know how anyone at Microsoft finds things on their own site, but I expect they end up using Google too.
+
+Those are the essential references I use.  None of them are particularly helpful for learning Javascript in the first place, or for developing a good style and using more advanced techniques, or taking advantage of browser specific features.  If there is interest, I can write about those another time.
+

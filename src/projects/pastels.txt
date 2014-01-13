@@ -1,0 +1,22 @@
+Pastels Screensaver
+
+#type: Project
+#format: markdown
+#tags: Projects, Screensaver, Art, OS X, Examples, Python
+#tagline: PyObjC Example Screensaver Code
+
+### PyObjC Example Screensaver Code
+
+Pastels is an example project for creating an OS X screensaver in Python using PyObjC. By extension it could be used as an example for building nearly any plugin or bundle for OS X. It started when I had an idea for drawing a simple squiggle, over and over, while cycling the colours and moving the squiggle around. I was very pleased with how it turned out.
+
+<img src="/assets/pastels/pastels.png" alt="Pastels screenshot" />
+
+<a href="http://code.google.com/p/pastels/">Source code repository</a> using Subversion at Google
+
+<a href="/assets/pastels/Pastels-0.3.1.dmg">Download version 0.3.1</a> Fixed universal build, tested on OS X (10.4). 3.4MB DMG file.
+
+<a href="/assets/pastels/Pastels-0.3.dmg">Download version 0.3</a> Intel build, tested on OS X (10.4). 3.4MB DMG file.
+
+<a href="/assets/pastels/Pastels.dmg">Download version 0.2</a> Universal build, tested on OS X (10.4). 3.6MB DMG file.
+
+<a href="http://code.google.com/p/pastels/issues/list">Bug reports and feature requests</a>  

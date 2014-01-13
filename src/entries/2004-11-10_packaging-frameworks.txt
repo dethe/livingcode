@@ -1,0 +1,85 @@
+Packaging Frameworks
+
+#published: 2004-11-10
+#tags: Python, PyObjC, Cocoa, Example Code, Tutorial, Renaissance
+#type: Journal Post
+#uuid: 692e400c-5755-4c93-b742-ce3f1027252d
+
+Packaging Renaissance applications (or any other frameworks) takes a bit more care than just wrapping your Python scripts. Today's exercise helps us get our apps out into the world.
+
+Now that we can build cool OS X applications with Python and Renaissance, it would be cool if we could share them with others, wouldn't it. And that stumped me for a bit. We're using `py2app` to package our scripts as applications, and it knows how to include a framework, but it takes a bit more than that. Specifically, the wrapper which imports the framework into Python has to be a tiny bit smarter. Let's take a look at the wrapper I provided earlier in this series, to go in Python's `site-packages/Renaissance/` folder.
+
+**Old __init__.py**
+
+    import objc, AppKit, Foundation
+
+    objc.loadBundle('Renaissance', globals(),
+        bundle_path='/Library/Frameworks/Renaissance.framework')
+    del objc, AppKit, Foundation
+
+And the new, smarter version, which handles bundling.
+
+**__init__.py**
+
+    import objc, AppKit, Foundation, os
+
+    if 'site-packages.zip' in __file__:
+        base_path = os.path.join(os.path.dirname(os.getcwd()), 'Frameworks')
+    else:
+        base_path = '/Library/Frameworks'
+    bundle_path = os.path.abspath(os.path.join(base_path, 'Renaissance.framework'))
+
+    objc.loadBundle('Renaissance', globals(), bundle_path=bundle_path)
+
+    del objc, AppKit, Foundation, os, base_path, bundle_path
+
+That takes care of importing the Renaissance framework, now we just need to make sure it gets included in our application bundle. You can do this by passing it on the command line
+
+`python setup.py py2app –framework=Renaissance.framework`
+
+But I'd prefer to put it into the `setup.py` so we don't have to remember command-line flags. Py2app is new enough that the documentation is a little rough, but Bob Ippolito (author of py2app) is very responsive on the pythonmac mailing list and he gave the following advice.
+
+> If you use a python module that links to Renaissance, it will automatically get included. Otherwise, you have to specify it as a framework.
+> 
+> `% python setup.py py2app -f Renaissance.framework`
+> 
+> (you can specify a full path to the framework or the dylib inside the framework if you want)
+> 
+> or from setup.py it would look like:
+> 
+>     setup(
+>         app = [...],
+>         options = dict(py2app=dict(
+>             frameworks=['Renaissance.framework'],
+>         )),
+>     )
+> 
+> This command is your friend:
+> 
+> `% python setup.py –help py2app`
+> 
+> Every "long name" in the list corresponds to an option you can pass via the options dict. Hypens are converted to underscores. This same dance works for any distutils command, btw.
+
+That's good to know about `distutils`, I've had trouble figuring out the mapping between command-line parameters and `setup.py` configuration. So here's the new version of `setup.py` for the browser app:
+
+**setup.py**
+
+    '''
+    Smarter setup.py example, run with:
+    % python setup.py py2app
+    '''
+
+    from distutils.core import setup
+    import py2app
+
+    setup(
+        data_files = ['MainMenu.gsmarkup'],
+        app = ['browser.py',],
+        options=dict(py2app=dict(frameworks=['Renaissance.framework'],)),
+    )
+
+There's still a lot more we can do with `py2app`, like adding custom icons, giving the application a better name, a version, the ability to advertise its ability to open certain types of files, etc. We're just getting to the good stuff.
+
+
+
+

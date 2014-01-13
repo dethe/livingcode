@@ -1,0 +1,14 @@
+Announcing Kinzin
+
+#published: 2007-04-17
+#tags: News, Kinzin
+#type: Journal Post
+#uuid: c30070f9-2253-43f1-85e4-e2afb404eaed
+
+<img src="/assets/2007/1970_sm.jpg" alt="1970" height="311" width="450" />
+
+Well, I'm not the <a href="http://www.mynameiskate.ca/2007/04/and_were_live_k.html">first</a> on the team to blog this, but at least I can explain a bit why my blog has been so quiet for the past few months: we've been working really hard to get <a href="http://www.kinzin.com/">Kinzin</a> launched. And last Tuesday, we did it.
+
+Here's the pitch: Kinzin is a social network for the network you already have: your family. Share photos, stories, events, and news with your family in a safe and convenient way. If your family is anything like mine, then it's full of crazy people. But also, and this is where Kinzin comes in, it is scattered around the world. I don't generally put pictures of my kids on the web, or on sites like Flickr, but I can shared them with family members on Kinzin. I can't tell you what a joy it has been to work on a site I'm actually interested in using.
+
+And now that we've launched, I'm hoping to a) add comments to this blog, and b) start writing about all the cool programming stuff I have back-logged. But while you're waiting, definitely check out Kinzin (we even have a <a href="http://blog.kinzin.com/">blog</a>).

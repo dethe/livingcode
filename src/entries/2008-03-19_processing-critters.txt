@@ -1,0 +1,60 @@
+Processing Critters
+
+#published: 2008-03-19
+#tags: Processing, Art, Projects
+#type: Journal Post
+#uuid: 81135c76-d162-4c66-91e2-47f52fba7dc9
+
+### Jittery Generative Creatures in Processing
+
+<p>
+<!--[if !IE]> -->
+<object classid="java:sketch_080314a.class" 
+    type="application/x-java-applet"
+    archive="/assets/2008/processing_critters/sketch_080314a.jar"
+    width="400" height="400"
+    standby="Loading Processing software..." >
+    <param name="archive" value="/assets/2008/processing_critters/sketch_080314a.jar" />
+    <param name="mayscript" value="true" />
+    <param name="scriptable" value="true" />
+    <param name="image" value="/assets/2008/processing_critters/loading.gif" />
+    <param name="boxmessage" value="Loading Processing software..." />
+    <param name="boxbgcolor" value="#FFFFFF" />
+    <param name="test_string" value="outer" />
+<!--<![endif]-->
+    <object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+codebase="http://java.sun.com/update/1.4.2/jinstall-1_4_2_12-windows-i586.cab"
+        width="400" height="400"
+        standby="Loading Processing software..."  >
+        <param name="code" value="sketch_080314a" />
+        <param name="archive" value="/assets/2008/processing_critters/sketch_080314a.jar" />
+        <param name="mayscript" value="true" />
+        <param name="scriptable" value="true" />
+        <param name="image" value="/assets/2008/processing_critters/loading.gif" />
+        <param name="boxmessage" value="Loading Processing software..." />
+        <param name="boxbgcolor" value="#FFFFFF" />
+        <param name="test_string" value="inner" />
+        <p>
+            <strong>
+                This browser does not have a Java Plug-in.
+                <br />
+                <a href="http://java.sun.com/products/plugin/downloads/index.html" title="Download Java Plug-in">
+                    Get the latest Java Plug-in here.
+                </a>
+            </strong>
+        </p>
+    </object>
+<!--[if !IE]> -->
+</object>
+<!--<![endif]-->
+</p>
+
+Source code: <a href="/assets/2008/processing_critters/sketch_080314a.pde">sketch_080314a</a> 
+
+I've been playing around some with <a href="http://processing.org/">Processing</a>, this is the result. As I mentioned in my earlier <a href="/entries/2008-02-20_the-importance-of-visual-programming">article</a>, Processing and <a href="http://www.nodebox.net/code/index.php/Home">NodeBox</a> are quite similar. Processing has some more interactivity (better keyboard and mouse handling) built in, and it can do basic 3D. NodeBox has better color handling (gradients) and remarkable libraries (WordNet). But what it really comes down to is that NodeBox is Python (much easier to extend) and Processing is Java (still easier than straight Java, but a lot more code to do basic extensions). Now all we need is a quick-start programming environment like these for Flash (and before you tell me the Adobe Flash tools are for artists–I have used the Flash IDE and it is possibly the worst IDE I've ever experienced. Which is odd, because the Flex IDE is one of the best, better than XCode/Interface Builder in some ways).
+
+All of which is the long way to say that I enjoyed making this little animation in Processing, but I'm ready to go back to working in Python now, thank you.
+
+
+
+

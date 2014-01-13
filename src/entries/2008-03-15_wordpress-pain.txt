@@ -1,0 +1,15 @@
+Wordpress pain
+
+#published: 2008-03-15
+#tags: Processing, Wordpress, Projects
+#type: Journal Post
+#uuid: 94536c76-be1a-401d-8340-d258a0c07835
+
+Well, I've been working off and on for a few days on a Processing applet.  The only reason I like Processing better than NodeBox is because I can embed the results in an applet on my web site.  At least, I could if WordPress didn't keep stripping out the embedding markup.  
+
+[Update: I did finally figure out how to disable the auto-conversion.  What a PITA.  Now I just have to figure out what I've broken by doing that.]
+
+Frustrations like this are why I was writing my own blogging software.  The main holdup on writing my own blogging software was the fact that it is damn difficult to get anything but PHP to run persistently on Dreamhost.  Actually, even WordPress runs as a CGI, so maybe its hard to run PHP persistently too.  Anyway, it would take a lot of effort to move all my sites to a host that lets me run WSGI apps, but at moments like this, I think it would be worth it.  WordPress has sucked yet more hours of my life away.
+
+Going to bed, sick with loathing for WordPress. Again.
+

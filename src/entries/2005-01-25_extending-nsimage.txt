@@ -1,0 +1,65 @@
+Extending NSImage
+
+#published: 2005-01-25
+#tags: Python, PyObjC, Example Code, Tutorial
+#type: Journal Post
+#uuid: 6ad4b306-802c-4746-a1a1-19e81071b280
+
+I'm going to try to post smaller snippets and experiments, more frequently. I've been struggling with creating images in code for a game I'm working on and had some successes lately that I wanted to share. Along the way we get to play with Categories, which allow existing Cocoa classes to be extended with new methods at runtime without access to the source code. Categories are in the latest release of PyObJC, but the example I'm giving uses a fresh checkout from the Subversion repository because I turned up a bug which Ronald Oussoren was kind enough to identify and immediately fix. Since this example is already on the bleeding edge, I'll also dabble with Python2.4 descriptors.
+
+The specific problem I was faced with is that it is easy enough to create images programmatically, or to read them in from a file, but there was no obvious way to save them to a file. A bit of googling led me to <a href="http://borkware.com/quickies/">Mark Dalrymple's</a> quickies which has lots of tips and tricks for programming Cocoa in Objective-C and which I got the basics for writing to an image to a file from. I pythonified it and turned it into a method of NSImage through the magic of Categories, adding a bit more along the way.
+
+**image_ext.py**
+
+    from objc import Category
+    from AppKit import *
+    from os.path import splitext
+
+    _fileRepresentationMapping = { '.png': NSPNGFileType,
+                                   '.gif': NSGIFFileType,
+                                   '.jpg': NSJPEGFileType,
+                                   '.jpeg': NSJPEGFileType,
+                                   '.bmp': NSBMPFileType,
+                                   '.tif': NSTIFFFileType,
+                                   '.tiff': NSTIFFFileType, }
+
+    def _getFileRepresentationType(filepath):
+        base, ext = splitext(filepath)
+        return _fileRepresentationMapping[ext.lower()]
+
+    class NSImage(Category(NSImage)):
+
+        def rect(self):
+            return (0,0),self.size()
+
+        # If you're using the current release of PyObjC and don't feel like grabbing the fix
+        # from the repository, remove this method altogether and read in from files as
+        # usual (reading isn't so tricky)
+        @classmethod # If you're using Python 2.3 comment this line and uncomment below
+        def imageWithFilePath_(cls, filepath):
+            return NSImage.alloc().initWithContentsOfFile_(filepath)
+        #imageWithFilePath_ = classmethod(imageWithFilePath_)
+
+        def writeToFilePath_(self, filepath):
+            self.lockFocus()
+            image_rep = NSBitmapImageRep.alloc().initWithFocusedViewRect_(self.rect())
+            self.unlockFocus()
+            representation = _getFileRepresentationType(filepath)
+            data = image_rep.representationUsingType_properties_(representation, None)
+            data.writeToFile_atomically_(filepath, False)
+
+        def fillWithColor_(self, color):
+            self.lockFocus()
+            color.set()
+            NSBezierPath.fillRect_(self.rect())
+            self.unlockFocus()
+
+I probably should have just elided the `imageWithFilePath:` method, since it is the only part which is really bleeding-edge, but I was so happy to get it working that I couldn't bring myself to drop it. In any case, it's the `writeToFilePath:` method which I was looking for. In case its not obvious, this will grab the extension of the path you pass in and determine the right type of file to save. The key to saving images in Cocoa is that they have to pass through a subclass of NSImageRep and of NSData before they're ready to write. This just encapsulates is all in one place.
+
+While I was at it I added `fillWithColor:` because I thought and image should be able to do that %-)
+
+Next up: Teaching NSBezierPath new tricks.
+
+
+
+

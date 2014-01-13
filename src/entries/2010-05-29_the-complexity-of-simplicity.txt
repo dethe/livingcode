@@ -1,0 +1,70 @@
+The Complexity of Simplicity
+
+#published: 2010-05-29
+#tags: Simplicity, Kabbalah, Graphics, Programming
+#type: Journal Post
+#uuid: ce38d1cc-c4a5-44f9-b473-d3d5c571e1e4
+
+<div id="tree_of_simplicity"></div>
+
+I have been thinking a lot about simplicity recently, and for some time. I'm going to use John Maeda's book, <a href="http://lawsofsimplicity.com/category/laws?order=ASC">The Ten Laws of Simplicity</a>, as a jumping-off point, not because I necessarily agree that there are ten laws and these are them, but because when I was reading it they reminded me, for whatever reason, of the ten <a href="http://www.byzant.com/Mystical/Kabbalah/Sefira.aspx">sephiroth</a> in Kabbalah, leading to the image above. I am not an expert in Kabbalah (or simplicity) and I am using above image as a jumping-off point for a meditation on simplicity. I have attempted to match the "laws" to the sephiroth (the circles), but I would be happy to have feedback on better matches. Maeda's book is available at the link above, but for quick reference, the ten laws are:
+
+> 1. Reduce. "The simplest way to achieve simplicity is through thoughtful reduction."
+> 2. Organize. "Organization makes a system of many appear fewer."
+> 3. Time. "Savings in time feel like simplicity."
+> 4. Learn. "Knowledge makes everything simpler."
+> 5. Differences. "Simplicity and complexity need each other."
+> 6. Context. "What lies in the periphery of simplicity is definitely not peripheral."
+> 7. Emotion. "More emotions are better than less."
+> 8. Trust. "In simplicity we trust."
+> 9. Failure. "Some things can never be made simple."
+> 10. The One. "Simplicity is about subtracting the obvious, and adding the meaningful."
+
+Murray Gell-Mann talked about simplicity in John Brockman's *The Third Culture* (Simon and Schuster, 1995) in his definition of "Plectics"
+
+> "...the study of simplicity and complexity. It includes the various attempts to define complexity; the study of roles of simplicity and complexity and of classical and quantum information in the history of the universe, the physics of information; the study of non-linear dynamics, including chaos theory, strange attractors, and self-similarity in complex non-adaptive systems in physical science; and the study of complex adaptive systems, including prebiotic chemical evolution, biological evolution, the behaviour of individual organisms, the functioning of ecosystems, the operation of mammalian immune systems, learning and thinking, the evolution of human languages, the rise and fall of human cultures, the behaviour of markets, and the operation of computers that are designed or programmed to evolve strategies - say, for playing chess, or solving problems."
+
+The thought above brought to mind Christopher Alexander's <a href="http://www.livingneighborhoods.org/ht-0/fifteen.htm">15 properties</a> necessary for creating a sense of life:
+
+> 1. Levels of Scale
+> 2. Strong Centres
+> 3. Thick Boundaries
+> 4. Alternating Repetition
+> 5. Positive Space
+> 6. Good Shape
+> 7. Local Symmetries
+> 8. Deep Interlock and Ambiguity
+> 9. Contrast
+> 10. Gradients
+> 11. Roughness
+> 12. Echoes
+> 13. The Void
+> 14. Simplicity and Inner Calm
+> 15. Not Separateness
+
+Now there are 22 <a href="http://www.byzant.com/Mystical/Kabbalah/Path.aspx">paths</a> between the sephiroth, associated with the 22 letters of the Hebrew alphabet (and with 22 cards of the Major Arcana in the Tarot, by some), so I thought of using Alexander's properties for the paths. He isn't exactly talking about simplicity here, but then, neither is Maeda, really. At least to my mind, they appear to be driving towards the same goal. Of course, 15 properties for 22 paths doesn't work, so I was glancing through my journal to see if there was anything which would be a better fit and came on my notes from David Gelernter's book, <a href="http://goo.gl/KmEb ">Mirror Worlds</a>.  In it he had three *clarity principles* and my notes include four other important principles in the book, for a total of seven. Luck is with me, if I combine the seven principles from Mirror Worlds with Alexander's fifteen principles of life, I get 22 paths, and they even make sense together, to some degree.  Here are the seven principles that I drew from Mirror Worlds:
+
+> 1. Recursive simplicity (first clarity principle)
+> 2. Uncoupling (second clarity principle)
+> 3. Espalier (third clarity principle)
+> 4. Piranha parallelism
+> 5. A deep picture that is also a live picture
+> 6. Agents
+> 7. History and experience
+
+So now we have thoughts on simplicity (or life, but I am going to treat them as the same for the purpose of this post) from a designer, a physicist, an architect, and a programmer.  I have organized the tree in three columns, using principles from Richard Gabriel's <a href="http://www.dreamsongs.com/Files/PatternsOfSoftware.pdf">Patterns of Software</a>, which in turn is inspired by, and an exploration of, Christopher Alexander's work.  These principles are Habitability, Compression, and Piecemeal Growth.
+
+Of all of these, perhaps the "Laws" are the most self-explanatory, at least in combination with the catchphrases the Maeda helpfully provides (on its own, "The One" isn't very descriptive).  I think Alexander's properties are fairly evocative on their own, although you should really read his books which give many examples in art and architecture to build a strong story. When we get to Gelernter's principles, they become fairly cryptic. Recursive Simplicity repeats the theme of this post, but also tackles one of the techniques in programming (and in nature) that is both utterly simple (and simplifying), but can also lead to incredible complexity: recursion, or the ability for something to be built of parts, and to also be one of the parts it is built with. Uncoupling means that things which are separate can be changed independently without breaking the whole, and Gelernter's *Linda* programming language, which introduce the concept of <a href="http://en.wikipedia.org/wiki/Tuple_space">Tuplespaces</a>, was uncoupled both in space (as is common in distributed systems), but also in time (which was, and is, quite innovative and powerful). And Espalier is a concept which is so compact that I keep having to refer back to the book to interpret it. It is a horticultural technique of training a tree through both pruning and grafting. In Gelernter's use of the word, I understand it to encompass what is usually called "refactoring" now, the process of taking an existing, working system, and evolving it to be more elegant and maintainable. Piranha parallelism is when you have many processors, and each asks for more work whenever it has free cycles. This is roughly how systems like SETI@Home work, and is powerful in that it scales to a tremendous number of processors smoothly, while also being easy to understand. A deep picture which is also a live picture is something like Google Earth, if you could zoom down into Google Earth and get up to the minute data on what you find there: traffic conditions, temperatures, building occupancy, etc. Agents are programs that you tell to find things which you are interested in and report back, like Google notifications (a very simplistic form of agent). And history and experience refers to our systems learning from us. If I use a piece of software, and I always go through the same series of menus and commands with it, that software should learn from my behaviour to anticipate what I'm going to do and give me an easier/faster/more intuitive way of doing it.
+
+I am trying to imagine what computing systems would look like if they were based on these properties. I think the <a href="http://www.vpri.org/fonc_wiki/index.php/Main_Page">Fundamentals of New Computing</a> (FONC), which is trying to write an entire operating system in 20,000 lines of understandable code (roughly the length of a novel) is trying to explore this space. Can a system be built from scratch, in parallel with our existing computer systems, using these properties, or would it have to be created by selectively ignoring and un-using the complexities we already have (already are burdened with)?  What is missing? What can we do without?
+
+Some, such as ambiguity and roughness are genuinely challenging for computing systems today. We don't have a language for them. Perhaps the key lies there.
+
+One of the things I find interesting is that in trying to grapple with Simplicity, I have created something quite complex. The graphic above is built using the <a href="http://raphaeljs.com/">Raphaël</a> library, which builds on SVG and VML, which build on XML, which build on HTML, which builds on SGML, et cetera ad infinitum. Simplicity begets complexity which gets wrapped in a simple interface only to build complexity again. Simple systems are complex inside, and complex systems often have a simple core. In a way it is related to fractals, which are self-similar at varying levels of scale, except that simplicity and complexity are different at different levels of scale, then get similar again.
+
+In the end, I'm not sure if any of this has helped me to understand simplicity (I don't understand Kabbalah, either), but I like the image that came out of it, and the journey was more important than the destination anyway. I hope you found it interesting also.
+
+
+<script src="/javascripts/raphael-min.js"></script>
+<script src="/assets/2010/simplicity.js"></script>
+<link rel="stylesheet" href="/assets/2010/simplicity.css" />

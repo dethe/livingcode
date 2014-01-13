@@ -1,0 +1,28 @@
+Oblique Strategies
+
+#published: 2004-11-24
+#tags: Python, Cocoa, PyObjC, Renaissance, Example Code, Tutorial, Oblique Strategies, Project
+#type: Journal Post
+#uuid: aa5dccd4-df32-4f0a-9791-ec6d6ea26f5d
+
+Today's Example is a simple, but full application. Our setup file is getting more complicated as we give the app a custom icon and a name which isn't taken from the main python file. We're finally using the menus for more than just default behaviors. We're loading in resources at runtime. We're adding a custom About box. And we're taking advantage of Python standard libraries from within a Cocoa program. One icon file + 224 lines of python, XML, and HTML.
+
+Some years ago Brian Eno and Peter Schmidt created a deck of cards for brainstorming your way through artistic blocks. Each card had one idea, and they were called Oblique Strategies. The Whole Earth Review published a list of some of the strategies, the decks went through several editions, and there were quite a number of programs written to simulate drawing a card from the deck. The <a href="http://www.rtqe.net/ObliqueStrategies/">Oblique Strategies Web Site</a> has more details. You can buy the deck from <a href="http://www.enoshop.co.uk/">Brian Eno's site</a>. And a group called curvedspace created a nice<a href="http://www.curvedspace.org/software/oblique.html"> OS X version</a> which you can download for free from their site.
+
+The curvedspace app is so nice, in fact, that we're going to slavishly imitate it. There are only a couple of problems with it. First, you can't add your own quotes and sayings to the mix. Second, it's free, but not open source, so you can't patch it to allow you to add your own quotes. Tonight's example will build a version identical to the curvedspace tool, but which allows you to choose from among several quote files, not just the Oblique Strategies. A future exercise will be to allow the user to customize it with new quotes from within the running application.
+
+Since there's quite a bit more code, and by reader request, this example is contained on a downloadable .dmg file. The file contains both the finished, runnable application, and all the source code. I'll just be describing highlights of what's different from earlier examples. You can download it all <a href="http://prdownloads.sourceforge.net/livingcode/ObliqueStrategies.dmg?download">here</a>.
+
+What's new? First of all, the `setup.py` defines a plist resource inline to map some of the application features. This gives the application a name ("Oblique Strategies" rather than picking up "oblique" from the python file, and sets up some info for the About box. The setup call is a little more complex too, including English.lproj (which holds our icon) and Credits.html (which is the content of our About box), and passing in the plist we defined.
+
+In the `MainMenu.gsmarkup` we have added a bunch of menu items to the File menu, to allow the user to pick a quotation file. What's interesting is that we've implemented `About Oblique Strategies' and Edit->Copy, but those menu items didn't have to change.
+
+In `oblique.py`, the main script, we implement a subclass of NSWindow called TexturedWindow. This is to work around a limitation of the current version of Renaissance, which doesn't support so-called Metal windows (because GNUstep doesn't have them). Nicola has fixed this in CVS, so it will be in the next release, but in the meantime it is a simple class (4 lines of code) and we use the `instanceOf` attribute of `<window />` to call our subclass in the `MainWindow.gsmarkup`.
+
+Our AppDelegate is similar to earlier examples, but has grown a couple of methods. The `change()` method is called by our one button to select another quotation at random from the selected file (or a random file if you like). The `chooseFile_()` method checks to see which menu item called it, and based on the menu item, selects the file for future calls to `change()`. There is one support function, `getQuote(filename)` which uses Python standard file manipulation and the random module to pick a quote (much less verbose than doing this from Objective-C).
+
+All that's left are the quote files. These are simple text files with short quotations, one to a line. If a quote requires newlines, they can be embedded with '`\n`'. The included files have quotes from Martin Fowler's book "Refactoring," the book "The Pragmatic Programmer," the Magic 8-Ball, Jenny Holzer's Truisms, and more. Enjoy!
+
+
+
+

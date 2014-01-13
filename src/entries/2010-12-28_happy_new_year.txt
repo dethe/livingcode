@@ -1,0 +1,34 @@
+Happy New Year
+
+#published: 2010-12-28
+#tags: Blogging, Update, Life
+#type: Journal Post
+#uuid: 5e3b424a-0d37-48df-b5c8-1d3d1c658524
+
+<a href="http://www.wordle.net/show/wrdl/2926895/Living_Code" title="Wordle: Living Code (historic)"><img src="/assets/2010/living_code_historic_wordle.png" alt="Wordle: Living Code (historic)" ></a>
+<em>Word cloud for entire history of Living Code</em>
+          
+As we near the end up 2010 I wanted to make one last (probably) post for the year. It's been a slow year for blogging, but busy in pretty much every other way. There could be a connection between these things.
+
+Reader Matthias Endler pointed out that the links on my archives pages were broken. Changes the way I post from my laptop up to the blog had left some links as absolute rather than relative, which caused them to point to http://localhost/ instead of http://livingcode.org/ (i.e., breaking things badly). That should be fixed now, thanks Matthias!
+
+I don't usually write about my day job here, but things are going really well at <a href="kinzin.com">Kinzin</a>. If you want to be able to share photos and discussion with a group privately, without worries of sharing with the whole internet, give Kinzin a try. And I'm convinced there is no easier way to build photo books, trading cards, or custom calendars. I'm lucky to be working with a great team, and we are all focused on making the experience the easiest and most pleasant anywhere. And let me know what you think of it. We are always working to make Kinzin even better.
+
+Our Xmas holiday has been mostly quiet times at home. Azlen got the D&D board game <a href="http://boardgamegeek.com/boardgame/59946/dungeons-dragons-castle-ravenloft-board-game">Castle Ravenloft</a>, so he and I have been playing that about twice a day. Great fun. If you like complex board games or simplified role playing games, I recommend it. There are lots of additional adventures and other expansions that fans have created for it, so we expect to get a lot of play from this one.
+
+<a href="http://strangeplaces.livingcode.org/">Daniela</a> has been busy working on her dissertation (yay!), with the goal of defending it in April. She and I are working on turning one of her manuscripts into an eBook. Seth got a lot of books for Xmas, so he's been busy reading and drawing, with breaks to practice guitar. Between all of that and eating turkey, the house has been quiet and a bit sleepy. Relaxing and fun, my favourite way to spend the holidays.
+
+I have several side projects in various stages of pre-release. I'm not entirely sure which ones will be ready for public comment first, but they relate to things I've discussed here before: visual programming, programming for kids, making graphics and games easier. All of my programming has become very web-based, a lot more Javascript than Python these days. I've also become quite a fan of <a href="http://couchdb.apache.org/">CouchDB</a>, and I'll be posting more about that in the coming months.  All the web projects will be open source and hosted on GitHub. Stay tuned.
+
+There are a few projects I haven't open-sourced, for the iPhone. I currently have <a href="http://itunes.apple.com/artist/living-code/id326179694">3 apps</a> in the iPhone store (see the sidebar for links), mostly experiments as I learned the platform. I will write more about the experience and what I've learned from it, as well as discuss a couple of upcoming apps.
+
+<img src="http://api.ning.com/files/M5bUMpoq2*8q1rPIVMCTMMHjYl7oO3rvXZHZgpj-H71AK1C8Qtaf-2yq*sY-2wyyjjjo4ZGjwKMYfqKvRmXckWm3*NEEBP8e/W2RenderResize.jpg" alt="Image of W2 at Woodwards" />
+
+This year I also joined the board of directors for the <a href="http://www.creativetechnology.org/">W2 Community Media Arts Centre</a>, an arts and technology resource for Vancouver's Downtown East Side. It is an exciting time for W2 because after years of hard work and perseverance, and several temporary locations, the Centre is finally in its long-awaited home in the historic Woodwards building. This is the beginning of something big, and I'm very happy to be a part of it. W2 is the closest thing I've seen to my vision for <a href="/entries/2009-10-12_schools-of-the-future/">schools of the future</a>.
+
+In the coming year, aside from continuing to post code snippets and tutorials, I plan to engage more in the community around me. I have lived in Vancouver for over ten years now, but most of that time I have been heads-down with start-ups and raising small children. Now my kids are 10 and 14 and Kinzin is transitioning beyond start-up. I plan to celebrate by starting to have that thing I've heard so much about: a life. And part of that means I will be posting more about life and not just code. I hope that works for you.
+
+All in all, 2010 has been a wild ride, and I expect 2011 to be even more so. Fasten your seat belts and hang on tight. Let's go!
+
+<a href="http://www.wordle.net/show/wrdl/2925659/Living_Code" title="Wordle: Living Code (recent)"><img src="/assets/2010/living_code_recent_wordle.png" alt="Wordle: Living Code (recent)" ></a>
+<em>Word cloud of recent entries on Living Code</em>    

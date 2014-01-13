@@ -1,0 +1,14 @@
+Coming attractions
+
+#published: 2005-02-25
+#tags: Python, Reference, Cocoa, Projects, PyObjC
+#type: Journal Post
+#uuid: 11910cdc-1c99-4a6e-ba3a-57f9e69edc99
+
+I'm slowly making progress on ZenPaint, a simple animation tool for kids. I started writing it using PyGame, but hit the wall in terms of display, having to redefine my own widgets, etc. So I've taken a couple of step back and now I'm working on it using PyObjC. I keep waffling back and forth on whether to use Interface Builder or not. I don't find Interface Builder very intuitive at all, but maybe I need to buckle down and get good at it. Knowing about nibtool helps–at least I can do text diffs and simple renames from the command-line.
+
+One thing I would like to point out, the Apple <a href="http://developer.apple.com/releasenotes/Cocoa/NSDocumentFAQ.html">NSDocument FAQ</a> is one of the best bits of documentation I've ever seen out of Apple. So I'm mentally translating it into Python and trying to apply it to ZenPaint. As soon as I can load and save files reliably I'll post the program and code up here for comments.
+
+
+
+

@@ -1,0 +1,14 @@
+MetaProgramming at VanPyZ
+
+#published: 2008-03-31
+#tags: Python, Meeting
+#type: Journal Post
+#uuid: e6446af0-c2dd-477c-92dc-aae3d104a724
+
+Just a reminder for Pythonistas in the Vancouver area: The Vancouver Python and Zope user group (VanPyZ) is tomorrow (Tuesday, April 1). Paul Prescod will be talking about metaprogramming in Python. Details and directions are on the <a href="http://www.vanpyz.org/">VanPyZ site</a>. And, as usual, we'll be heading out to the pub afterwards for more discussion.
+
+Hope to see you there!
+
+
+
+

@@ -1,0 +1,33 @@
+Losing my Nibs
+
+#published: 2004-11-02
+#tags: Python, OS X, PyObjC, Cocoa, Critique
+#type: Journal Post
+#uuid: 96c87ef7-0fc0-4144-8c23-d1bf157ac0ca
+
+
+
+I've been working with <a href="http://pygame.org/">PyGame</a> a lot and it's been hard slogging. PyGame is great for moving images around quickly, but I'm more interested in vector drawing, native UI widgets, and higher-level events than I can get from PyGame.
+
+So lately I've been turning my attention more and more toward <a href="http://pyobjc.sourceforge.net/">PyObjC</a><a href="http://pyobjc.sourceforge.net/">.</a> I'm writing games for my kids, who are playing them on OS X, and I'm much less willing to make sacrifices to get cross-platform behaviour. And when I only have a few hours a week to write code, I need to focus on high productivity tools. So I'm writing Cocoa code, using Python, and it's great. Bob Ippolito, Bill Bumgarner, Ronald Oussoren, Jack Jansen and the rest of the MacPython developers have produced an amazingly great tool. on top of Apple/Next's highly evolved Cocoa framework. The mapping is so good that standard Cocoa references work for me to bootstrap my way up the Cocoa learning curve, my favorite reference being <a href="http://homepage.mac.com/aglee/downloads/">AppKiDo</a>, which gives a series of views on every class (being able to separate instance methods of a class from all the intance methods it inherits, for example). Great stuff.
+
+My only problem with Cocoa development (besides all the things I still have to learn about it, I'm not yet a proficient Cocoa developer) is the reliance on Interface Builder and NIB files. I think Interface Builder is one of the best visual layout tools I've used, and it's great as far as it goes, but the problem is that you pretty much have to use it. I've tried to create applications which built their own interfaces from code, but I was unable to get the menus working because the Cocoa framework expects you to load the menus from a NIB at startup. I'm sure it can be done, but I couldn't figure out how, even with the help of the MacPython <a href="http://mail.python.org/mailman/listinfo/pythonmac-sig">mailing list</a> and <a href="http://www.pythonmac.org/wiki/FrontPage">wiki</a>.
+
+And NIB files, which is how Interface Builder stores the interface, are a problem for me too, because they are serialized objects, not descriptions, so they are binary goop which is inaccessible except to Interface Builder. I can't grep them or do a global search-and-replace if I change a method name. It's hard enough for me to find the right places in IB to hook into my application, but finding all the places later which I need to change when my code changes rapidly becomes nightmarish.
+
+And all this leads to examples like <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/TextArchitecture/Tasks/TextEditor.html">Build a text editor in 15 minutes</a> or <a href="http://66.102.7.104/search?q=cache:6-vXeR_P108J:crankycoder.com/archives/000052.html+Victor+Ng+Cocoa+NSDocument&amp;hl=en">An example using NSDocument</a> which consist of a few lines of code (the power of Cocoa) accompanied by tons of screenshots of Interface Builder and paragraphs of instructions for wiring up your application. Even worse, as the second example demonstrates, since the author no longer hosts that article and Google doesn't cache the images, the screenshots no longer exist.
+
+One more gripe. Because IB stores serialized objects, it doesn't pick up changes to your code for those object unless you specifically force it to. So what I want in a UI tool:
+
+* Declarative
+* Simple <em>and</em> powerful
+* Able to replace NIB files and Interface Builder
+* Text-based, not binary
+* Agile for rapid development, adapts to rapidly changing code
+* Able to specify simple apps completely, in code, without resorting to pictures or talking the user through mouse gestures
+
+And the best part is that I think I've found it. More in my next post.
+
+
+
+

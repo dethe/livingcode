@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Creating OS X Cocoa Applications Using XML and Python</title>
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.0" />
+<meta name="presdate" content="20041216" />
+<meta name="author" content="Dethe Elza" />
+<meta name="company" content="Blast Radius" />
+<link rel="stylesheet" href="ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="ui/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="ui/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+	<h1>VanPyZ&#8226; 2005-02-01 &#8226; Dethe Elza</h1>
+	<h2>Using Python and Cocoa on OS X</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+<div class="presentation">
+
+<div class="slide">
+	<h3>Using Python and Cocoa on OS X</h3>
+	<h4>Dethe Elza</h4>
+	<h4><a href="http://blastradius.com/">Blast Radius</a></h4>
+	<ul>
+		<li>Project Site: <a href="/projects/">livingcode.org/projects/</a></li>
+	<li>Blog: <a href="http://livingcode.org/">livingcode.org</a></li>
+	<li>Source and Apps: <a href="http://livingcode.sf.net/">livingcode.sf.net</a></li>
+</ul>
+</div>
+
+
+<div class="slide">
+  <h1>Some Elementary Background</h1>
+  <p style="text-align:center">
+  <img src="pix/no-adults.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>OS X, How and Why</h1>
+<ul>
+	<li>BSD Unix with a nice UI</li>
+	<li>Apple OS with a robust underpinning</li>
+	<li>GUI based on OpenGL, very fast, flexible, and powerful</li>
+	<li>Many other nice features: powerful search tools, graphics manipulation, network autodiscovery (Rendezvous)</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Cocoa: What and Why</h1>
+<ul>
+	<li>NextStep Object-Oriented GUI toolkit</li>
+	<li>Coded in Objective-C</li>
+<li>Flexible, powerful, fast, beautiful</li>
+<li>Open-source version: GNUstep, based on OpenStep specification</li>
+<li>Kind of a steep learning curve</li>
+<li>Can require a lot of code to set up the UI</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>The Three Roads to Cocoa in Python</h1>
+  <p>Cocoa is accessible from Python via the PyObjC library, but there are (at
+  least) three ways to build the Cocoa UI.<p>
+<ul>
+	<li>Interface Builder</li>
+<li>Renaissance</li>
+<li>Pure Python</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>The Dream of the Perfect Interface Interface</h1>
+  <p style="text-align: center">
+    <img src="pix/interface_builder.png" height="405" width="559"/>
+  </p>
+</div>
+
+<div class="slide">
+<h1>Interface Builder: What and Why</h1>
+<ul>
+<li>Drag-and-drop "simplicity" for building user interfaces</li>
+<li>Creates a binary bundle of serialized objects</li>
+<li>Pro: You can see what your interface will look like</li>
+<li>Con: Can take a lot of time and tweaking to get interface right</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Interface Builder: Continued</h1>
+<ul>
+<li>Pro: Standard practice for OS X Apps</li>
+<li>Con: Hard to maintain and refactor binary bundle</li>
+<li>Pro: Can be used to create stub application</li>
+<li>Con: Later changes not automatically picked up</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>No Honor Among Renaissance Men</h1>
+  <p style="text-align: center">
+    <img src="pix/renaissance.png" height="400" width="770"/> 
+  </p>
+</div>
+
+<div class="slide">
+<h1>Renaissance: What and Why</h1>
+<ul>
+<li>XML language for building GNUstep and Cocoa application UIs</li>
+<li>Alternative to binary NIB files</li>
+<li>Declarative, simple, and powerful</li>
+<li>Easy to create, maintain, modify, read</li>
+<li>Has some pretty severe limitations</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Renaissance: Continued</h1>
+<ul>
+<li>Pro: Good for teaching: Can show how to build app without screenshots of
+Interface Builder</li>
+<li>Con: Unfortunately missing a lot of UI classes</li>
+<li>Pro: Autolayout makes app development fast</li>
+<li>Con: Autolayout doesn't support dynamically changing interfaces</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>Interface Builder NG: Vim</h1>
+  <p style="text-align: center">
+     <img src="pix/pure_python.png" height="435" width="912"/>
+  </p>
+</div>
+
+<div class="slide">
+<h1>Pure Python Cocoa: What and Why</h1>
+<ul>
+<li>A Cocoa interface can be written in pure python using PyObjC</li>
+<li>It's tricky, and can be verbose</li>
+<li>Once the hard parts are done, they can be reused in other apps</li>
+<li>With nice wrappers, development can be as fast as Renaissance, more
+powerful than Interface Builder</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>Pure Python Cocoa: Continued</h1>
+  <ul>
+    <li>Wrapping the Cocoa API with Pythonic factories</li>
+    <li>Rely on good defaults, lots of keyword options</li>
+    <li>Building slowly, as needed, not heavily designed up front</li>
+    <li>Could easily be wrapped to read in from XML</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Mac Snobbery for Fun and Profit</h1>
+  <p style="text-align:center">
+  <img src="pix/gasprices.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>What makes a complete OS X application?</h1>
+<ul>
+<li>Menus, including special Apple menu, Services sub-menu, Windows menu</li>
+<li>Handle cut-and-paste, drag-and-drop across applications</li>
+<li>Minimize, zoom, hide behaviours</li>
+<li>Standard shortcuts for menus and commands</li>
+<li>Follow Apple's UI Guidelines</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>Having our cake and eating it too</h1>
+  <ul>
+    <li>Interface Builder, Renaissance, and Pure Python UIs can live together
+    in peace.</li>
+    <li>There's nothing wrong with visual tools, they're handy, I just don't
+    like to be forced to use them when inappropriate</li>
+    <li><code>nibtool</code> can convert binary NIB to text (but not vice
+    versa)</li>
+    <li>"Simple things should be declarative.  Complex things should be
+    procedural."  --Adam Bosworth</li>
+    <li>Apple themselves are moving toward a declarative XML syntax for
+    building UIs, but their syntax is XHTML</li>
+    <li>(I think this makes a *lot* of sense)</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1><strike>NextStep</strike> <u>Cocoa</u> Interface Builder</h1>
+  <ul>
+    <li>Provides a rich palette of widgets</li>
+    <li>Gives visual hinting to help follow Apple's UI Guidelines</li>
+    <li>Blessed by Apple as the One True Way</li>
+    <li>WYSIWYG</li>
+  </ul>
+</div>
+
+
+<div class="slide">
+  <h1>21st Century Renaissance</h1>
+  <p style="text-align:center">
+  <img src="pix/sars_danders.jpg" height="400"/>
+  </p>
+</div>
+
+
+<div class="slide">
+<h1>Renaissance: The Missing Manual</h1>
+<p>Renaissance is somewhat XUL-like, but not as thoroughly developed or documented</p>
+<ul>
+	<li><a href="http://www.gnustep.it/Renaissance/Manual/index.html">http://www.gnustep.it/Renaissance/Manual/index.html</a></li>
+	<li><a href="http://livingcode.blogspot.com/2004/11/renaissance-tags.html">http://livingcode.blogspot.com/2004/11/renaissance-tags.html</a></li>
+	<li>Still needs more work: &lt;button/&gt;, &lt;box/&gt;, &lt;hbox/&gt;, &lt;vbox/&gt;, &lt;hspace/&gt;, &lt;vspace/&gt;</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Missing Widgets</h1>
+	<table width="100%">
+		<tr>
+			<td><ul>
+			<li>NSlider</li>
+			<li>NSProgressIndicator</li>
+			<li>NSStepper</li>
+			<li>NSCombobox</li>
+			<li>NSDrawer</li>
+			<li>NSTabView</li>
+			</ul></td>
+			<td><ul>
+			<li>NSSearchField</li>
+			<li>NSDateFormatter</li>
+			<li>NSNumberFormatter</li>
+			<li>NSWebView</li>
+			<li>NSOpenGLView</li>
+			<li>NSMovieView</li>
+			</ul></td>
+		</tr>
+	</table>
+</div>
+
+
+<div class="slide">
+<h1>Missing Attributes</h1>
+<ul>
+<li>Alignment not working as well as it should</li>
+<li>ID could be exposed to the application</li>
+<li>Make it easier to add and remove elements at runtime (more dynamic)</li>
+<li>Tooltips</li>
+<li>More font control, in more widgets</li>
+<li>Some of the special menu types</li>
+<li>Allow &lt;view/&gt; and &lt;panel/&gt; to have child views</li>
+<li>Best-effort pass-through of unrecognized attributes using key-value binding</li>
+<li>Inter-file references</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Other Limitations of Renaissance</h1>
+<ul>
+	<li>Not designed for dynamic updates</li>
+	<li>Inexplicable crashes</li>
+	<li>Tricky to add new tags from Python (but it can be done)</li>
+</ul>
+</div>
+
+
+<div class="slide">
+  <h1>Do-It-Yourself</h1>
+  <p style="text-align:center">
+  <img src="pix/altoid-radio.gif" height="400"/>
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Four ways to make Cocoa more "Pythonic"</h1>
+  <ul>
+    <li>Categories: Extend existing Cocoa classes in-place</li>
+    <li>Subclass: Use __new__ hack for Python-style intialization
+      <ul><li><code>def __new__(cls): return cls.alloc().init()</code></li></ul>
+    </li>
+    <li>Factory Functions: Take a dict of options and return an intialized
+    object</li>
+    <li>Wrappers: Normal Python classes which act as a bridge to Cocoa
+    class</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Reinventing Lisp</h1>
+  <ul>
+    <li>Making a utility library can make Cocoa very easy to use</li>
+    <li>Like Lisp and Smalltalk, Python can grow to resemble you</li>
+    <li>This has the potential to make your code hard for others to
+    follow</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Enough knowledge to be dangerous</h1>
+  <p style="text-align:center">
+  <img src="pix/somethingbad.jpg" height="400" />
+  </p>
+</div>
+
+<div class="slide">
+  <h1>What about the alternatives</h1>
+  <ul>
+    <li>Carbon</li>
+    <li>wxPython</li>
+    <li>pyGTK</li>
+    <li>pyXPCOM</li>
+    <li>tkinter</li>
+    <li>pyGame</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Problems with the alternatives</h1>
+  <ul>
+    <li>Not Cocoa, don't benefit from things like Services</li>
+    <li>Not sufficiently Mac-like</li>
+    <li>Every one has it's own event system</li>
+    <li>Most include a lot of non-UI stuff, like strings, timers, etc.</li>
+    <li>Libraries much larger than Python itself</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>The benefits of XML</h1>
+  <ul>
+    <li>Every UI library seems to have its own XML resource format</li>
+    <li>Renaissance, Glade, UIML, etc...</li>
+    <li>This is the right place to be cross-platform, not the library</li>
+    <li>Apple is moving this way in OS X (10.4)</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>The benefits of XML (Continued)</h1>
+  <ul>
+    <li>An XML UI library should be cross-platform and familiar<li>
+    <li>There should be good WYSIWYG tools</li>
+    <li>It should support platform-specific extensions without breaking</li>
+    <li>You should be able to script it in Python, of course</li>
+    <li>In OS X it's called Dashboard</li>
+    <li>For the rest of the world it's called <a href="http://www.whatwg.org/">HTML 5</a></li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Thank you for inviting me here</h1>
+  <h3>Any questions?</h3>
+</div>
+
+<div class="slide">
+  <h1>In the Beginning</h1>
+  <p style="text-align:center">
+  <!--
+<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" width="640"
+height="496"
+ codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+ <param name="SRC" value="pix/adam.mov" />
+ <param name="AUTOPLAY" value="false" />
+ <param name="CONTROLLER" value="true" />
+ -->
+    <embed src="pix/adam.mov" width="640" height="496" controller="true" autoplay="false"></embed>
+    <!--
+ </object>
+     -->
+  </p>
+  
+</div>
+
+</div>
+
+</body>
+</html>

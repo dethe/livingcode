@@ -1,0 +1,18 @@
+Words for Crows
+
+#type: Project
+#format: markdown
+#tags: Projects, Poetry, Art, Photography, Book, iPhone
+#tagline: Original Poetry, Art, and Photography iChapbook
+
+<a href="http://itunes.apple.com/ca/app/words-for-crows/id330743379?mt=8"><img src="/assets/2009/wordsforcrows.png" alt="Words for Crows image" width="320" height="480" class="alignnone size-full" /></a>
+				
+<a href="itms://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=330743379&lt;mt=8&lt;s=143441%3Cbr%20/%3E">Words for Crows</a> is a 50-page iPhone poetry book of original poetry, art and photography. It is a collaboration between poet Daniela Elza, artist Nevena Giljanovic, and programmer Dethe Elza. It is an experiment with this new media form. Let us know how you like it.
+
+Daniela Bouneva Elza has lived on three continents and crossed numerous geographic and cultural borders. Her work has appeared in more than 30 literary and peer-reviewed publications. She hopes she writes for those who run when they hear the word poetry, for those that have been traumatized by poetry at school. For Daniela poetry is a necessary part of the day, a place for serious play, a fierce meditation. She believes that writing a poem and working on it in turn alters the poet. <a href="http://strangeplaces.livingcode.org/">http://strangeplaces.livingcode.org/</a>
+
+Nevena Giljanovic is a ceramic artist and painter. Her inspiration comes from nature where she finds beauty in simple shapes and imperfect things. With an academic background in Art History and a strong European heritage, she has been influenced by many cultures. She lives in Vancouver with her husband and three sons. <a href="http://www.unevenarts.com/">http://www.unevenarts.com/</a>
+
+Dethe Elza spends his days taking shortcuts through the alleys of Vancouver and the Web, then goes home to build robots with his kids and help them plan to take over the world. He loves to program for the Mac and iPhone, and for the sheer fun of it. <a href="http://livingcode.org/">http://livingcode.org/</a>
+
+To read the book simply drag left and right (or up and down) to leaf through the pages.

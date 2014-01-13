@@ -1,0 +1,10 @@
+Space Worms
+
+#type: Project
+#format: markdown
+#tags: Projects, Art, iPhone, Generative, Processing
+#tagline: Generative Art and Sound
+
+### Generative Art and Sound
+
+Spaceworms started by playing around with some sample code and got out of hand.

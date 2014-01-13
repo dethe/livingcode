@@ -1,0 +1,21 @@
+Atom and Microformats Intro
+
+#published: 2006-05-31
+#tags: Python, Article, XML, Atom, Microformats, developerWorks
+#type: Journal Post
+#uuid: b8e5f56b-9e79-4e76-91f7-4972aeffaa64
+
+
+My most recent article at IBM <a href="http://www-128.ibm.com/developerworks/xml">developerWorks</a> is up (part of David Mertz's "XML Matters" column), discussing the intersection of <a href="http://www.ietf.org/rfc/rfc4287.txt">Atom Syndication Format</a>, <a href="http://www.ietf.org/internet-drafts/draft-ietf-atompub-protocol-08.txt">Atom Publishing Protocol</a>, and <a href="http://microformats.org/">Microformats</a>:
+
+<a href="http://www-128.ibm.com/developerworks/xml/library/x-matters45.html">Up And Atom</a>
+
+Actually, it's been up for at least a week, but I was out of town at JavaOne (and too tired to post), then off the grid completely taking my son's school to camp. I'm still getting caught up, but nearly recovered.
+
+I think I've figured out why my new blog is not being picked up by <a href="http://planet.python.org/">Planet Python</a> too: the planet software has only recently begun to support Atom 1.0, and that version hasn't been officially released yet. There should be a 1.0 release of the <a href="http://planetplanet.org/">planet</a> code soon, and hopefully Planet Python will upgrade then and all will be well with the world.
+
+I guess that's one downside to developing my own blogging tools to support open standards: I may not have to implement deprecated formats or protocols, but if others are still stuck with legacy systems it can still hurt.
+
+
+
+

@@ -1,0 +1,108 @@
+in earth dreams
+
+#published: 2008-11-13
+#tags: Mac, Presentations, Python, Web, Movie
+#type: Journal Post
+#uuid: a21f4c54-a3c4-44b8-a6fd-43a10244f30d
+
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/gybpgqwRHso&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/gybpgqwRHso&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en&amp;fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+
+This is a collaboration that <a href="http://strangeplaces.livingcode.org/">Daniela</a> and I did together.  Her words and voice, my scripting and adding some titles.  The words to the poem can be found on her site <a href="http://strangeplaces.livingcode.org/archives/6/in-earth-dreams">here</a> (or actually, on any page of her site since it is currently in her sidebar). The animation itself was done in <a href="http://nodebox.net/">NodeBox</a> (so this example is Mac-only, but it could probably be adapted easily to Processing.
+
+    from math import radians, sin, cos
+    from random import seed
+
+    POEM = '''
+    in earth dreams
+    her limbs 		are all sky
+    her body		inhabited
+    by wild birds		and busy
+    mammals
+    an endangered 		species
+    she lost		 her head
+    where reason 		gives
+    the impression 		everything is
+    clear
+    she motions 	to dance
+    a rhythm			spins
+    and turns		attracted
+    to light
+    if she had eyes 		I would see
+    the stars		she holds
+    dear
+    then 		there are 		all
+    the words		she escapes
+    slips past 		their curved
+    seashell ears	as they listen
+    to capture 		her
+    on the page		 my words
+    are already	changing her
+    while she weaves 	gossamer
+    and soft moss		to hang
+    in autumn 	woods
+    '''.split()
+
+    size(320,240)
+    speed(30)
+
+    class Vector(object):
+
+        def __init__(self, idx):
+            self._starting_angle = self.angle = radians(random(360))
+            self.rate = random(0.5,2.5)
+            self.distance = sin(radians(idx * 2) + 180) * 100
+            self.x = 0
+            self.y = 0
+
+        def step(self):
+           self.angle = self._starting_angle + FRAME * radians(self.rate)
+           self.x = cos(self.angle) * self.distance
+           self.y = sin(self.angle) * self.distance
+           return self.rate, self.x, self.y
+
+    class Word(object):
+        index = []
+
+        def __init__(self, idx, word):
+    		self.red = random()
+    		self.green  = random(0.4, 0.75)
+    		self.blue = 0.4
+    		self.vector = Vector(idx)
+    		self.word = word
+    		self.size = 10 + 2 * len(word)
+    		self.duration = 3 * (len(word) + 2)
+    		Word.index += [idx] * self.duration
+
+        def step(self, alpha=1.0):
+    		fill(self.red, self.green, self.blue, alpha)
+    		rate, x, y = self.vector.step()
+    		push()
+    		rotate(rate * FRAME)
+    		font('Georgia', self.size)
+    		text(self.word, x, y)
+    		pop()
+
+    def setup():
+        global words
+        seed(0)
+        words = [Word(idx, word) for idx,word in enumerate(POEM)]
+
+    def draw():
+        translate(WIDTH/2 -50,HEIGHT/2)
+        background(1.0, 0.97, 0.86)
+        # Add one word at a time, then show all words for 100 frames more
+        if FRAME < len(Word.index):
+            last = Word.index[FRAME]
+            for word in words[:last]:
+                word.step()
+        # Now fade out and have blank screen for titles
+        elif FRAME < len(Word.index) + 100:
+            alpha = 1.0 - 0.01 * (FRAME - len(Word.index))
+            for word in words:
+                word.step(alpha)
+
+I used iMovie '08 to mix the voice and animation and to add the titles.  I wasn't very happy with the changes to iMovie, I found the earlier versions were much more flexible and easy to use.  On the other hand, I tried Norrkross Movie, that I actually had to buy, and was unable to do it at all.  Next time I will just add the titles in NodeBox and only use iMovie to add the soundtrack.
+
+My Python script could probably be cleaned up too.  This was what I had after many iterations and experiments to get the timing, color, and rotation where we were both happy with it.
+
+This was my first time uploading to YouTube and the resulting movie is very jumpy, in the original movie I uploaded was not.  If anyone has suggestions how to avoid that (whether pre-processing or a better movie hosting service), please let me know in the comments.  Overall I was happy with how it turned out and I'm looking forward to our next collaboration.

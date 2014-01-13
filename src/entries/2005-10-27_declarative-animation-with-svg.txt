@@ -1,0 +1,16 @@
+Declarative animation with SVG
+
+#published: 2005-10-27
+#tags: Python, Article, XML, SVG, developerWorks
+#type: Journal Post
+#uuid: 802c9dd0-6cdc-4b3a-8aae-0aa671183830
+
+One of the things which has been taking up my time from releasing Drawing Board is that I've been writing another guest edition of my friend David Mertz's <a href="http://www-128.ibm.com/developerworks/views/xml/libraryview.jsp?search_by=xml+matters:">XML Matters</a> column for IBM developerWorks. The latest, <a href="http://www-128.ibm.com/developerworks/xml/library/x-matters42/">SVG and the Scriptless Script</a> went live yesterday.
+
+My last article, on using the DOM, was something I know well and have used for years. This one was on a subject I've wanted to learn more about, so getting the examples all working the way I wanted was challenging, but I'm really happy with the result.
+
+Another reason I haven't released Drawing Board yet is that I want to put up a screencast of it in use, but there doesn't appear to be a good solution for creating screencasts on OS X. I think I've got a solution for that.
+
+
+
+

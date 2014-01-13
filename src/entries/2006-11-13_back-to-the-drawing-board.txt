@@ -1,0 +1,32 @@
+Back to the Drawing Board
+
+#published: 2006-11-13
+#tags: Python, Project, Drawing Board, Example Code, Cocoa, PyObjC
+#type: Journal Post
+#uuid: 5fa33c2c-b6a3-4f16-bddd-7680d147eb82
+
+Well, I've been promising this off and on here in my intermittent blog, but I've had the code up on Google code hosting for some time now, my kids have tested out the latest version, I've fixed some bugs introduced when PyObjC switched from distutils to setuptools. It is still pretty raw, unpolished, unoptimized, but I'm ready to let the world see it and let me know what they think.
+
+Current features of Drawing Board:
+
+* Freehand sketching: This is the main point of the software
+* Onion-skinning: See previous frame dimmed behind current frame
+* Create new frames: Either blank, or containing a copy of the current frame. Copied frames include the entire undo stack for the frame, so you can copy, and then undo a portion of the frame
+* Change colours and line sizes
+* Change the opacity of the window (this is a hack to allow you to trace images until I get image backgrounds implemented)
+* Scale and translate the frame
+* Remove current frame (not undo-able)
+* Export as SVG
+* Export frame as PNG or JPEG (PNG includes alpha for any area not drawn)
+
+There is basic file handling, which may be useful as example code for learning Cocoa programming using Python. I'm still working at adding drawing tools besides freehand drawing, and I have ideas for a lot of other things, but the main idea is to keep the program from getting in your way–to keep as close to possible as sketching with a pencil on paper, but to make the process of creating simple animations easier.
+
+Two features that are pretty close, and are important to the goal of the project, are export as Flash and export as Quicktime. Those will be coming sooner, rather than later.
+
+The project page is at <a href="/projects/drawingboard">http://livingcode.org/projects/drawingboard</a> and you can find links there to the binary download, the source repository, and the bug/feature tracker. I've also set up Google groups for the Living Code projects: <a href="http://groups.google.com/group/livingcode-users">http://groups.google.com/group/livingcode-users</a> and <a href="http://groups.google.com/group/livingcode-developer">http://groups.google.com/group/livingcode-developer</a> for ongoing discussions.
+
+A few people have seen me demo this program at the Vancouver Python Workshop and at Bar Camp Vancouver and expressed an interest, so I hope it can be of use, both in learning to program OS X with Python, and for creating animations. Please let me know what you find useful and what could be improved!
+
+
+
+

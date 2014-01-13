@@ -1,0 +1,19 @@
+#magnetic_poem{
+    position: relative;
+    background-color: rgb(192, 153, 108);
+    padding: 20px;
+}
+
+.word {
+  margin-top: 10px;
+  margin-right: 5px;
+  background: white;
+  color: black;
+  cursor: hand;
+  border: outset;
+  border-width: 2px;
+  padding: 3px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: monospace;
+}

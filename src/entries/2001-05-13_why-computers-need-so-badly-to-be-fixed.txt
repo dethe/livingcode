@@ -1,0 +1,36 @@
+Why computers need so badly to be fixed
+
+#published: 2001-05-13
+#tags: Essay, Critique, Technology
+#type: Journal Post
+#uuid: d630db6e-c3d5-4413-8f1b-2a8dce2ee4ce
+
+
+
+The computer has been around for about 50-60 years now.  For the past 30 years or so people have been making big predictions about the advance of computing power–computers will soon outstrip human intelligence and go on to form their own digital utopia, etc., etc.
+
+So why can't my computer remember what I was working on last?  Why does it take so long to start?  Why, in the 21st century, is it so damn hard to learn to use a new program (or remember how to use one I don't use often)?
+
+Because computer development stopped in the 1970s, when computers became available commercially.  They were extremely primitive devices, loved only by the gadget-obsessed, but for the first time a machine was available which could "learn"–that is it could be programmed to do things beyond what it could do when it was built.  The metaphors with human intelligence were intoxicating.  But they were, and are, only metaphors.
+
+So computers began to sell (and be marketed).  Slowly at first, then with increasing enthusiasm.  Computers weren't ready for the average person (hell, they're not ready for the average Electrical Engineer), but they sold well.  Because they sold well they got cheaper and because they got cheaper (and were intoxicating), they sold even better.  So there was no enthusiasm to improve the computer, besides incrementally making it faster, giving it more bells and whistles (thereby increasing its complexity and artificially driving up its price).
+
+Then came the dotcom revolution, when the world discovered the internet.  "Internet Time" became an excuse for every possible poor design decision.  Suddenly we went from little or no progress, to moving rapidly backwards in terms of usability and design. Every web site has to go through the evolution of the computer until it settles into the inadequacies of early 80's GUI design.  Or &lt;deity&gt; forbid, Flash (but let's not go there).
+
+Computers are victims of their own success, and we are all victims of the computer.  Now we've settled into the routine of paying thousands of dollars to test hardware and software for a living–no matter what field we work in.  We struggle with our configurations, registries, manuals, and unnecessary, bloated software to try to get our work done, if we can still remember what it is by that time.
+
+And it is only getting worse.  Operating systems are now commodities.  Operating systems, for crying out loud!  How many people really know what the hell the "operating system" is or does?  But we all know about Windows, and the Mac, and (increasingly) Linux.  Since when should the operating system matter, anyway?  It's just there to give the programs a little boost, help them talk to the underlying hardware.  If anything should matter it should be which programs will help you work on your data the best -- it's your data (document, spreadsheet, pictures, whatever) that's important after all.  A really good "operating system" would be one you never see, but which does plenty of work on your behalf -- like making damn sure you never lose one jot of your precious work (or time).  Instead we have to go through endless gyrations just to keep "operating systems" from screwing up too badly.
+
+I saw a .sig recently which was amusing, "A computer without Windows is like a dog without bricks strapped to its head."  Funny, true, and (unfortunately) you can replace "Windows" with pretty much any operating system you choose to name.  Windows is simply the most egregious example, but the best you can really say about [your favourite operating system] is that it's the best of a bad lot.
+
+What gives me some shred of hope is the open source movement.  Not that open source software tends to be more usable, far from it.  Linux, Mozilla, and Apache are pigdogs in the usability department.  But the original work to create, develop, and evolve computers was done in the public domain, with public funds.  It was cannibalized by corporate interests, who boldly stole work done with taxpayers money, broke it, and sold it back to them with a shrinkwrap license.
+
+And then we have corporate executives who complain about the state of what they stole.  "The internet isn't dependable enough for business."  Well, so sorry, it wasn't made for YOU.  "Open source is un-American."  Um, no, taking money from the defence department to build stuff is pretty damn American (although it *is* unusual to build stuff with defence department money which is useful, or works).  Unfortunately, stealing from the public commons seems to be pretty American too–just look at logging companies, mining companies, the California energy crisis, or Microsoft.
+
+Oh, back to that shred of hope.  Open source may generate a lot of crap, but it's OUR crap.  Anyone can learn from it.  It opens the doors to learning and building new things, some of which might not suck.  By recreating the public commons we give real innovation a chance.  And after all, the people paid for the development of these machines that now rule our lives, isn't it time to pay them back by making the machines useful?
+
+[Originally published May 13, 2001 on my long-defunct Manilasites blog]
+
+
+
+

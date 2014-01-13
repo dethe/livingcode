@@ -1,0 +1,23 @@
+Drawing Board
+
+#type: Project
+#format: markdown
+#tags: Projects, Games, Creativity, Art, Animation
+#tagline: OSX Animation for kids of all ages
+
+### OS X Animation for kids of all ages
+
+Drawing Board is a tool I'm writing for my kids, to let them do "sketch-based" animations easily.  It is still a bit rough around the edges, but it allows you to create new frames, remove frames, draw (of course), and it has single-layer onion-skinning to guide the animation. It can export frames as PNG, GIF, or JPEG, and it can export the animations as SVG (Quicktime and Flash coming soon).  More upcoming features will be listed in the issue tracker.
+
+<a href="http://code.google.com/p/lcdrawingboard/">Source code repository</a> using Subversion at Google
+
+<a href="/assets/drawingboard/DrawingBoard-0.4.1.dmg">Download version 0.4.1</a> Universal build, tested on OS X (10.4). 4.1MB DMG file. Bugfix for problems with saving fill, copying frame with fill, and opening file with more than 256 lines in a frame. Added support for drawing filled lines, turning off onionskinning, export as Quicktime.
+
+<a href="/assets/drawingboard/DrawingBoard-0.3.3.dmg">Download version 0.3.3</a> Universal build, tested on OS X (10.4). 3.5MB DMG file. Bugfix release because I was compiling with the wrong python in earlier releases.  <br />
+
+<a href="/assets/drawingboard/DrawingBoard-0.3.2.dmg">Download version 0.3.2</a> Universal build, tested on OS X (10.4). 3.5MB DMG file. Bugfix release to deal with broken pen setting.  <br />
+
+<a href="/assets/drawingboard/DrawingBoard-0.3.dmg">Download version 0.3</a> Universal build, tested on OS X (10.4). 3.5MB DMG file.
+
+<a href="http://code.google.com/p/lcdrawingboard/issues/list">Bug reports and feature requests</a>
+

@@ -1,0 +1,66 @@
+Tab Dumping with AppleScript and back to Python
+
+#published: 2009-01-31
+#tags: Mac, Projects, Python, Tutorial, Example Code, AppleScript
+#type: Journal Post
+#uuid: d13588ed-cf37-49af-8268-7e466fedca61
+
+<img src="/assets/2009/rock.jpg" alt="Rock"/>
+
+**Goal:** Iterate through all my (OS X Safari) browser windows and make a list of titles and urls which is then placed in the clipboard ready to be pasted into an email or blog post.
+
+This is an update to <a href="/entries/2006-08-30_tab-dumping-in-safari">Tab Dumping in Safari</a>. That still works well as the basis for extending any Cocoa-based application at runtime, but it relies on SIMBL, which while it is a great bit of code, essentially is abusing the InputManager interface.  Some developers and users shun such hacks, and at least one Apple application checks for them at startup and warns you from using them.
+
+I have been running the <a href="http://webkit.org/">WebKit</a> nightlies, which are like Safari, but with newer code and features (most importantly to me right now, a Firebug-like developer toolkit).  WebKit warns at startup that if you're running extensions (such as SIMBL plugins) it may make the application less stable.  I was running both <a href="http://haoli.dnsalias.com/">Saft</a> and my own tab dumping plugin, and WebKit was crashing a lot.  So I removed those and the crashes went away.  I miss a handful of the Saft extensions (but not having to update it for every Safari point release), and I found I *really* miss my little tab-dumping tool.
+
+I toyed with the idea of rewriting it as a service, which would then be available from the services menu, but couldn't figure out how to access the application's windows and tabs from the service.  So I tried looking at Safari's scriptable dictionary, using the AppleScript Script Editor.  Long ago, John Gruber had <a href="http://daringfireball.net/2003/05/safaris_unscriptable_tabs">written</a> about the frustration with Safari's tabs not being scriptable, but a glance at the scripting dictionary showed me this was no longer the case (and probably hasn't been for years, I haven't kept track).
+
+I am a complete n00b at AppleScript.  I find the attempt at English-like syntax just confuses (and irritates) me no end.  But what I wanted looked achievable with it, so I armed myself with some examples from Google searches, and Apple's intro pages and managed to get what I wanted working.  It may not be the best possible solution (in fact I suspect the string concatenation may be one of the most pessimal methods), but it Works For Me™.
+
+In Script Editor, paste in the following:
+
+    set url_list to ""
+    -- change WebKit to Safari if you are not running nightlies
+    tell application "WebKit"
+      set window_list to windows
+      repeat with w in window_list
+        try
+          set tab_list to tabs of w
+          repeat with t in tab_list
+            set url_list to url_list & name of t & "\n"
+            set url_list to url_list & URL of t & "\n\n"
+          end repeat
+        on error
+          -- not all windows have tabs
+        end try
+      end repeat
+      set the clipboard to url_list
+    end tell
+
+I had to use AppleScript Utility to add the script menu to my menu bar.  From there it was easy to create script folders that are specific to both WebKit and Safari and save a copy of the script (with the appropriate substitution, see comment in script) into each folder.  Now I can copy the title and URL of all my open tabs onto the clipboard easily again, without any InputManager hacks.
+
+I had some recollection that is a way to do this from Python, so I looked and found <a href="http://appscript.sourceforge.net/">Appscript</a>.  I was able to install this with a simple `easy_install appscript` and quickly ported most of the applescript to Python.  The only stumbling block was that I couldn't find a way to access the clipboard with appscript, and I didn't want to have to pull in the PyObjC framework just to write to the clipboard. So I used `subprocess` to call the command-line `pbcopy` utility.
+
+    #!/usr/local/bin/python
+    from appscript import app
+    import subprocess
+    tab_summaries = []
+    for window in app('WebKit').windows.get():
+        try:
+            for tab in window.tabs.get():
+                name = tab.name.get().encode('utf-8')
+                url = tab.URL.get().encode('utf-8')
+                tab_summaries.append('%s\n%s' % (name, url))
+        except:
+            # not all windows have tabs
+            pass
+    clipboard = subprocess.Popen('pbcopy', stdin=subprocess.PIPE)
+    clipboard.stdin.write('\n\n'.join(tab_summaries))
+
+The remaining hurdle was simply to put the Python script I'd written into the same Scripting folder as my AppleScript version. For me this was `~/Library/Scripts/Applications/WebKit/`. When run from the scripts folder, your usual environment is not inherited, so the `#!` line must point to the version of Python you are using (and which has Appscript installed). You should also make the script executable.  Adding `.py` or any other extension is not necessary.
+
+Overall, while I found AppleScript to be very powerful, and not quite as painful as I remembered, I found the Python version (warts and all) to be easier to work with. Combined with the fact that the script folder will run non-Applescript scripts, this opens up new worlds for me.  I have hesitated in the past to write a lot of SIMBL-based plugins, tempting though it may be, because they are hacks, and they run in *every* Cocoa-based application.  But adding application-specific (or universal) scripts, in Python, is pure, unadulterated goodness.
+
+
+
+

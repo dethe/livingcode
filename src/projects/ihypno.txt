@@ -1,0 +1,16 @@
+iHypno
+
+#type: Project
+#format: markdown
+#tags: Projects, iPhone, Entertainment
+#tagline: Mind Control for the Rest of Us
+
+### Mind Control for the Rest of Us
+
+<a href="http://itunes.apple.com/ca/app/ihypno/id326179691?mt=8"><img src="/assets/2009/iHypno-Image.png" alt="iHypno image" title="iHypno image" width="324" height="452" class="alignnone size-full wp-image-146" /></a>
+
+<a href="http://itunes.apple.com/ca/app/ihypno/id326179691?mt=8">iHypno</a> is my first iPhone application.
+
+Inspired by the old "hypno disk" ads in the back of comic books when I was a kid, **iHypno** give you a spinning spiral to amuse your friends. You can control the speed it spins with gestures, change the size of the inner disk by pinching, and switch between black and white and cycling colours by double-tapping.
+
+For amusement and entertainment purposes only.

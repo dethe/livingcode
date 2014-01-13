@@ -1,0 +1,16 @@
+Interface Builder vs. Macromedia Flex Builder 2
+
+#published: 2005-11-03
+#tags: Python, XML, User Interface, Tools
+#type: Journal Post
+#uuid: fc42e6f0-55d2-4aae-926b-0d294bed578c
+
+I recently tried out the beta of Macromedia Flex Builder 2, and was quite impressed. I normally avoid Flash on principle, but it has some pretty powerful tools built in. It feels more limited than Apple's Interface Builder, but it has one feature that I've been dying to see in IB: You can flip between visual drag-and-drop widget mode, and editing the layout as XML. Interface Builder so needs this ability. It would help for folks writing about developing for OS X (sometimes 100 words is better than half a dozen pictures, and trying to show CTRL-dragging in a still picture is an exercise in futility), and it would help when you come to a new project (or one you haven't worked on in awhile) and want to get a feel for what methods and event handlers are hooked in to various widgets. Heck, it would help with automated tools, with testing, with grep. Just do it, Apple, or hire me to do it.
+
+The other part that was interesting for me was that Flex Builder runs inside of Eclipse. It's been a long time since I've tried Eclipse and I was pleasantly surprised. It was fairly snappy, not too confusing to find my way around in, and looked better than I remembered. Of course, I was running it on a dual 3GHz Windows box, so I might be disappointed once more if I ran it on my Powerbook, but my brief encounter with it didn't suck, which was a big improvement.
+
+Of course, neither of these developments are going to lure me away from Python and Vim any time soon.
+
+
+
+

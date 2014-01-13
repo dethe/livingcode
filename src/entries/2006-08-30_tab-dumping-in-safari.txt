@@ -1,0 +1,129 @@
+Tab Dumping in Safari
+
+#published: 2006-08-30
+#tags: Python, PyObjC, Projects, Tab Dump, Plugins, Cocoa, Example Code, Tutorial
+#type: Journal Post
+#uuid: 9c81a60b-f4ca-47af-b38b-b5e26ba84e0b
+
+### The Problem
+
+I first saw the term "tab dump" on Dori Smith's <a href="http://www.backupbrain.com/2006_04_16_archive.html">blog</a>, but I immediately recognized the concept. I keep Safari running all the time and with the help of Hao Li's wonderful extension <a href="http://livingcode.org/entry/li.dnsalias.com/Saft/">Saft</a> I keep everything in tabs in one window. Among its many features, Saft will let you consolidate your windows into tabs of one window, and it can save the tabs you have open when you close (or crash) Safari, and re-open them automatically when you start Safari again. What it doesn't do is give you a list of all the tabs you have open in text format, suitable for blog or email. I don't currently put tag dumps on the blog because a) I'd feel guilty doing that without adding at least a short comment for each link, which would take too much time, and b) because this isn't really a link blog, more a place for me to bash out example code and tutorials. At least, that's how I think of it.
+
+I do however, find Safari teetering on the brink of being unfunctionally slow because I have so many tabs open, and often they're only open because I want to remember to do something with them later, or come back to them, or some other reminder-type function. So I send myself a tab dump on a more-or-less daily basis. Firefox has tools to help you do this, but I haven't seen anything for Safari, possibly because you can't really do it with a Safari plugin, but need to use an InputManager, which is fairly deep magic, and basically a hack, an abuse of the system.
+
+On the other hand, I couldn't keep using Safari if it wasn't for Saft, and Saft is an InputManager. Another tool for blocking ads and such (which Saft also does) is <a href="http://www.culater.net/software/PithHelmet/PithHelmet.php">PithHelmet</a>, but the interesting thing to me about PithHelmet isn't that it is a popular ad blocker, but that the Mike Solomon (who wrote PithHelmet) decided to not just make an InputManager, but to make <em>the only InputManager you'll ever need</em>. You see, PithHelmet itself is not an InputManager, it is a plugin for <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a> (also by Solomon), which is an InputManager that loads plugins based on the application(s) they claim to support. InputManagers get loaded by <em>every</em> application (Cocoa apps, at least), so you have to be careful you're in the app you want to modify, and take steps not to break things. SIMBL takes care of the nasty business of being a well-behaved system hack, and your code can assume it is in the right app, because it doesn't get loaded otherwise.
+
+### The Goal
+
+Once I figured out that the only way I was going to get Tab Dumping behaviour into Safari (because Safari tabs don't play well with Javascript, that turned out to be a dead-end), I decided to try writing an InputManager in Python. SIMBL is open-source, so at first I was looking at the code to see what I need to do to create an InputManager (remember, this is a hack, so Apple doesn't document it very well). I also read Mike's essay <a href="http://www.culater.net/wiki/moin.cgi/CocoaReverseEngineering">Armchair Guide To Cocoa Reverse Engineering</a>. What I decided was that, rather than recreate the functionality in SIMBL using Python, I would just create a SIMBL plugin in Python.
+
+Getting started wasn't too bad, but I found one issue in the above essay that stumped me for awhile. Mike recommends you put your initialization code into a class method `load()` which gets called after your class is loaded. I don't know if it is artifact of using PyObjC or what, but my `load()` method was never getting called. What I did instead was to run the command-line utility `class-dump` on another SIMBL plugin to see what they were doing. They were using the class method `initialize()` rather than load and when I switched to that things started working, where by "things" I mean, "I could print to the console to see that my class had loaded."
+
+### The Solution
+
+The next step was to actually do something once I had my code loading into Safari. The tab behaviour of Safari isn't part of WebKit, so it isn't documented anywhere. Once again, I used the handy `class-dump `utility. This is a fabulous tool which will read any Cocoa library, bundle, or application and produce a pseudo-header file showing all the objects and methods defined. I still had to try a few different paths to get to the tab information I wanted, but it was pretty easy, armed as I was with Python and the output of `class-dump`. Here is the result:
+
+    import objc
+    from Foundation import *
+    from AppKit import *
+
+    class TabDump(NSObject):
+
+        # We will retain a pointer to the plugin to prevent it
+        # being garbage-collected
+        plugin = None
+
+        @classmethod
+        # the following is not strictly necessary, but we only
+        # need one instance of our object
+        def sharedInstance(cls):
+            if not cls.plugin:
+                cls.plugin = cls.alloc().init()
+            return cls.plugin
+
+        @classmethod
+        def initialize(cls):
+            app = NSApp()
+            menu = app.windowsMenu()
+            cls.item = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_(
+                'Dump tabs to clipboard',
+                 'tabdump:',
+                 '')
+            # should be after "Previous Tab" and "Next Tab"
+            menu.insertItem_atIndex_(cls.item, 6)
+            cls.item.setTarget_(cls.sharedInstance())
+
+        def tabdump_(self, source):
+            output = []
+            app = NSApp()
+            for window in app.windows():
+                if window.className() == 'BrowserWindow':
+                    controller = window.windowController()
+                    for browserWebView in controller.orderedTabs():
+                        output.append(browserWebView.mainFrameTitle().encode('utf8'))
+                        output.append(browserWebView.mainFrameURL().encode('utf8'))
+                        output.append('')
+            self.copyToPasteboard_('\n'.join(output))
+
+        def copyToPasteboard_(self, string):
+            pasteboard = NSPasteboard.generalPasteboard()
+            pasteboard.declareTypes_owner_([NSStringPboardType], self)
+            pasteboard.setString_forType_(string, NSStringPboardType)
+
+As you can see, on my class being initialized, I create a new menu item and insert it into the Windows menu. This could be more robust, by testing menu item names to make sure I'm in the right place, but it works for me, and simple code is more maintainable code. I create an instance of my object and make it the target of the menu item. Pretty basic stuff.
+
+When the `tabdump` method is called (by selecting the menu item in Safari), it walks through Safari's window objects (of which there are many) until it finds browser windows, then it extracts the tabbed views from the browser windows to get the titles and URLs involved. When it has collected all the title/URL pairs, it turns it into a big string and puts the string on the pasteboard. Here is where we could be a lot fancier. I'm just putting title/URL pairs, separated by newlines in plain text, because that's how I mail them to myself. You could easily create Markdown links or any other format here. You could turn them into HTML and put them on the Pasteboard that way. There's a lot you can do, and the Firefox tool I used to use to do this offered so many options that I was never sure what most of them actually did. Here you can customize the code to do exactly what you need, and keep it simple.
+
+### Building the plugin
+
+I haven't tested this with multiple windows, or with a window with only one tab. It might work, might not. I don't plan on using it that way, and if I do, it's easy enough to fix. Now, there is one more thing you'll need, which is the `setup.py` script to build it. Assuming you've saved the above code as `TabDump.py`, the following script should be what you need:
+
+    '''
+        Minimalist build file for TabDump.py
+        To build run 'python setup.py py2app' on the command line
+    '''
+
+    from distutils.core import setup
+    import py2app
+
+    plist = dict(
+        NSPrincipalClass='TabDump',
+        CFBundleName='TabDump',
+        SIMBLTargetApplications=[
+            dict(
+                BundleIdentifier='com.apple.Safari',
+                MinBundleVersion='312',
+                MaxBundleVersion='420')],
+    )
+
+    setup(
+        plugin=['TabDump.py'],
+        options=dict(py2app=dict(
+            extension='.bundle',
+            plist=plist,
+        )),
+    )
+
+In the above file, `MinBundleVersion` and `MaxBundleVersion` can keep your code from being loaded if an untested version of the application is running. I have more-or-less dummy values there, don't treat them as the right thing to do. The `SIMBLTargetApplications` key holds a list, so if you want your code to load in other applications, add more dictionaries to the list.
+
+Also note that you can build your bundle with python `setup.py py2app -A` to create a development version (can't ship it that way) that is all symlinks, so you can edit TabDump.py to make changes without having to rebuild the plugin. If you modify the `MinBundleVersion` or `MaxBundleVersion` you will have to rebuild to regenerate the property list (or move the property list to be an external file rather than generating it in setup.py), but that should be an infrequent operation. More importantly, you can put a symlink to your bundle in your `~/Library/Application Support/SIMBL/Plugins/` directory. Then you can make changes to the python code and test it by simply restarting Safari. **WARNING:** If you have a syntax error in your file, Safari will most likely hang on restart. Just force quit it and check your console for the error to fix.
+
+### The Promise
+
+Now, if you've followed along with me so far, I'd like to point out a few things that are *really freaking cool* about this. Item the first: You now have Python running in Safari. Can you think of anything else you'd like it to do while you're there? I bet you can. Item the second: You can do this in any Cocoa-based application just as easily. Problems in Mail.app? Frustrated by iChat? Just fix it. Take control of your own applications! Make the computer work for you, not the other way around. Item the third: dump-classes gives you the keys to the kingdom. Seriously, the combination of being able to embed Python and get a listing of the objects and methods at will is so powerful that when I got TabDump working late last night and realized what I'd just done (i.e., these three things), I was barely able to get to sleep after that. The possibilities are endless.
+
+If you use this and do something cool with it, please drop me a line and tell me about it. I'm really looking forward to hearing about what kind of cool ways we can push our existing applications.
+
+### Correction [2006-08-30]
+
+The `class-dump` utility rocks, and you should add it to your arsenal of Cocoa tools, along with Python and PyObjC. Since I've found it it has already become indispensable for examining existing applications that I want to, er, adjust. Here's what I've learned so far.
+
+First, I want to update my previous post to talk a little bit more about the command-line utility `class-dump`. This is a fine tool that lets you introspect a Cocoa bundle (plugin, library, or application) and prints out a header file describing all the objects and methods in that bundle. I didn't mention where to get it, and at BarCamp this weekend I gave some mis-information by telling people it came with Apple's developer tools, which is not true. I assumed that's where it came from, because I didn't remember hearing of it before reading Mike Solomon's <a href="http://www.culater.net/wiki/moin.cgi/CocoaReverseEngineering">Armchair Guide to Cocoa Reverse Engineering</a>, which refers to `classdump` without any explanation of where to get it. I tried it, found `class-dump` worked (tab-completion is your friend), and assumed it came with my system, when in fact I had installed it earlier after reading about it on another blog (I'm afraid I don't remember where) meaning to try it out, then forgotten about it. So it was there, waiting for me, when I discovered a need for it.
+
+So the truth is, <a href="http://www.codethecode.com/Projects/class-dump/">class-dump</a> is a utility written by Steve Nygard. He says it provides the same output as the developer tools command `otool -ov`, but formatted as a header file. Besides the basic output it can also do various kinds of filtering, sorting, and formatting.
+
+So this is my Tool of the Week (and then some): `class-dump`. Use it, love it, thank Steve.
+
+
+
+

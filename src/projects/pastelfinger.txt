@@ -1,0 +1,18 @@
+Pastel Finger
+
+#type: Project
+#format: markdown
+#tags: Projects, Games, Art, Creativity, iPhone
+#tagline: iPhone App for Creative Doodling
+
+### iPhone App for Creative Doodling
+
+<a href="http://itunes.apple.com/ca/app/pastel-finger/id333267689?mt=8"><img src="/assets/2009/pastelfinger.jpg" alt="Pastel Finger image"  width="320" height="480" /></a>
+<a href="http://itunes.apple.com/ca/app/pastel-finger/id333267689?mt=8">Pastel Finger</a> is a fun app for doodling, with an element of randomness. It gives you a spinning "brush" which cycles through colours as you draw. You can layer the colours and build it up, with results that can be reminiscent of oil pastels.
+
+The results can be unexpected. Give it to your kids to see what they will surprise you with. I could barely get my nine-year-old off it (or my wife).
+
+The interface is simple: Draw with your finger, shake to erase.
+
+Coming soon: you'll be able to save the drawing, use it as a desktop image, or send it to a friend. Let me know what else you'd like to see.
+							

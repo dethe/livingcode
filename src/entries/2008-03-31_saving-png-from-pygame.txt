@@ -1,0 +1,24 @@
+Saving PNG from PyGame
+
+#published: 2008-03-31
+#tags: Python, Example Code, Graphics
+#type: Journal Post
+#uuid: 16b9efd4-e5f9-4b00-9241-3c7c5c60cca8
+
+The latest version, 1.8, of PyGame can save PNGs directly from a Surface: `pygame.Image.save(mySurface, 'myimagefile.png')`.  But what if you want to support an older version of PyGame, such as the one available for the N800 or the XO?  Well, assuming you have access to the Python Image Library, you can use that:
+
+    import Image # from PIL
+    import pygame
+
+    def pygame_to_pil_img(pg_surface):
+        imgstr = pygame.image.tostring(pg_surface, 'RGB')
+        return Image.fromstring('RGB', pg_surface.get_size(), imgstr)
+
+    def pil_to_pygame_img(pil_img):
+        imgstr = pil_img.tostring()
+        return pygame.image.fromstring(imgstr, pil_img.size, 'RGB')
+
+Once you have a PyGame Image, you can save it to PNG easily: `myImage.save('myfilename.png')`
+
+I've found myself looking for this code snippet more than once, now I can Google for it more readily, and maybe someone else will find it helpful too.
+

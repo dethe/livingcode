@@ -1,0 +1,48 @@
+Go Language and Functional Programming
+
+#published: 2009-11-13
+#tags: Tutorial, GoLang, Example Code
+#type: Journal Post
+#uuid: 620b58e9-0c55-4bee-a9c2-8317dabaad13
+
+There is a cool new language on the block, coming from The Google courtesy of (among others) Rob Pike and Ken Thompson. The language is called <a href="http://golang.org/">Go</a> (and the debugger is called Ogle, so put 'em together for a secret message) and it attempts to be both a low-level, type-safe, compiled language, like C, while being garbage-collected, concise, with high-level structures and idioms like Python and Javascript. There are a lot of things to like in it, and I am exploring what it can and cannot do.  My first question was whether you could use it for functional programming, i.e., are functions first-class objects that can be passed to other functions, returned from functions, stored in variables, etc. This wasn't in the <a href="http://golang.org/doc/go_faq.html">FAQ</a> or the <a href="http://golang.org/doc/go_lang_faq.html">Language Design FAQ</a>, but there were some hints of it in the description of channels, so I went ahead and wrote my own tests to see if it would work.
+
+    package main
+
+    import fmt "fmt"
+
+    type Stringy func() string
+
+    func foo() string{
+            return "Stringy function"
+    }
+
+    func takesAFunction(foo Stringy){
+        fmt.Printf("takesAFunction: %v\n", foo())
+    }
+
+    func returnsAFunction()Stringy{
+        return func()string{
+            fmt.Printf("Inner stringy function\n");
+            return "bar" // have to return a string to be stringy
+        }
+    }
+
+    func main(){
+        takesAFunction(foo);
+        var f Stringy = returnsAFunction();
+        f();
+        var baz Stringy = func()string{
+            return "anonymous stringy\n"
+        };
+        fmt.Printf(baz());
+    }
+
+This compiled and ran, giving the right output, so it looks to me like functional programming is indeed possible in Go, and on the <a  href="http://golang.org/doc/effective_go.html">Effective Go</a> page we learn, "In Go, function literals are closures: the implementation makes sure the variables referred to by the function survive as long as they are active." So that's kind of cool.
+
+Go also has rich, high-level concurrency support similar to <a  href="http://erlang.org/">Erlang</a>, several features that prevent random memory from being read or written, and both strings and maps (dictionaries, hash tables) are built-in datatypes. It has a small, but powerful standard library.
+
+One puzzle down, several to go. I still want to explore how I can talk to <a href="http://developer.apple.com/cocoa/">Cocoa</a> from Go (for GUIs), how to wrap libraries such as <a href="http://xmlsoft.org/">libxml2</a> and <a href="http://www.cairographics.org/">cairo</a> for Go, and basically how to map more Python/Javascript library goodness into Go's world.
+
+I have smaller questions too: can I add methods to existing types? How do I load the contents of a URL? It's looking good so far! Tune in next time for more exploration.
+

@@ -1,0 +1,10 @@
+PySight
+
+#type: Project
+#format: markdown
+#tags: Projects, Python, Video, Photography, OS X
+#tagline: Access the Mac's iSight camera from Python
+
+### Access the Mac's iSight camera from Python
+
+PySight is a simple wrapper to provide access to the iSight camera from Python.

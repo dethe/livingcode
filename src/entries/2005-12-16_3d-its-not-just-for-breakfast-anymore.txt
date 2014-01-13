@@ -1,0 +1,18 @@
+3D, it's not just for breakfast anymore
+
+#published: 2005-12-16
+#tags: Python, XML, X3D, Article, developerWorks, 3D
+#type: Journal Post
+#uuid: 230c35c4-b1db-44b4-ba60-c4ccaea00ba8
+
+I've been fooling around with 3D lately. First off, my third article as guest-writer for <a href="http://www.gnosis.cx/publish/">David Mertz's</a> XML Matters column, <a href="http://www-128.ibm.com/developerworks/web/library/x-matters43/index.html">The Web ain't just for 2D anymore</a> went live on IBM's developerWorks site today. It's about X3D (3D in XML), successor to VRML, and the possibility of it being relevant today. I have moderate hope for it, now that SVG is starting to be a player. The funny thing is, I think X3D is probably less complicated to implement than SVG is. The real coolness starts when you can combine them, but that is still a ways off.
+
+Years ago, I was the lead programmer for <a href="http://antarcti.ca/">Antarcti.ca's</a> 3D web client (which was discontinued awhile back), and before that I implemented a simple 3D renderer in Java AWT (this was before Swing, and way before Java3D. So I've been tinkering around with 3D for awhile. Lately I've volunteered to take a stab at porting <a href="http://vpython.org/">VPython</a> over to OS X Aqua (it can be built for OS X, but only under X Windows, which doesn't appeal to me). So far, the build process for it has been stumping me, and soaking up what little time I have to devote to my hobby coding, but I still plug away at it from time to time. It's a C++ extension for Python which relies on boost, glib, and OpenGL libraries, and it uses autoconf in a fairly non-auto way. I've never been expert at build systems, most python projects I've needed were either .`configure;make;make install` or `python setup.py install`, so the struggle to port this really bugs me, but VPython is a very cool project and I want to use it (and I don't want to give in and rely on fink and X). Sometimes I'm too stubborn for my own good.
+
+In a previous post I mentioned that I was thinking of writing a tool for screencasting from OS X. It turns out that while Apple has included more advanced Cocoa libraries for Quicktime in Tiger, there isn't a convenient way to create new, writable movies from Cocoa, so that project has stalled, for the time being. There is a solution, but I'm trying to wrap up other things before I delve into it.
+
+I have two projects nearly ready to release which are both larger examples of using PyObjC. One is my own project, DrawingBoard, which is being tested right now by both my kids and my friend <a href="http://fergusson.net/">Michael's</a> kids. I'm about ready to let other people see it, rough as it still is. The other project is a port of Apple's Sketch example code from Objective-C into Python, which gives examples of how to use Core Data, undo/redo, and many other things. Both will be coming soon.
+
+
+
+

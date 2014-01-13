@@ -1,0 +1,39 @@
+A New Renaissance
+
+#published: 2004-11-03
+#tags: Python, PyObjC, Cocoa, Example Code, Tutorial, Renaissance
+#type: Journal Post
+#uuid: 65006f66-b118-4489-b4a6-4628a0b5f259
+
+Yesterday I laid out the issues I have with using Interface Builder to create Cocoa applications (whether in Objective-C or Python), and my requirements for a replacement. To sum up, here are the requirements again:
+
+* Declarative
+* Simple and powerful
+* Able to replace NIB files and Interface Builder
+* Text-based, not binary
+* Agile for rapid development, adapts to rapidly changing code
+* Able to specify simple apps completely, in code, without resorting to pictures or talking the user through mouse gestures
+
+As I hinted at previously, I think I've found the tool I was looking for in GNUstep Renaissance, and as an added bonus, it can be used to create applications for Linux, unix, and Windows using the GNUstep framework. So although I'm interested mainly in building applications for OS X, there is still a chance for cross-platform compatibility.
+
+So what does Renaissance look like? It's and XML format, similar to HTML and Mozilla XUL (but simpler than XUL). Today I will cover how to install Renaissance and set it up to use from PyObjC.
+
+Prerequisites (this is my setup, others may work, but I haven't tested them).
+
+1. A Mac
+2. OS X (10.3)
+3. PyObjC (1.1), available from <a href="http://pyobjc.sourceforge.net/">http://pyobjc.sourceforge.net/</a>
+4. py2app (0.1.4), available from <a href="http://pythonmac.org/wiki/py2app">http://pythonmac.org/wiki/py2app</a> (we'll use this to build our double-clickable applications)
+5. Renaissance framework (0.8), available from <a href="http://www.gnustep.it/Renaissance/Download.html">http://www.gnustep.it/Renaissance/Download.html</a> (this is the secret sauce)
+
+Once you have the prerequisites installed, you need to make Renaissance available from Python. In your site-packages directory (on my machine this is `/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/site-packages`) add a Renaissance directory containing the following file:
+
+**__init__.py**
+
+    import objc, AppKit, Foundation
+    objc.loadBundle('Renaissance', globals(),
+        bundle_path='/Library/Frameworks/Renaissance.framework')
+    del objc, AppKit, Foundation
+
+Well, that was easy enough. Next up, a Hello World application.
+

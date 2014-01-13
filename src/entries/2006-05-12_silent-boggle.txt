@@ -1,0 +1,16 @@
+Silent Boggle
+
+#published: 2006-05-12
+#tags: Python, Browser, Projects, Silent Boggle
+#type: Journal Post
+#uuid: 6ef797c4-5b1f-4298-81ef-effece56a253
+
+In my sidebar, under Mini Projects is one called <a href="/projects/boggle">Silent Boggle</a>. When my first son was born, my wifed Daniela and I like to play Boggle a lot, but we worried about the noise waking the baby, so I coded up a quick CGI script to create a web page listing the letters with the same frequency as the game. That worked OK, and now we could play without rattling the box, but of course a project never stops where you thought it would. I kept thinking that it would be cool if I could list all the words available, making it useful for learning new vocabulary, or just checking your score. It turns out that <a href="http://www.norvig.com/">Peter Norvig</a> covered solving Boggle as an AI problem in his book <a href="http://aima.cs.berkeley.edu/">AI: A Modern Approach</a>. And he also provides the code from the book, in both <a href="http://www.cs.berkeley.edu/~russell/code/doc/overview.html">Lisp</a> and <a href="http://aima.cs.berkeley.edu/python/readme.html">Python</a>. So, armed with a standard linux word list, munged to remove words illegal or impossible in Boggle (and to handily my funky hack involving the Qu face of the Boggle dice) and the AIMA python library, I was able to get something going. A little slow, and resource intensive, but it works (if that project ever starts getting much traffic, I'll have to stick the wordlist in a separate, long-running process).
+
+The thing is, the linux word list has a lot of words I don't recognize and cannot find in any dictionary. At first I wanted to create links from the "answers" to a site with their definitions, but for many of the words there don't appear to be definitions. I'd like to use this as a vocabulary building tool for my kids (my first child at the start of this project is now nine, and our second is now five and both are avid readers), but I can find two types of resources on the web: <a href="http://wordlist.sourceforge.net/">word lists</a> suitable for use with the AIMA library, and <a href="http://onelook.com/">dictionaries</a> that don't have associated word lists. I suppose I can download an open-source dictionary and extract the word-list myself, but it seems like with all the work that's been done out there on wordlists and dictionaries, that there should be one that combines them both, that I just haven't found yet.
+
+So, lazyweb, I invoke thee! Please help me to find the wordlist + dictionary that I have overlooked in my searching.
+
+
+
+

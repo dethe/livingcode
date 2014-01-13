@@ -1,0 +1,147 @@
+Drawing with opacity
+
+#published: 2008-12-14
+#tags: Python, Tutorial, Example Code, Graphics
+#type: Journal Post
+#uuid: bcb776bc-1deb-40b6-9ae4-d2792c89e600
+
+This is something of a followup to earlier posts <a href="/entries/2008-03-20_drawing-hexmaps">Drawing Hexmaps</a> and <a href="/entries/2008-03-31_saving-png-from-pygame">Saving PNG from PyGame</a>.  A recent comment from <a href="http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/">Roger Aisling</a> on the second of those posts asked about drawing with opacity in the <a href="http://www.pythonware.com/library/pil/handbook/index.htm">Python Image Library</a> (PIL).  A check of the PIL API didn't turn up anything, but there is an optional add-on to the PIL called <a href="http://effbot.org/zone/pythondoc-aggdraw.htm">aggdraw</a>, which is based on <a href="http://www.antigrain.com/">Anti-Grain Geometry</a> (AGG), a graphics library that seems to cover similar ground to <a href="http://www.cairographics.org/">Cairo</a>.  I've been meaning to play with both of these, but don't know enough about either project to know what is better about one vs. the other.  I know Cairo is used by Mozilla, GTX+, Mono, Inkscape, and WebKit (under GTX+).  I wasn't able to find much about where AGG is used.
+
+Anyway, here are some examples showing how to draw polygons with variable opacity (or alpha).  I've got examples for <a href="http://nodebox.net/code/index.php/Home">NodeBox</a>, aggdraw, and pycairo.  I was going to do some for the browser canvas, <a href="http://processing.org/">Processing</a>, PyObjC, and SVG, but a) I wanted to get this post out, and b) PyCairo can already output to SVG and Cocoa (and Processing will be very similar to NodeBox).  So if there is any interest in those examples, or others I may have forgotten, let me know in the comments.
+
+While the images below look identical (at least they do to me), each was drawn with its respective library.
+
+For each library I will present the drawing function and the main function that sets things up and drives it.  At the end I will present the utility functions used which were the same for all libraries.  No optimizations here, just the simplest thing I could do that worked.
+
+<img src="/assets/2008/nodebox_example.png" alt="NodeBox Example Image" title="NodeBox Example" />
+
+**NodeBox**
+
+I began with NodeBox, because it is so easy work with.  In Processing they call programs "sketches" and in NodeBox that is very much what it feels like.  The first thing I worked up was a way to draw "random" polygons in the same way for each libary. I could seed the random with a set value, but decided to use random to generate starting values, then just re-use those initial values.  To get 50 different polygons, I used a list of primes, chose from the list at random, then used those selected values to increment each polygon vertex and color value (red, green, blue, and alpha).  All of which was probably more work than was strictly necessary, but should be stable across different versions of Python and different operating systems.
+
+The drawing routines all have the same signature.  They take a tuple of point tuples (x,y) and a tuple of colors (r,g,b,a) as ints between 0 and 255.
+
+    def nodebox_poly(pts, clr):
+        fill(*ints2floats(clr)) # convert ints in range 0-255 into floats between 0.0 and 1.0
+        beginpath()             # every time we want to change colours or linewidth we need to start a new path
+        moveto(*pts[-1])     # start and end at the last point in the list
+        for pt in pts:
+            lineto(*pt)
+        endpath()
+
+    def nodebox_main():
+        size(WIDTH, HEIGHT) # nodebox wants to know how big a canvas you are working with
+        draw_all(nodebox_poly) # No additional setup needed
+
+<img src="/assets/2008/cairo_example.png" alt="Cairo Example Image" title="Cairo Example" />
+
+**PyCairo**
+
+The lines in cairo_main where we create the surface and where we save it are all we would have to change if we wanted to generate a Cocoa view, an SVG document, a PDF document, etc.  Two of the main differences between this and the NodeBox example are that there is a bit more setup (Cairo doesn't default to a white background) and we need to have a reference to the context for drawing, where NodeBox has an implicit drawing context.
+
+    def cairo_poly(pts, clr):
+        ctx.set_source_rgba(*ints2floats(clr))
+        ctx.move_to(*pts[-1])
+        for pt in pts:
+            ctx.line_to(*pt)
+        ctx.close_path()
+        ctx.fill()
+
+    def cairo_main():
+        # Setup Cairo
+        import cairo
+        global ctx
+        surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, WIDTH, HEIGHT)
+        ctx = cairo.Context(surface)
+        # fill background white
+
+    cairo_poly(((0,0),(WIDTH,0),(WIDTH,HEIGHT),(0,HEIGHT)),(255,255,255,255))
+        draw_all(cairo_poly)
+        surface.write_to_png('cairo_example.png')
+
+<img src="/assets/2008/aggdraw_example.png" alt="Aggdraw Example Image" title="Aggdraw Example" />
+
+**aggdraw**
+
+The aggdraw example is very similar to Cairo.  In fact, if I'd done either of these first, I would have passed the context object around and simply ignored it in NodeBox to eliminate a global variable.  Aggdraw can draw in memory without using PIL, but doesn't appear to have a way to write to a PNG image that way, so we draw to a PIL image (which requires us to flush all drawing operations before writing the file).
+
+    def aggdraw_poly(pts, clr):
+        import aggdraw
+        global ctx
+        b = aggdraw.Brush(clr, clr[-1])
+        pts2 = []
+        for p in pts:
+            pts2.extend(p)
+        ctx.polygon(pts2, b)
+
+    def aggdraw_main():
+        import aggdraw, Image
+        global ctx
+        img = Image.new('RGBA', (WIDTH, HEIGHT), "white")
+        ctx = aggdraw.Draw(img)
+        draw_all(aggdraw_poly)
+        ctx.flush()
+        img.save('aggdraw_example.png')
+
+**Utilites**
+
+These were the same for all of the examples.  If you put it all in one file (or use mine, linked below) you can choose what library to use by switching which main function is called.
+
+    MIN_ALPHA = 50
+    MAX_ALPHA = 100
+
+    WIDTH = 500
+    HEIGHT = 250
+
+    #
+    #   Utilities
+    #
+
+    def hex2tuple(hex_color):
+        return tuple([int(hex_color[i:i+2], 16) for i in range(1,9,2)])
+
+    def tuple2hex(tuple_color):
+        return "#%0.2X%0.2X%0.2X%0.2X" % tuple_color
+
+    def ints2floats(tuple_color):
+        return tuple([c / 255.0 for c in tuple_color])
+
+    def inc_point(p, dp):
+        return (p[0] + dp[0]) % WIDTH, (p[1] + dp[1]) % HEIGHT
+
+    def inc_triangle(t, dt):
+        return tuple([inc_point(t[i], dt[i]) for i in range(3)])
+
+    def inc_color(c, dc):
+        new_c = [(c[i] + dc[i]) % 256 for i in range(3)]
+        new_a = (c[3] + dc[3]) % MAX_ALPHA
+        if new_a < MIN_ALPHA: new_a += MIN_ALPHA
+        new_c.append(new_a)
+        return tuple(new_c)
+
+    def draw_all(draw_fn):
+        triangle = start_t
+        color = start_c
+        for i in range(50):
+            triangle = inc_triangle(triangle, dt)
+            color = inc_color(color, dc)
+            draw_fn(triangle, color)
+
+    #
+    #   Starting and incrementing values
+    #
+
+    start_c = hex2tuple('#0xE6A20644')
+    start_t = (127, 132), (341, 171), (434, 125)
+    dt = (107, 23), (47, 73), (13, 97)
+    dc = 61, 113, 109, 41
+
+As you can see, these libraries are all quite capable of producing nice vector-based, anti-aliased polygons with alpha blending. I have heard anecdotal evidence that AGG is faster than Cairo, but Cairo appears to be more widely used.  Aside from that I don't know why one would be preferred over the other (unless you want to get into language wars: AGG is written in C++, Cairo is written in C).  Both have bindings in a number of languages besides Python, if that's your thing.  NodeBox is still my favourite tool for noodling around in with graphics programming.  All of these are great fun, easy to use, and handy to have in your bag of tricks.
+
+I tested this under OS X (required for NodeBox), using pycairo installed via fink (using fink's Python 2.5) and aggdraw installed via easy_install (using the builtin in Python 2.5).
+
+Here is my test file containing all of the code above: <a href="/assets/2009/alpha_polygonspy.zip" title="Alpha polygons example code">Alpha polygons example code</a>
+
+
+
+

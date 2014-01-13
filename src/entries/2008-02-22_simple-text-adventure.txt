@@ -1,0 +1,174 @@
+Simple text adventure
+
+#published: 2008-02-22
+#tags: Python, Programming, Projects, Games, Tutorial, Example Code
+#type: Journal Post
+#uuid: 1a498da1-fe68-4c52-afce-4867f8f5a41e
+
+<img src="/assets/2008/stairs.jpg" alt="Stairs down" />
+
+My son was working on his <a href="http://laptop.org/laptop/">XO</a> and said something like, "Dad, you promised to help me with Python." It turns out he was working on his first python program, using the bare-bones IDE for the XO, <a href="http://wiki.laptop.org/go/Pippy">Pippy</a>. (Aside: If anyone has a suggestion for a better environment than Pippy, that runs on the XO, I'm all ears.) I helped him with the syntax of an if statement and explained how else works, and how to quote the strings he was testing against. Looking over his shoulder I see that he's got a minimal version of a text adventure game shaping up.  I thought this would be a good opportunity to introduce him to lists and dicts, so I put together an email for him, so he would have it to refer back to later.  Here is what I wrote:
+
+In Python there are some powerful data structures for organizing your
+code and information.  You can also build your own, and I'll show you
+how to do that soon, but it is amazing what you can do just with what
+is built in.  Three of the key structures are lists, dicts (short for dictionaries), and tuples.  Tuples are similar enough to lists that I
+will only talk about lists and dicts for now, and we can talk about
+tuples later.  Also, it is important to know that when I talk about
+"strings" I mean text, which is a string of characters, generally
+surrounded by either single quotes 'like this' or double quotes "like
+this".
+
+### Dictionaries
+
+Dicts are a lot like real dictionaries: there is something you use to
+look something else up.  With a real dictionary you use the spelling
+of a word to look up its definition.  With python dictionaries, you
+can use a wide variety of objects to look up other objects.  The
+objects you look up can be anything: strings, functions, even lists or
+other dictionaries.  The objects you use to look up with are required
+to be things that cannot change, but usually they are strings.
+
+For convenience we call the things we use to look up with "keys" and
+the things that are looked up "values".  In the case of a real
+dictionary, the key is the spelling of a word, and the value is the
+definition.
+
+There are two ways to create a dict and assign it to a variable, in
+this example the variable is "my_lookup".  There is the dict()
+constructor function, and the literal notation.
+
+    my_lookup = dict(one=1, two=2, three='xyzzy') # dict constructor
+    my_lookup = {'one': 1, 'two': 2, 'three': 'xyzzy')
+
+Once we have a dict, we can change the value of the keys, add new key/value pairs, remove key/value pairs, or loop through all the keys:
+
+    print my_lookup['one']  # prints '1'
+    my_lookup['one'] = 'flugelhorn' # the key 'one' is now associated with the value 'flugelhorn'
+    my_lookup['four'] = 'this is the value of the key "four"' # add a new key, my_lookup now has four key/value pairs
+    del my_lookup['one'] # remove a key/value pair, my_lookup now has keys 'two', 'three', and 'four'
+    for key in my_lookup:
+        print key, my_lookup[key] # will print each key with its value, in random order
+
+The last point is important: dicts do not keep any specific order for
+their keys.  If you need to have the keys in order, you need to sort
+them first.  Usually this is not a problem.
+
+For more information on dicts and things you can do with them: <a href="http://docs.python.org/lib/typesmapping.html" target="_blank">http://docs.python.org/lib<wbr></wbr>/typesmapping.html</a>
+
+If you do need ordering, then you would generally use lists.  Lists
+keep what you put into them in order.  They can grow or shrink as you
+put things in or take them out, and you can put pretty much anything
+into a list, including dicts or other lists.  Getting or putting an
+item into a list looks a lot like getting or putting an item into a
+dict, except the keys are always integers.  By now you probably know,
+or can guess, that the first item in a list is 0, followed by 1, then
+2, etc.  You can also count down in a list: the last item is -1, the
+next-to-last is -2, etc.
+
+    my_list = list(1,2,3,4)
+    my_list = [1,2,3,4] # create a literal list
+
+So far my_list may not be what you expect.  What is the value of
+my_list[1]?
+
+    print my_list[1] # prints 2 because the indexes (like keys) of the list start with 0
+    my_list = [4,8,16,32]
+    print my_list[1] # prints 8
+
+You can change any value in a list
+
+    my_list[2] = "new value of two"
+
+You can add new values to the end of a list
+
+    my_list.append(64)
+
+And you can go through all the values of a list:
+
+    for value in my_list:
+        print value
+
+OK, so what does all of this have to do with games?
+
+Here is a simple example game.  See if you can extend it to do some
+more things, like dropping an item (or all items), or the 'look'
+command to show the long description and the room's contents. What
+else would be good to add?
+
+    '''
+    Simple dungeon game
+    '''
+
+    character = {'inventory': [], 'location': 'west room'}
+
+    dungeon = {
+        'west room': {
+            'short description': 'west room',
+            'long description': 'a sloping north-south passage of barren rock',
+            'contents': ['pail of water', 'dragon tooth'],
+            'exits': {'east': 'centre room'}
+        },
+        'east room': {
+            'short description': 'east room',
+            'long description': 'a room of finished stone with high arched ceiling and soaring columns',
+            'contents': [],
+            'exits': {'west': 'centre room'}
+        },
+        'centre room': {
+            'short description': 'centre room',
+            'long description': 'the very heart of the dungeon, a windowless chamber lit only by the eerie light of glowing fungi high above',
+            'contents': ['golden key', 'spiral hourglass'],
+            'exits': {'east': 'east room', 'west': 'west room'}
+        }
+    }
+
+    while True:
+        room = dungeon[character['location']]
+        command = raw_input(room['short description'] + ' > ')
+        command_parts = command.split(None, 1)
+        verb = command_parts[0]
+        obj = command_parts[-1] # if the user only types one word, both verb and obj will be the same
+        if verb in ['east', 'west', 'north', 'south', 'up', 'down', 'in', 'out']:
+            if verb in room['exits']:
+                character['location'] = room['exits'][verb]
+                room = dungeon[character['location']]
+                print 'You are in', room['long description']
+                for item in room['contents']:
+                    print 'There is a', item, 'here'
+            else:
+                print 'You cannot go that way'
+        if verb == 'inventory':
+            print 'You are carrying:'
+            for item in character['inventory']:
+                print '   ', item
+        if verb == 'quit':
+            print 'Goodbye'
+            break
+        if verb == 'take':
+            if obj == 'all':
+                if room['contents']:
+                    for item in room['contents'][:]: # this part: [:] makes a copy of the list so removing items works
+                        print 'You pick up the', item
+                        character['inventory'].append(item)
+                        room['contents'].remove(item)
+                else:
+                    print 'There is nothing to take!'
+            else:
+                for item in room['contents']:
+                    if obj in item: # does the word in obj match any part of the text of item?
+                        print 'You pick up the', item
+                        character['inventory'].append(item)
+                        room['contents'].remove(item)
+
+That's it for now.  I hope this was clear.  Feel free to ask me
+
+questions.
+
+Love,
+
+--Dad
+
+
+
+

@@ -1,0 +1,19 @@
+Imaginary Gadget: Tricorder
+
+#published: 2009-02-08
+#tags: Projects, Futurism, Gadgets, Environment
+#type: Journal Post
+#uuid: b6ec11ac-0fe1-47e6-80d8-c418b489ee83
+
+<img src="/assets/2009/green_vortex.png" alt="Green Vortex"/>
+
+This is a response to Bruce Sterling's <a href="http://blog.wired.com/sterling/2009/02/welcome-to-the.html">call for imaginary gadgets</a>.
+
+The Star Trek universe actually had several devices called Tricorders, and I'm not enough of a Trekkie to know what the difference was between them, or even what the "Tri" part was about.  What I do know is that they were magical devices which you waved knowledgeably in the air in front of you, which then answered the specific questions about your environment.  Sometimes you had to fiddle with them a bit.
+
+Back on Earth, <a href="http://www.environmentalhealthclinic.net/people/natalie-jeremijenko/">Natalie Jeremijenko's</a> <a href="http://www.nyu.edu/projects/xdesign/feralrobots/upgradeindex.html">Feral Robotic Dogs</a> project embeds cheap environmental sensors in off-the-shelf toys and sends them out into the environment.  The types of these sensors is growing, you can easily (and cheaply) buy sensors for carbon monoxide, radiation, volatile organic compounds (VOCs), etc.  My imaginary gadget would simply to replace the cheap toy dogs with yuppies and technophiles, by making a small device filled with sensors that plugs into their iPhone (or build it directly into Google's Android platform, or the XO2).
+
+If anyone is interested in making this gadget less imaginary, please get in touch with me.  Despite having a Master's degree in Electrical and Computer Engineering, my practical electronic skills are currently at the level of making LEDs shift colors with my new Arduino.  I'm willing to write the web service for co-ordinating all the sensor data data, the iPhone application, and exposing all the aggregate data for nice visualizations in Processing, NodeBox, etc.
+
+Making the invisible visible in our environment can be the first step towards making radical improvements to that environment. Lets see what's out there, or in Star Trek parlance, "Make it so!"
+

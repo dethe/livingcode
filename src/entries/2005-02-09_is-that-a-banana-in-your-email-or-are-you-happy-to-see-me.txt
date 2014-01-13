@@ -1,0 +1,20 @@
+Is that a banana in your email, or are you happy to see me?
+
+#published: 2005-02-09
+#tags: Tutorial, Email, Security
+#type: Journal Post
+#uuid: 50c84662-1f81-4d48-8693-cb624587e58a
+
+I've gotten a couple of messages asking why there are strange attachments in my email which may or may not prompt you to open your security settings if you try to open them. Fear not, these are not viruses! Rather, it's the basis of email itself if we ever want to move beyond the ocean of spam we currently swim in.
+
+First some background. When you send an email, by default there are three things which do not occur. The first is Authorization, i.e., there is no guarantee that the person you are sending the mail to is able to read it. The second is Encryption, which ensures that other people are not able to read it. The third is Authentication, proving that the mail which appears to be from me, actually is from me. None of these are present in normal email.
+
+In fact, sending an email without these is like putting all of your standard (snail) mail on postcards, then having the postcards travel through the houses of random strangers until they (possibly) end up at their destination. Adding authentication, authorization, and encryption is like putting your email in an envelope.
+
+So that is what the obscure attachment is in my email, it's a digital signature, which provides some form of authentication (better than nothing). I recieved this certificate from a company called Thawte, for free, and installed it in my primary email application, Mail.app. There are very good instructions for doing this at <a href="http://www.joar.com/certificates/">http://www.joar.com/certificates/</a>. Once you have installed the certificate, signing your mail happens automatically and transparently. The process of getting the certificate could be easier, but it's certainly not difficult.
+
+The real benefit happens when more people start doing this. See, if I have received mail from someone who also uses digital signatures, then Mail.app remembers this, and when I respond it uses their signature and my signature in combination to get the rest of the picture: Authorization and Encryption. If we can get to the point where the standard is to put messages in an envelope instead of postcards, it makes much better tools for eliminating spam available–don't accept mail unless it is from a verifiable source. It's not perfect, but a big improvement over the situation we have today.
+
+
+
+

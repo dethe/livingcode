@@ -1,0 +1,15 @@
+Apologies
+
+#published: 2008-02-21
+#tags: Python
+#type: Journal Post
+#uuid: 60af6065-774e-414a-87e3-5d0db3cede94
+
+<img src="/assets/2008/mandala.png" alt="Mandala" />
+
+I wanted to apologize for spamming Planet Python (and anyone else that happens to subscribe) with old posts recently.  After spending many of my free hours for the past year noodling around with my weblog software (and the myriad of problems getting anything to run persistently on Dreamhost), I finally gave up and switched to WordPress.  I've imported my old blogs for the sake of continuity (from Blogger and my own custom weblog, but not going back to Manila yet), and mapped the old URLs with redirects, so things should be fairly transparent to the casual observer.
+
+A couple of good things came from my time wrestling with my own software. I learned a lot more about WSGI. I got to evaluate TurboGears, Django, web.py, Pylons, and raw WSGI. I learned more about Atom syndication and AtomPub. And while I was doing all that, WordPress got semi-decent Atom 1.0 support and also began to support tagging: two of the reasons I was rolling my own.  It's still dog-slow, but I think that may have more to do with how DreamHost is running it (as a CGI) than WordPress itself.  And since I'm running several other WordPress blogs for family members and friends, at least I only have one system to fight with rather than two.
+
+Another good thing that came out of switching to WordPress, and one of the main reasons I had ripped my old blogging system apart to rebuild it it as a server-side tool, is that my blog supports comments now. I have spent the past year doing a bit more than just twiddling with blogging software, and I hope to have some of my more interesting experiments and some tutorials to post soon.  Let me know what you think of it.
+

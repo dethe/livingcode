@@ -1,0 +1,14 @@
+Vancouver XML Users Group
+
+#published: 2004-11-07
+#tags: Python, Meeting, Renaissance
+#type: Journal Post
+#uuid: 0f6f3be2-1271-425c-b4d8-0c0f7feea98a
+
+
+
+I'll be presenting on Renaissance, OS X, and Python at the <a href="http://vanx.org/">VanX</a> meeting at 6:30 p.m. on Thursday, December 16th. By then I should have a lot more programs and utilities to show.
+
+
+
+

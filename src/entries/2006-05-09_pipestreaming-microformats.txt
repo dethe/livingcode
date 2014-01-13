@@ -1,0 +1,12 @@
+Pipestreaming Microformats
+
+#published: 2006-05-09
+#tags: XML, Python, Article, developerWorks, Microformats
+#type: Journal Post
+#uuid: c11457b6-80f9-476c-a9fc-310d9151a16f
+
+<img src="/assets/2006/pipedreaming.jpg" />
+
+My latest article for David Mertz's column XML Matters on IBM's developerWorks site has been up for over a week now, but I'm finally coming up for air long enough to post about it. The title is <a href="http://www-128.ibm.com/developerworks/xml/library/x-matters44.html">Pipestreaming Microformats</a> and it is a survey of attempts to apply the Unix pipe metaphor to XML content, then some blue-sky dreaming of how to apply that to <a href="http://microformats.org/">microformats</a>.
+
+One thing I mention in the article is that Norm Walsh's <a href="https://sxpipe.dev.java.net/">SXPipe</a> would be cool to re-implement in Python using <a href="http://codespeak.net/lxml/">lxml</a>. While I was writing the article and in the time since, lxml has been undergoing a flurry of activity the results of which (among other cool things) are that it now has Python eggs for easy install on Windows, OS X, and Linux. So I think it's ready, I just need to find time to spend with that project. If there is interest in such a thing, let me know so I can bump the priority up.

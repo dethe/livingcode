@@ -1,0 +1,14 @@
+In the future, all websites will be handwritten
+
+#published: 2008-05-29
+#tags: Humour, Web
+#type: Journal Post
+#uuid: f475456c-2159-4758-a805-52891a8bbc31
+
+Daniel Gordon had the first <a href="http://web.archive.org/web/20070625030114/http://www.cl.cam.ac.uk/~dlg10/">hand-written website</a> that I am aware of, existing unchanged from 1999 to 2007 (via Wayback Machine).
+
+The invention of photography and gas stoves in 2007 allowed Miranda July to <a href="http://noonebelongsheremorethanyou.com/">update the concept</a>.
+
+And today, of course, there are <a href="http://www.unowen.net/tegaki/">handwritten social networks</a>.
+
+That is all.

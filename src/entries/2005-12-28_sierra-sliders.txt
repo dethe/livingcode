@@ -1,0 +1,18 @@
+Sierra Sliders
+
+#published: 2005-12-28
+#tags: Javascript, Project, Tool, Sierra Sliders
+#type: Journal Post
+#uuid: f5c9b440-c17b-4616-8ba5-eb7df2621ea9
+
+Kathy Sierra, of the <a href="http://headrush.typepad.com/creating_passionate_users/2005/11/how_to_come_up_.html">Creating Passionate Users</a> blog, posted about using an equalizer metaphor for product planning and brainstorming. She included some images for her readers to play around with for their own equalizer-planning projects. I took those, apply the Gimp to them, mixed with Bob Ippolito's uber-cool <a href="http://mochikit.org/">MochiKit</a>, and release to you:
+
+<a href="/projects/sliders">Sierra Sliders</a>
+
+<img src="/assets/2005/equalizer_example.png"/>
+
+You can label up to eight sliders using the text box, hit enter and tweak the sliders. When you have it the way you want it, you can bookmark the result and send it to your team members, or your mom. Tested in IE 6, Firefox 1.5, and Safari 2.0.2. Your mileage may vary. Void where prohibited by law. Some limitations may apply. Coded in a hurry(tm).
+
+
+
+

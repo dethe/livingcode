@@ -1,0 +1,12 @@
+Silent Boggle
+
+#type: Project
+#format: markdown
+#tags: Projects, Games
+#tagline: Boggle generator and solver
+
+### Boggle generator and solver
+
+When my first child was born, my wife Daniela and I like to play Boggle a lot, but we worried about the noise waking the baby, so I coded up a quick CGI script to create a web page listing the letters with the same frequency as the game. That worked OK, and now we could play without rattling the box, but of course a project never stops where you thought it would. I kept thinking that it would be cool if I could list all the words available, making it useful for learning new vocabulary, or just checking your score. It turns out that Peter Norvig covered solving Boggle as an AI problem in his book AI: A Modern Approach. And he also provides the code from the book, in both Lisp and Python. So, armed with a standard linux word list, munged to remove words illegal or impossible in Boggle (and to handle my funky hack involving the Qu face of the Boggle dice) and the AIMA python library, I was able to get something going. A little slow, and resource intensive, but it works (if that project ever starts getting much traffic, I'll have to stick the wordlist in a separate, long-running process).
+
+<iframe src="/assets/boggle/boggle.py" height="600px" width="100%"></iframe>

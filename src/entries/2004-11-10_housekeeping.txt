@@ -1,0 +1,22 @@
+Housekeeping
+
+#published: 2004-11-10
+#tags: Python, Update, Renaissance
+#type: Journal Post
+#uuid: 7715fc52-d1d2-4335-b47a-1b25f429fcd4
+
+
+
+Various small improvements. Switched the template so code doesn't run off the edge so easily. Fixed whitespace, which I forgot to do after switching the template (thanks, Xavier, for pointing that out!). All the code for the renaissance examples is available via cvs from the SourceForge <a href="http://sourceforge.net/projects/livingcode/">Living Code</a> project, in the somewhat predictable cvs module, <a href="http://cvs.sourceforge.net/viewcvs.py/livingcode/renaissance_examples/">renaissance_examples</a>. As some of the examples grow, I may only publish the highlights in the blog, and put the remainder in CVS. We'll se how it goes.
+
+Coming attractions. I'm researching how to build the Renaissance projects so they can be distributed (I haven't forgotten you, Jorjun, I'm just still figuring it out myself). I can do it now (thanks, Bob!), but I want something more straightforward to build. Hopefully later tonight.
+
+Now that we've got a brower for Renaissance files (see previous post), I wanted to create a markup file to show off most of the widgets and options, but realized there is no markup for tabbed views, so I'm going to try creating new tags from Python, and show how to do that. When I've got the tags which represent Cocoa widgets that do not yet have Renaissance representations working, then I'll put together the demo gsmarkup file.
+
+Then back to the Small Nerd examples and a couple of other applications (ports of existing tools, nothing terribly original yet).
+
+It's been nice to hear from people who are enjoying this series. If there are specific things you'd like to see, let me know, either in the comments, or at dethe(at)livingcode.org
+
+
+
+

@@ -1,0 +1,107 @@
+GMarkup Browser
+
+#published: 2004-11-09
+#tags: Python, PyObjC, XML, Example Code, Tutorial, Cocoa, Renaissance
+#type: Journal Post
+#uuid: 12f60a9d-8796-4f47-ad80-5db1bb175748
+
+Today's exercise was to port the GMarkup Browser, an Objective-C program which comes with Renaissance, to Python. Using this allows you to see what various gmarkup files will look like when they are loaded, which is very handy as you're developing a program's UI, without having to build a program around them. The source code of Renaissance (available separately from the binary we installed a few entries ago) contains an Examples folder showing all of the tags in use, both as small toy examples and tests, and as full-fledged applications. It's well worth downloading this and poking around in it with the Browser.
+
+There are three files today, the `setup.py`, a simple `MainMenu.gsmarkup`, and the `browser.py` application. Note that loading resources, especially menu resources, into a running program can cause bad side effects. So far I've been able to exit by ctrl-clicking the application icon and selecting quit, even when the menus disappeared, but use caution. Also, buttons wired up to the "`terminate:`" selector will exit your program if you click on them. With great power comes great responsibility, or something like that. Caveats aside, you can open multiple gsmarkup files at a time, just use the File->Open menu or Cmd-O.
+
+**MainMenu.gsmarkup**
+
+    <?xml version="1.0"?>
+    <!DOCTYPE gsmarkup>
+    <gsmarkup>
+        <objects>
+            <menu type="main">
+                <menu title="GSMarkup Browser" type="apple">
+                    <menuItem title="About GSMarkup Browser"
+                        action="orderFrontStandardAboutPanel:"/>
+                    <menuSeparator/>
+                    <menu title="Services" type="services"/>
+                    <menuSeparator/>
+                    <menuItem title="Hide GSMarkup Browser" action="hide:" key="h"/>
+                    <menuItem title="Hide Others" action="hideOtherApplications:"/>
+                    <menuItem title="Show All" action="unhideAllApplications:"/>
+                    <menuSeparator/>
+                    <menuItem title="Quit GSMarkup Browser" action="terminate:" key="q"/>
+                </menu>
+                <menu title="File">
+                    <menuItem title="Open" action="open:" key="o"/>
+                </menu>
+                <menu title="Window" type="windows">
+                    <menuItem title="Minimize Window" action="performMiniaturize:" key="m"/>
+                    <menuSeparator/>
+                    <menuItem title="Bring All to Front" action="arrangeInFront:"/>
+                </menu>
+            </menu>
+        </objects>
+    </gsmarkup>
+
+**browser.py **
+
+    '''
+    Port of GSMarkupBrowser from Objective-C to Python
+    '''
+
+    from Foundation import *
+    from AppKit import *
+    from Renaissance import *
+
+    class Owner(NSObject):
+    def takeValue_forKey_(self, obj, key):
+        #print 'Set value %s for key %s of NSOwner' % (obj, key)
+        pass
+
+    def bundleDidLoadGSMarkup_(self, notification):
+        if NSUserDefaults.standardUserDefaults().boolForKey_('DisplayAutoLayout'):
+            topLevelObjects = notification.userInfo().objectForKey_('NSTopLevelObjects')
+            for obj in topLevelObjects:
+                if obj.isKindOfClass_(NSWindow) or obj.isKindOfClass_(NSView):
+                    obj.setDisplayAutoLayoutContainers_(True)
+
+    def applicationDidFinishLaunching_(self, notification):
+        self.open_(self)
+
+    def open_(self, notification):
+        filetypes = ['gsmarkup']
+        panel = NSOpenPanel.openPanel()
+        result = panel.runModalForDirectory_file_types_(None, None, filetypes)
+        if result == NSOKButton:
+            self.pathname = panel.filenames()[0]
+            #print 'Loading', self.pathname
+            didLoad = NSBundle.loadGSMarkupFile_externalNameTable_withZone_localizableStringsTable_inBundle_(
+                self.pathname,
+                {'NSOwner': self}, None, None, None)
+            if didLoad:
+                print self.pathname, 'loaded!'
+            else:
+                #print 'Could not load', self.pathname
+                NSBeep()
+
+    def main():
+        defaults = NSUserDefaults.standardUserDefaults()
+        defaults.registerDefaults_({'DisplayAutoLayout': 'NO'})
+        app = NSApplication.sharedApplication()
+        owner = Owner.alloc().init()
+        app.setDelegate_(owner)
+        NSBundle.loadGSMarkupNamed_owner_('MainMenu', owner)
+        NSApp().run()
+
+    if __name__ == '__main__': main()
+
+**setup.py**
+
+    '''
+    Minimal setup.py example, run with:
+    % python setup.py py2app
+    '''
+
+    from distutils.core import setup
+    import py2app
+    setup(
+        data_files = ['MainMenu.gsmarkup'],
+        app = ['browser.py'],
+    )

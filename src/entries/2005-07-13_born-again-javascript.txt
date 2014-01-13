@@ -1,0 +1,14 @@
+Born-Again Javascript
+
+#published: 2005-07-13
+#tags: Python, Javascript
+#type: Journal Post
+#uuid: ed723af6-0aa9-4f9a-b8bd-8577a9d0e4c0
+
+While most of my coding for fun is in Python, a whole lot of my coding at work is in Javascript. Over the years I have tried <a href="http://dynapi.sourceforge.net/">many</a>, <a href="http://www.technicalpursuit.com/">many</a> frameworks for extending Javascript to add new widgets to the browser, to handle functional-style programming in Javascript, or simply to make the browser DOM easier to use. They pretty much all suck. Much of the suckitude comes from trying to support beasts such as Netscape 4 or IE Mac, neither of which are supported by any sane company these days. Of course, now that Netscape 4 is finally settling into the dim recesses of history where it belongs, we still have all the flavours of IE to plague us. Microsoft does their best work when they are playing catch-up. Everyone predicted that as soon as they were the dominant browser they would stop caring about standards and stop updating their browser in any significant way. Microsoft denied it, but can anyone really say they're surprised that it's exactly what they did? Only when Firefox began to seriously erode their "market share" did they reanimate the moribund IE team. I can't wait to see what kind of nightmares we get when that monster walks out of the laboratory.
+
+Despite all this, I'm still somewhat of a fan of Javascript. It doesn't get much respect, in part because of poor implementations, and in part because it wasn't designed to be very modular. It ignores modern concepts such as threading. You could go on for days on the problems of Javascript, and others have, so I won't. What all this is getting to is that I'm excited about seeing good uses of Javascript in <a href="http://maps.google.com/maps?q=Vancouver,bc,+canada&amp;spn=.130507,.324526&amp;hl=en">Google Maps</a> and <a href="http://backpackit.com/">Backpack</a>. I'm going to try using <a href="http://script.aculo.us/">Script.aculo.us</a> to see what I can get away with (using my new fave web framework, <a href="http://www.cherrypy.org/">CherryPy</a>). And I'm really, really looking forward to what Bob Ippolito is cooking up with his semi-stealth project: <a href="http://bob.pythonmac.org/archives/category/javascript/mochikit/">Mochikit</a>. Bob has done some amazing work with PyObjC, and Mochikit could well be the Javascript framework I've been looking for, complete with documentation and unit tests. I can't wait.
+
+
+
+

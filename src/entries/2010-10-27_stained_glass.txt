@@ -1,0 +1,14 @@
+Stained Glass Generator
+
+#published: 2010-10-27
+#tags: Art, Generative
+#type: Journal Post
+#uuid: 2e4acf3d-e11a-4924-8b25-17221cbec53a
+
+<div id="glass" style="width: 500px; height: 500px"></div>
+
+This is just a quick sketch I made, originally in NodeBox, ported to Raphael for sharing. I was had an idea for a book cover and used this to explore the space. Generates a new image each time you load the page.
+
+<script src="/javascripts/raphael-min.js"></script>
+<script src="/assets/2010/stained_glass.js"></script>
+

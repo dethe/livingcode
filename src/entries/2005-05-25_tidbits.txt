@@ -1,0 +1,18 @@
+Tidbits
+
+#published: 2005-05-25
+#tags: Python, Update, Projects
+#type: Journal Post
+#uuid: 9434a5f5-43bd-4f7e-ab8b-7e65b3222cae
+
+My posts have been infrequent, in part because I've been working on lots of things to talk about. I'm in the last stages of putting together info on creating NSStatusItems (tools which show up in the menu bar across all applications in OS X) in PyObjC. I've also got some cool Quicktime and iSight tools coming soon. And I've renamed ZenPaint to DrawingBoard, but it's working and just waiting for a little GUI cleanup before I post the first binary and source.
+
+Two of my back-burner projects, better blue-screening, and easy lightsabre effects, have been done by others recently. Inspired by the same BoingBoing piece on rotoscoping your own lightsabres as I was, but <a href="http://www.lamarchefamily.net/nakedsoft/">Naked Software</a> actually sat down and wrote the code. It's pretty slick, too. For blue-screen effects (and many more), check out Sam Kass' <a href="http://www.samkass.com/blog/">Quartz Composer Compositions</a>. Very neat stuff, Tiger-only though [Update: now Leopard]. Some of the compositions require a newer system with a higher-end video card than my three-year-old PowerBook.
+
+But to be honest, the real point of this post is not to tease with coming attractions, but to point out my first paid publication. My friend <a href="http://gnosis.cx/publish/">David Mertz</a> asked me to collaborate with him on his <a href="http://www-128.ibm.com/developerworks/views/xml/libraryview.jsp?search_by=xml+matters:">XML Matters</a> column for IBM developerWorks, and my first column went live last Friday: <a href="http://www-128.ibm.com/developerworks/xml/library/x-matters41.html">Beyond the DOM</a>.
+
+I've wanted to be a writer for as long as I can remember, with poetry notebooks and 200 pages of a novel gathering dust on my bookshelves, so finally getting around to finishing something and having it published leaves me pleased as punch. And more **will** be forthcoming.
+
+
+
+

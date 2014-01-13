@@ -1,0 +1,22 @@
+Pastels
+
+#published: 2006-08-19
+#tags: Python
+#type: Journal Post
+#uuid: 78ac7f97-5567-499c-8c8c-b0d2d4e5f3f7
+
+[Update: Thanks to Blake Winton for pointing out that the project page link to the Pastels download was broken, fixed now. Also added a link to the project page.]
+
+Pastels is an example project for creating an OS X screensaver in Python using PyObjC. By extension it could be used as an example for building nearly any plugin or bundle for OS X. It started when I had an idea for drawing a simple squiggle, over and over, while cycling the colours and moving the squiggle around. I was very pleased with how it turned out.
+
+Project page: <a href="/projects/pastels">http://livingcode.org/projects/pastels/</a>
+
+It's also my first attempt at hosting an open-source project at Google with their new hosting program. If it works out well I will add more of my projects there, which will save me trying to set up and configure Subversion on Dreamhost for public access (probably not difficult, but one more thing I don't have to do means more time for writing example code and tutorials).
+
+I'm working on the tutorial text to go along with this project, so ask any questions you have and I'll try to get to them in the tutorial.
+
+If you are seeing this on my site (as opposed to the Atom feed), there are some changes I'm making to the site that I'd like to point out. I've added pages for projects and mini-projects which use the same stylesheet and includes as the rest of the site. I know the stylesheet is <del>ugly</del> less than completely attractive right now–the first thing was to get everything factored and consistent, then to make it pretty. The projects page only has one item on it (Pastels), but that should be changing now that I have the infrastructure set up the way I want it. Nearly all the projects I mentioned in my presentation at the Vancouver Python Workshop will get their own pages soon. More about that in my next post.
+
+
+
+

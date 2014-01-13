@@ -1,0 +1,13 @@
+VanDjangoJam
+
+#published: 2007-02-01
+#tags: News, Meeting, Python
+#type: Journal Post
+#uuid: b25e3aeb-fd88-419f-854a-a027880b5a5b
+
+The next <a href="http://www.vanpyz.org/">Vancouver Python</a> users' group meeting will have a special guest: <a href="http://www.holovaty.com/">Adrian Holovaty</a>, lead developer for the <a href="http://www.djangoproject.com/">Django</a> web framework. The meeting will be on Tuesday, February 6th from 7-9 pm, hosted by <a href="http://www.sophos.com/companyinfo/contacting/canada/">Sophos</a> at their Vancouver office.
+
+To prepare for this, there will be workshop before-hand to learn more about Django. The introduction to Django web framework workshop will be a hands-on tutorial on February 4th from 1-4 pm, also at the Sophos office. To make this event even more special (at least for me) it happens to be my birthday, when I get in touch with Life, the Universe, and Everything.
+
+Details on both events can be found at the <a href="http://www.vanpyz.org/Djangojam">VanDjangoJam</a> page. Thanks to <a href="http://prescod.net/">Paul</a> for organizing this, and to everyone who has volunteered to help out.
+

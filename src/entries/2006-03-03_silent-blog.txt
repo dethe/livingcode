@@ -1,0 +1,28 @@
+Silent Blog
+
+#published: 2006-03-03
+#tags: Python, Projects, Update
+#type: Journal Post
+#uuid: 9bb1bdb8-0012-4258-a49e-ba6bac26b1b4
+
+Yes, I've been quiet for awhile. No, I'm not going to apologize, and I wish more bloggers would stop apologizing when they take time off. One of the great things about Atom/RSS feeds is that I can keep up with blogs that are posted to infrequently, which includes some of my favorites. Don't feel like you need to post all the time–we've all got plenty of other things to read!
+
+My quiet time is going to continue for a bit longer, but while I won't apologize, I will at least explain. Here's what I'm doing instead with the couple of hours I have between putting the kids to bed and going to bed myself.
+
+* Writing the OS X version of the file uploader for The Conversation Network. At some point this will be made public, and the idea is to open source it. I'll be sure to point that out when it happens. It's been really great to have this opportunity to work with Doug Kaye and the rest of the gang from ITConversations, after being an admirer (and consumer) of their work for some time.
+* Attended the Northern Voice and Moose Camp conference, where I was fortunate enough to co-moderate a session on community and blogs with Nancy White
+* Writing my own weblog software. Blogger has a better interface than manilasites, but that's not saying much. I'm also trying to port my old content from manilasites, plus my pre-blog-era work, plus my paper journal. All of this will be hosted at livingcode.org in the near future.
+* Writing more articles for IBM developerWorks, I hope to have more to say about that Real Soon Now
+* Generally organizing the livingcode site better, getting projects their own pages, putting code into SVN. Trying to use Sourceforge was a huge failure, their interface is just too crufty and they still don't support Subversion. But Dreamhost (where livingcode.org is hosted) does support Subversion now, so I'm going to be moving all my public code over there.
+* I wrote a screensaver using PyObjC which I'm hoping to get included in their distribution as an example, but I need to do some refactoring first (in the time leftover from other projects). I want to write that up too, it was pretty interesting to work on.
+* I periodically take a stab at porting VPython to the Aqua environment. I have some ideas for this (some of them probably heretical to the VPython folks), but need time to work on them. Notice a pattern emerging?
+* Porting Apple's Sketch demo application from ObjectiveC to PyObjC.
+* Several of these things are just precursors to DrawingBoard, my animation program for kids. I really, really want to be working on that, but need to get some of the smaller projects finished and out of my head so I can concentrate.
+* Exploring programming environments for my kids. My nine-year-old son and I will try competing in the PyWeek game challenge later this month.
+* I'm sure I've forgotten several significant things.
+
+More news as it happens.
+
+
+
+

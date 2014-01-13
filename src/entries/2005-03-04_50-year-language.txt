@@ -1,0 +1,46 @@
+50-Year Language
+
+#published: 2005-03-04
+#tags: Python, Programming, Languages
+#type: Journal Post
+#uuid: 69bde45f-64b8-488d-8e65-d70d447987a0
+
+A post by <a href="http://patricklogan.blogspot.com/2005/03/languaging.html">Patrick Logan</a> on languages, in response to something <a href="http://www.dehora.net/journal/2005/03/communication_languages.html">Bill de hÓra</a> wrote on language and communication inspired me to think some more about the language I'd like to be programming in. If you follow those links you might be interested to know that KIF is the <a href="http://logic.stanford.edu/kif/dpans.html">Knowledge Interchange Format</a>, FIPA is the Foundation for Intelligent Physical Agents, and ACL is the <a href="http://www.fipa.org/specs/fipa00061/">Agent Communication Language</a>.
+
+Paul Graham has an essay, <a href="http://www.paulgraham.com/hundred.html">The Hundred-Year Language</a> in which he argues, in part, "Unlike physics in a hundred years, which is almost necessarily impossible to predict, I think it may be possible in principle to design a [programming] language now that would appeal to users in a hundred years."
+
+It's a hard argument to back up, because we have no evidence in our existing programming languages. Lisp and Fortran are a little over fifty years old at this point, so those are the oldest examples we have to go by. And only Lisp is still gaining new adherents, as far as I can tell. It took Unix over 30 years to begin winning the OS wars, so who knows, maybe Lisp's time has come.
+
+There are some trends that have been showing up in recent mainstream languages like Java, Python, etc. The ability to handle Unicode for internationalization. Threads for scaling. Making network connections easier, especially for HTTP connections. Various layers of support for HTML.
+
+If we assume that adding these facilities into programming languages is progress, if it is a kind of encapsulation of best practices, or at least making common cases of complex behaviour more accessible (if you've ever managed network connections in C you'll understand what I mean), then what does that say for the next 50 year language? What would a language with the staying power of Lisp look like?
+
+Well, what are the trends and emerging best practices today? Testing is a big one. Designing for testability, unit testing, test-driven development, these are all current buzzwords and for good reason. If Extreme Programming manages to get one idea into the mainstream, test-driven development would be a good one. But certain types of code are very hard to test, and these are some of the code that most needs to be tested. Code that results in persistent state changes (databases) are hard to isolate for testing because by nature they keep changing. Threaded code is hard to test, and multi-process code is even harder. User interfaces are incredibly hard to test well. Web code is difficult to test because you have no control over the environment it runs in–how do you automate a test which needs to run over several versions of several browsers under various operating systems? Performance is difficult to test well, it's hard to isolate the bottlenecks of code to see where a minimum of effort (and disruption) can make a maximum performance impact.
+
+So, one thing I'd like to see in the language of the future is the language designed for testability. What would a language deigned for testing look like? In part it might look like Eiffel with all the knobs turned to 11.
+
+We can look at some of the most heralded features of existing languages, some mainstream, some more esoteric, to see what else might go into this future language.
+
+* Scalability [Erlang]
+* Robustness [Erlang]
+* Testability [Eiffel]
+* Flexibility [Smalltalk/Lisp]
+* Support for Little Languages &lt; [Lisp]
+* Native UI [C#]
+* XML as a native datatype [ECMAScript2]
+* Small core language [Ruby/Lua]
+* Web as a core competency [ECMAScript/PHP]
+* Refactorability [Smalltalk]
+* Prototyping [ECMAScript/Smalltalk]
+* Security [What does this now?]
+* Manipulate units as well as numbers [Frink]
+* Able to compile efficiently when needed [Lisp]
+
+The specific languages I chose are meant as examples, and reflect what I have some knowledge of. If I've left out Haskell, or Oz, etc., it's largely because I'm less familiar with them and their benefits. The languages I chose are definitely weighted towards the dynamic end of the spectrum because that's just the way things are going and I can only see that trend accelerating.
+
+I've also mixed up language and libraries a bit freely. This will be one of the axes that languages will be measured on. Python would probably be easier to port to new platforms if the language core were smaller and the standard library could be defined in terms of that core. Lua wins in this regard, if someone wants a small, embeddable language. Some of the list above may be mutually contradictory. Paul Graham theorizes that there will be only a small number of languages in the future, but there will certainly be more than one, depending on the needs of the programmer.
+
+Smalltalk and Lisp are mentioned above as "Flexible" and I should probably mention what I mean by that. In both languages you can create new core language features: operators, flow control, code rewriting, etc. Most languages do not support that level of manipulation (and Java specifically goes to lengths to prevent it).
+
+When I think about what I'd like to see in the next fifty-year language, I call it Rotfl, which comes from ROTFL (Rolling on the floor laughing), which is what a programmming language should lead to. I spend far too much of my coding time in computer-induced Tourette's Syndrome (i.e., swearing uncontrollably). I want to put the fun back in functions. This is at the core of Programming for the Fun of It. Some people spell Rotfl as Python 3000. We'll see.
+

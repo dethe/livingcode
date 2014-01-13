@@ -1,0 +1,17 @@
+Processing Playground
+
+#published: 2008-06-10
+#tags: Javascript, Processing, Projects, Art, Graphics
+#type: Journal Post
+#uuid: fbae4b41-f587-43f8-806b-80c383e552b8
+
+<img src="/assets/2008/kudzu3_forweb.png" alt="Kudzu"></a>
+
+There is a lot of interesting stuff happening in Javascript land these days, even to the point of other languages targeting the browser as a runtime, but running on top of Javascript.  You can run <a href="http://www.bluishcoder.co.nz/jsscheme/">Scheme</a> right in the browser, and by now everyone has probably heard of Objective-J (open-source <a href="http://objective-j.org/">coming soon</a>), an Objective-C-like language used by 280 North to create their <a href="http://280slides.com/">280 Slides</a> web application, inspired by Apple's Keynote.
+
+Since my last post <a href="/entries/2008-03-19_processing-critters">about Processing</a>, John Resig managed to port most of Processing to Javascript, so it is easier than ever to get started.  Now instead of having to download the Java-based runtime, you can create Processing animations in your browser, within the limitations that it only targets very recent, beta browsers (Firefox 3, Opera 9.5, WebKit nightlies, no version of IE) and that not all of Processing is supported (no 3D, for instance, and my example from the earlier post does not run).  Still, it is interesting and a lot of fun to play with.  My seven-year-old son is fascinated with computer programming and looking to move beyond <a href="http://scratch.mit.edu/">Scratch</a>, so as part of that I stuck all the basic examples from Mr. Resig's site into one page, with a menu to select them, and a button to run them.  And I made them editable.  You can write entirely new code too, of course, but the examples can help for getting started.  I hope folks enjoy it.
+
+<a href="/projects/processing/#sine_wave">Processing Playground</a>
+
+Of course, what my kids really want is a version of Scratch that we can extend to add some more features of our own.  Scratch has been open-sourced, so we could possibly extend it, but it is built on Squeak Smalltalk, and I've never been very good at Smalltalk.  Instead, I am porting it to Javascript.  It is still in the early stages, but I'm making steady progress in my hour or so I have to code each evening, and my kids are eager to use it, so they keep me motivated and focussed.
+

@@ -1,0 +1,58 @@
+Screencast in Cocoa (Python)
+
+#published: 2006-03-10
+#tags: Python, Cocoa, PyObjC, Example Code, Tutorial
+#type: Journal Post
+#uuid: 9d914c3c-2dc7-41d1-a2d4-2f38d84f24ca
+
+I noticed that jwz is trying to <a href="http://jwz.livejournal.com/608233.html">take a screenshot</a> in Cocoa and having trouble. I'm happy to see that he's porting his awesome collection of screensavers to OS X, that's great news. As for taking screen shots, I'm amazed it is as hard as it seems to be–heck even the new Nokia Series 60 give you the ability to take screeenshots from Python now. In any case, here is a method that works for me under PyObjC. It assumes it is part of a Cocoa object and that you've done a from `AppKit import *` already. Since I can't comment on jwz's blog (whether it's because I don't use LiveJournal or because I do use Safari, I don't know), I'll post it here instead.
+
+    def screenShot(self):
+
+        rect = NSScreen.mainScreen().frame()
+        image = NSImage.alloc().initWithSize_((rect.size.width, rect.size.height))
+        window = NSWindow.alloc().initWithContentRect_styleMask_backing_defer_(
+            rect,
+            NSBorderlessWindowMask,
+            NSBackingStoreNonretained,
+            False)
+        view = NSView.alloc().initWithFrame_(rect)
+        window.setLevel_(NSScreenSaverWindowLevel + 100)
+        window.setHasShadow_(False)
+        window.setAlphaValue_(0.0)
+        window.setContentView_(view)
+        window.orderFront_(self)
+        view.lockFocus()
+        screenRep= NSBitmapImageRep.alloc().initWithFocusedViewRect_(rect)
+        image.addRepresentation_(screenRep)
+        view.unlockFocus()
+        window.orderOut_(self)
+        window.close()
+        return image
+
+I cribbed this several months ago from some example Cocoa code, but forgot to make a note of where I got it. If anyone recognizes this pattern, please let me know so I can attribute it.
+
+[Update 2006-03-10]
+
+Nils Soffer pointed out:
+
+> A simpler solution:
+> 
+>     try:
+>         screenshot = 'screenshort.pdf'
+>         os.system('screencapture -i %s' % screenshot)
+>         image = NSImage.alloc().initWithContentsOfFile_(screenshot)
+>     finally:
+>         os.remove(screenshot)
+> 
+> :-)
+
+Which reminds me, you can also use the command-line `screencapture -c` to go to the clipboard instead of a file.  This might be faster, but I haven't tested it yet.  I still think there should be a Cocoa method to grab the underlying framebuffer of the screen. Besides the `-c` flag to send the image to the clipboard there is also a `-C` flag to capture the cursor as well.
+
+[Update 2008-01-22]
+
+Digging through old mail as I move this entry from my custom blog setup to Wordpress, I found where I got this code from originally. It's from the Irate Scotsman's <a href="http://mattgemmell.com/source">Screen Sharing </a>code.  Thanks, Matt!
+
+
+
+

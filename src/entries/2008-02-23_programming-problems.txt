@@ -1,0 +1,16 @@
+Programming Problems
+
+#published: 2008-02-23
+#tags: Python, Programming, Programming Challenges, Exercises
+#type: Journal Post
+#uuid: 649fec5a-5788-4b0c-8cba-e4c67ba8a693
+
+<img src="/assets/2008/ruins.png" alt="Ruins" />
+
+André Roberge has <a href="http://aroberge.blogspot.com/2008/02/99-problems-looking-for-volunteers.html">started a project</a> to embed programming challenges in his <a href="http://code.google.com/p/crunchy/">Crunchy</a> project.  Crunchy is a way to embed both Python code and an interpreter into a web page, making it great for Python education projects.  I like the idea of collecting both sources of programming challenges, and solutions to them in Python, as a way of spurring interest. Discussion around alternative solutions could get pretty interesting.  Anyway, rather than try to coordinate this through the comments on André's blog, or via email, I created a page on the Python wiki to help organize this: <a href="http://wiki.python.org/moin/ProblemSets">Problem Sets</a>. I listed the 99 Prolog Problems that André pointed to originally, and a couple more sources of programming challenges I was aware of.  Hopefully more people will fill in both the sources, and some solutions.  I've started to put up a few solutions, but this is definitely something that would benefit from more participation.
+
+If you know of a good source of programming problems (or want to create one), or want to provide some solutions of your own, or even just kibbitz, <a href="http://wiki.python.org/moin/ProblemSets">please dive in</a>!
+
+
+
+

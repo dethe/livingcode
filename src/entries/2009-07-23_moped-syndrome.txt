@@ -1,0 +1,25 @@
+Moped Syndrome
+
+#published: 2009-07-23
+#tags: Society, Technology, Critique
+#type: Journal Post
+#uuid: 22f829ad-3402-4c48-a433-7c307c88dcd4
+
+*[EMT]: Emergency Medical Technician
+
+[This is an essay I wrote in 2002, found in an old journal]
+
+What do you get when you cross a clock and a computer: a computer.  An airplane and computer: computer.  A VCR and computer: computer. [This argument I believe was my summary of something Donald Norman said in The Design of Everyday Things.]
+
+Of course, computer here is used as a code word for Something which is perverse and complicated, which most computer *are*, but they don't have to be.  It doesn't imply that you can program your clock radio with Python, for instance.
+
+These are examples of moped compromises.  I owned a moped once.  It was too heavy to pedal and too underpowered to go up hills.  It combined all the *worst features* of bicycles and motorcycles, with few of the advantages of either.
+
+These bad compromises are everywhere. When I studied to be an EMT, we learned some Greek and Latin, a little CPR, but mostly we learned how to cover our asses in case we were sued.  By becoming professionals we would no longer be covered by Good Samaritan laws, and the nature of the job (trying like hell to save somebody's life, often when it's too late) meant lots of times the patients died or lost a limb or whatever.  Whenever the outcome is less than optimal, the American knee-jerk reaction is to sue.  So we inadvertently became lawyers.
+
+What do you get when you cross a paramedic with a lawyer: A paralegal.
+
+Now I'm in computing and it seems that just writing code, pretty simple and harmless code, not viruses or anything like that, can get you thrown in jail or sued in all kinds of remarkable and unpredictable ways.  In fact, you can break the law without even knowing it, because what you've created is already a secret.  Add that to the awesome array of software licenses and we're inadvertently becoming lawyers again (or outlaws).
+
+What do you get when you cross a computer scientist with a lawyer: A lawyer.
+

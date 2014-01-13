@@ -1,0 +1,14 @@
+Jedi Training
+
+#published: 2006-05-02
+#tags: Projects
+#type: Journal Post
+#uuid: 325bddae-4cb1-4297-afd0-22054f270607
+
+OK, after we get the <a href="http://blog.makezine.com/archive/2006/01/make_a_boffer.html">boffers</a> done, we can get into more child-friendly swordsmanship with these instructions for how to <a href="http://www.instructables.com/id/Lightsaber-for-$33-in-33-minutes/">build a lightsabre</a> with common plumbing parts for about US$33. It looks pretty cool, too. Then we can use these <a href="http://www.boingboing.net/2005/02/23/howto-rotosccope-a-b.html">rotoscoping instructions</a> and the <a href="http://www.lamarchefamily.net/nakedsoft/">Crimson</a> application (designed just for rotoscoping lightsaber effects) to film the kids having a nice healthy duel.
+
+Crimson is OS X only, and has trouble running under Tiger, but it's open source, so I'll try to get in and fix it. Some of the Windows lightsabre rotoscoping tools (yes, it's a whole category of applications now) also add neato features like sound effects and flashes (from the blades touching), which would be fun to add as well.
+
+
+
+

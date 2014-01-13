@@ -1,0 +1,22 @@
+PySight Preview
+
+#published: 2005-10-19
+#tags: Python, Projects, PySight, OS X, PyObjC
+#type: Journal Post
+#uuid: 1a937522-8e7f-4516-bf43-f0e80d8a2b3c
+
+Awhile back I promised a bunch of posts, but delays were made (including a month of vacation travelling around BC which I won't apologize for). One of the promised projects I was going to talk about was PySight, which ought to be simple, since it's just a trivial wrapper around Tim Omernick's <a href="http://www.skyfell.org/cocoasequencegrabber.html">CocoaSequenceGrabber</a> (used with his permission). But I wanted to package it nicely, write more example code, maybe some documentation.
+
+So instead of a polished project I have no project, and finishing it is pretty low on my priorities right now, sad to say.
+
+Fortunately, Robbie Tingey came to the rescue and prompted me about it. I put a zip file together with Tim's code to create a framework, his example program to use the framework, my simple wrapper, and my re-write of Tim's example program in python using PyObjC to show how to use this. There's a README, but not much else. I sent Robbie the URL and he tried it out successfully, so I thought I'd toss it out to the rest of the world. Caveat emptor, this is pre-alpha, no guarantees, no promises, but hey, it "Works for me™."
+
+So if you're feeling adventurous, go ahead and try out <a href="/assets/2005/PySight.zip">PySight</a> (74K Zip) and start grabbing data from your iSight camera from Python. Contributions to packaging it nicely, documenting it, or adding examples are gratefully accepted. Or, just bug me about it and I'll see what I can do to move it up my priority list.
+
+Python, meet iSight. iSight, meet Python. Play nice together now.
+
+[Update: I forgot the link. Thanks, Marcia!]
+
+
+
+

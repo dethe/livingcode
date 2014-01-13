@@ -1,0 +1,38 @@
+BarCamp: Social Networking for Small Groups
+
+#published: 2008-10-12
+#tags: Presentations, Web, Social Networking, Kinzin
+#type: Journal Post
+#uuid: 0d5aa9bf-71f5-4bc9-9e05-46c8845273eb
+
+OK, it's been two weeks since I attended the local BarCamp and make two presentations, so it is way past time to blog it.  This is my recollection and summary of the first one presentation.  
+
+First some context about where I was coming from with this.
+
+I was recently "field-promoted" to manage my team at <a href="http://kinzin.com/">Kinzin</a>.  We've been going through a whole lot of changes all at once, and we're coming up on a major new release that I'm pretty excited about.  I've also been trying to think about what our key differentiator is, what sets us apart. I used this opportunity to start a discussion around some of the ideas I have been rolling around in my head about this.
+
+My intent was to throw up a few slides to set some context and hopefully be provocative enough to stimulate a conversation. Both my talks were at the end of the day, so many people had left already, and the rest were tired.  I outlined both presentations on the bus on the way to the BarCamp social the night before, and I'd put the slides together in a hurry during other people's presentations (sorry!).  So my goal here was just to get a good conversation going.  I also brought a devil duck to pass around, so whoever had the duck had the floor.
+
+Here are the slides:
+
+<a href="/assets/2008/small-groups.pdf" title="Social Networking for Small Groups">Social Networking for Small Groups</a> (PDF)
+
+Commentary on the slides
+
+After the preliminary slides telling who I am, I began by summarizing Clay Shirky's thesis, <a href="http://www.shirky.com/writings/group_enemy.html">A Group is its own Worst Enemy</a>. I think this is key to how we are approaching social networking at Kinzin.  It's a good essay, and I think you all should read it.  Go ahead, I'll wait.
+
+Then I briefly explained <a href="http://www.lifewithalacrity.com/2004/03/the_dunbar_numb.html">Dunbar's Number</a>, especially focussing on the idea that 150, which is usually thought of as the number of people you can interact with socially in a successful way (see the link for way better info, this is hard to summarize) is not a goal or an average, but a maximum, and that successful social groups tend to be composed of far fewer than 150 individuals. The actual numbers vary depending on the type of group and activity, but I lumped them all together as "around 30."
+
+Then I attempted to pull "Small is Beautiful" into it, because it's a good book and a good phrase, but didn't really get into Schumacher's ideas or ideals.  We all belong to many tribes is the idea that, while individual groups or "social networks" work best when they are small, we are all participating in many, many of these groups: Family (and subgroups of family), school, job, club, friends, sports team, etc.
+
+"Some ideas" was where I hoped to provoke contradiction, or at least addition.  The ideas I put out were: Casual collaboration (make it easy to start collaborations, including transient ones), privacy by default (we are growing used to putting all of our digital lives out in public, but there is still a place for privacy, and a great many people who are *not* comfortable living in public), lower the boundaries between the real and the virtual (make it easy to bring your stories, photos, etc. into the social network), and lower the boundaries between the virtual and the real (make it easy to turn your photos into prints, to send them to family by actual postal mail).
+
+So we passed around the devil duck and I got a lot of good comments, which would be hopeless to summarize here, but I will try anyway.  Since <a href="http://strangeplaces.livingcode.org/">Daniela</a> was there, she helped me to remember the discussion, but all errors are mine. 
+
+Several people spoke up with their stories of problems arising as groups got too big.  One spoke of a site she and many others volunteered on, which the owner then shut them out of and treated these, his core supporters, as if they were any other users.  I got two things from this: first, acknowledge your core users and treat them with respect, recognizing that they are special and worthy of special treatment, and second, if you are putting a lot of your time and effort into a site, and you feel some ownership of that site, either get that ownership explicitly in writing, or realize that the owner can change the site out from under you.
+
+Censorship was discussed, both the need for it (your right to free speech means you can say whatever you want on *your* blog, but you don't have the right to be offensive and hateful on my forum), and how to handle it without overly disgruntling the users of your site.  One site had an interesting tactic, where they had a character on the site who enforced the rules, but any of the core users could "play" that character.  Because there was no one person behind the facade, it was difficult for the users to place blame on any individual member, so the rules could get enforced, and any bad feelings over it were diffused.  Getting users themselves to self-monitor was also brought up.
+
+Thanks for the great discussion from everyone who attended.
+
+One good question came up which I wish we'd gotten back to, and I will leave you with here.  I suspect we could have spent the entire session (and more) discussing it, and I am sorry I left it hanging and got carried away with other points. Feel free to restart the discussion in the comments. The question, as well as I can remember, was "How can we positively scale down a large group?"

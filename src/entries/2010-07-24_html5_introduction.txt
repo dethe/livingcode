@@ -1,0 +1,74 @@
+A Gentle Introduction to HTML5
+
+#published: 2010-07-24
+#tags: HTML5, CSS3, ECMAScript5, Programming, Web Design
+#type: Journal Post
+#uuid: fcb03e65-ea8f-42f6-9666-21da7da68597
+
+
+# Getting started with HTML5
+
+For better or worse, the term HTML5 is being used for not only the actual HTML spec, version five, but for a whole collection of related technologies including (but not limited to) CSS3, ECMAScript5 (aka Javascript), and various spin-off technologies like geolocation, WebGL and client-side data storage.
+
+We can argue about the merits of this terminology, but that ends up being like arguing about whether the 21st century began in 2000 or 2001 or whether AJAX is a useful term. The purists may be technically correct, but I'm going with standard usage by the majority.
+
+# Basic Cultural Re-education
+
+The best place to start, especially for info on HTML5 as HTML (not all of the other specs under the HTML5 umbrella) is Mark Pilgrim's [Dive into HTML5](http://diveintohtml5.org/). This is a book in progress, developing along with the spec, but is very readable and the finished chapters capture not only what is new about HTML5, but why it matters. Mark also put HTML5 technologies, such as downloadable fonts, to good use in the online book.
+
+For further tutorials and an interactive playground, [HTML5 Rocks](http://www.html5rocks.com/) looks like a good resource, although I haven't fully explored it yet.
+
+For further detail and ongoing Q&A, the [HTML5 Doctor](http://html5doctor.com/) blog is a great resource. They explore what you can use from HTML5 in your work today, how to use semantic elements correctly, how to work around current browser limitations, and they answer questions from readers.
+
+For tracking the latest implementation news of the CSS3 family of specs, the [CSS3.info](http://www.css3.info/) blog is great. That site also has [preview pages](http://www.css3.info/preview/) to demo relevant CSS3 in use, as browsers implement it, and tracks both status of the specs through their relevant working groups, and also browser compatibility with the specs.
+
+For ECMAScript5 (the new Javascript) the best intro I've found is David Flanagan's [slides](http://davidflanagan.com/Talks/es5/slides.html). A lot of the attention Javascript has been getting lately has revolved around the dramatically faster implementations that have come out of the browser vendors lately, but changes in Javascript the language are important and useful as well.
+
+Canvas and SVG are simply pieces of HTML5 now, but they are substantial enough to be worth treating as separate technologies. Or, instead of learning these two alternative ways of creating 2D graphics and animations, you could use one of the Javascript libraries which abstracts away some of the details, while providing additional features on top of those.  My two favourites of these are [Processing.js](http://processingjs.org/), which builds on the canvas tag and [Rapha&euml;l](http://raphaeljs.com/), which builds on SVG, but there are many others. Of course, it is useful to learn how the underlying technology works, so Mozilla's [canvas tutorial](https://developer.mozilla.org/en/canvas_tutorial) and Kevin Lindsay's (older, but SVG implementation are just coming of age) [SVG tutorial](http://www.kevlindev.com/tutorials/basics/index.htm). The important thing to remember with SVG is that you get a DOM for manipulation, you can move elements around without redrawing the whole graphic, and it is declarative. If you want to draw an image using Javascript, Canvas is your friend. If you want to declare what an image looks like and animate parts of it, have a look at SVG, especially if you want parts of the image to be sensitive to events like mouseover or click (having a DOM helps with that).
+
+# Libraries
+
+[Modernizr](http://www.modernizr.com/) lets you test for HTML5 features, so you can choose to fall back to non-HTML5 behaviour, or emulate HTML5 using Javascript.
+
+
+[HTML5 Starter Pack](http://sickdesigner.com/resources/HTML5-starter-pack/index.html) gives you a starting point for HTML5 projects, with a basic framework page, starter CSS, and more.
+
+# Important Resources
+
+[HTML5 Readiness](http://html5readiness.com/) tries to show which features are relatively wide-spread in browsers and ready to use.
+
+[Can I Use?](http://caniuse.com/#cats=HTML5&statuses=rec,pr,cr,wd,ietf) is another take on the current state of HTML5 for production, with compatibility tables for features in HTML5, CSS3, SVG and other upcoming web technologies.
+
+[HTML5 Validator](http://html5.validator.nu/) tells you if your code is proper HTML5.
+
+The [CSS Validator](http://jigsaw.w3.org/css-validator/#validate_by_uri+with_options) goes to CSS3 now.
+
+[HTML5 Test](http://html5test.com/) tells you how well your browser supports HTML5.
+
+[ECMAScript5 Test](http://livingcode.org/temp/ES5conform/runtests.html) does this for the new Javascript, but you have to download it and run it locally. I put it on my server, but will be taking it down when there is a maintained, up-to-date version I can point to, so be careful about linking to this one.
+
+Peter Paul Koch maintains awesome [web browser compatibility tables](http://www.quirksmode.org/compatibility.html), and recently he has been extending them to cover mobile browsers.
+
+HTML5 changes how you use H1-H6, essentially each sectioning element has it's own stack of heading elements, starting with H1. Together these all form an outline of your document or page. You can see if the outline is working the way you expect with the [HTML5 Outliner](http://gsnedders.html5.org/outliner/).
+
+# Inspiration
+
+Some innovative [uses of the canvas tag](http://www.thecssninja.com/javascript/5-uses-canvas-tag).
+
+Paul Roget on [mixing the web](http://www.youtube.com/watch?v=-BsB0HpS768) at the recent (2010) Mozilla Summit.
+
+[Video JS](http://videojs.com/) Open Source Video Player
+
+[Prezi](http://prezi.com/) presentations, quite a different take than the standard slideshow
+
+[Akhibahara](http://www.kesiev.com/akihabara/ ) games in HTML5
+
+# Browsers for seeing the future
+
+To test out the features we will all have tomorrow, download and test using the beta browsers from each vendor, a list which currently includes Firefox4 beta, Webkit nightlies, and IE 9 beta.  This will let you see how support is coming along for cutting edge features such as WebGL, as well as what currently unsupported bits of HTML5 technologies are likely to be in the next general releases.
+
+# All the rest
+
+There is so much more to HTML5. There are great sources for freely available downloadable fonts, amazing libraries for Javascript, Audio manipulation is coming (generate audio, or extract a waveform from an audio tag). Cool ways to generate buttons or images inline. Microformats and RDF. Websockets and Webhooks. Server-side technologies, templating, AJAX, and more. Performance and best practices. Object-oriented CSS. Browser-specific CSS properties. jQuery and its many, many plugins. User content sanitization and preventing cross-site scripting hacks or other security vulnerabilities. Higher-level game and 3D libraries. Etc.
+
+There is a rich and growing ecosystem around HTML5, and I just want to make one last point. Smart phones (iPhone, Android, etc.) are all the rage right now, and building apps for smart phones is the current gold rush. Instead of learning Objective-C (for iPhone) and Java (for Android), you can build mobile apps using HTML5 technologies and deploy to smart phones by wrapping your webapp as a native app using [PhoneGap](http://www.phonegap.com/). PhoneGap also gives your app access to phone native apis from Javascript. Unless your app requires a lot of speed or 3D, it's worth considering this route.

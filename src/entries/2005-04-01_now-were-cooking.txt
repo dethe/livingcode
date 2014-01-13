@@ -1,0 +1,14 @@
+Now we're cooking!
+
+#published: 2005-04-01
+#tags: Python, Book
+#type: Journal Post
+#uuid: 994a699a-5155-45ae-94f7-a5ed4b2baa99
+
+My copy of the new Python Cookbook arrived today (pretty quick considering my first issue of Make magazine hasn't arrived yet). It's pretty cool to see my name in an O'Reilly book, even for only a single recipe. The book looks great too, I think Alex and Anna and David have done a great job and I'm really looking forward to going through it.
+
+Thanks to everyone who replied about the missing word. I've been a bit overwhelmed lately and haven't had a chance to follow up with that, but the responses were all great.
+
+
+
+

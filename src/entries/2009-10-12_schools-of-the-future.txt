@@ -1,0 +1,208 @@
+Schools of the Future
+
+#published: 2009-10-12
+#tags: Kids, School, Environment, Education, Futurism, Economics
+#type: Journal Post
+#uuid: 3239f206-a6e2-41cd-89d9-cae7a00c8418
+
+## The impact of technology on everything else
+
+Recently when I was at <a href="http://barcamp.org/BarCampVancouver2009">BarCamp</a> I was repeatedly reminded of an article about <a href="http://www.wired.com/epicenter/2009/08/craigslist-vs-ebay/">Craigslist</a>, explaining why bigger, more capitalized companies had failed over and over to compete successfully with Craigslist. It came down to their credo: "unbrand, uncompete, and demonetize." Essentially, they took a potentially $22 Billion market and cut it down to a $1 Billion market, or less. The AOLs and Ebays of the world cannot survive while scrapping over fractional parts of a $1B market, they're just too big. But Craigslist, with its 30 employees, can thrive just fine with $100M annual revenues. It comes down to the basic math of mammals vs. dinosaurs.
+
+And classified ads are simply where the battle has already been fought and written up for the history books. The same effect is happening in every industry you can name. Musicians are learning to route around their own industry titans to reach their fans directly, there are efforts underway to <a href="http://lexpublica.ca/">open source the law</a>, movie making has gotten to the point where fan films and low-budget pro films can be much better than Hollywood blockbusters, microlending (like <a href="http://www.kiva.org/">Kiva</a>) is profitable while building economies, rather than destroying them, newspapers (already financially gutted by Craigslist itself) are finding that there is <a href="http://www.shirky.com/weblog/2009/03/newspapers-and-thinking-the-unthinkable/">no economic model</a> which lets them survive in the form they have grown accustomed to. The list goes on and on.
+
+> "When you can't imagine how things are going to change, that doesn't mean that nothing will change.  It means that things will change in ways that are unimaginable."--Bruce Sterling
+
+You can argue about whether any of this is "good" or not, but the clear trend to me is that it is inevitable. If you are in a business now that is still doing business the way it was 20, 50, or 100 years ago, get ready to jump, because someone out there is about to steal your lunch money.  On the other hand, all of these new businesses reduce costs to citizens, empower people rather than corporations, and make good money for their small staffs. It's a good time to be a mammal.
+
+## The past of schools (is now)
+
+How does all of this relate to education? Schools have changed a lot in the past 100 years: Girls no longer have to wear bonnets, kids write with pencil and paper (or netbooks) rather than scratching on a slate. On the other hand, everyone is still reading from a state-approved book, facing the front of the classroom, where a state-approved teacher is expected to know all the answers and who writes the requirements on a board while lecturing. In other words, if you took a teacher from 100 years ago and dropped them in a modern classroom, it wouldn't take much adjusting for them to get up to speed. That is not true of many professions.  In fact, H. G. Wells made the same points about schools, and he made his points over 100 years ago.
+
+> "…our universities, I suggest, are not half-way out of the fifteenth century. [...] The three or four years' course of lectures, the bachelor who knows some, the master who knows most, the doctor who knows all, are ideas that have come down unimpaired from the Middle Ages.  Nowadays no one should end his learning while he lives and these university degrees are preposterous. [...] Educationally we are still for all practical purposes in the coach and horse and galley stage--H. G. Wells
+
+If school has not changed much in well over 100 years does that mean it has to change? For all of that time people have been saying that schools must change, have been working to change them, yet schools have remained remarkably the same all this time. Could this be because we've got schools right, that they are resilient and stable because they've been perfected? Or does it mean that school has become calcified and too broken to change? (too big to fail?)
+
+Well, there have been **some** changes in that time. Even in my lifetime I have seen schools become more and more like prisons, with smaller (or no) windows, bigger classrooms, metal detectors, locked doors. On the bright side, corporal punishment has been banned from school. And of course, once upon a time school was not mandatory.
+
+> "Our form of compulsory schooling is an invention of the state of Massachusetts around 1850. It was resisted <del>- sometimes with guns -</del> by an estimated 80% of the Massachusetts population, the last outpost in Barnstable on Cape Cod not surrendering its children until the 1880's when the area was seized by militia and children marched to school under guard. Now here is a curious idea to ponder. Senator Ted Kennedy's office released a paper not too long ago claiming that prior to compulsory education the state literacy rate was 98% and after it the figure never again reached above 91% where it stands in 1990. I hope that interests you--John Taylor Gatto
+
+In <a href="http://en.wikipedia.org/wiki/The_End_of_Education">The End of Education</a>, by Neil Postman, he argues (using the double meaning of "end" as both goal and the final part of something) that school as we know it now has no working goal and needs to find one if it is to continue. He also proposes five goals that school could adopt to give it a reason for being.
+
+In <a href="http://www.newciv.org/whole/schoolteacher.txt">The 7-Lesson Schoolteacher</a>, John Taylor Gatto lays out what is taught in modern schools: confusion, class position, indifference, emotional dependency, intellectual dependency, provisional self-esteem, and you can't hide. In the short essay, linked above, he explains why these are the real lessons of school, and in his book <a href="http://www.johntaylorgatto.com/chapters/">The Underground History of American Education</a> he explains how we got in this situation.
+
+Postman and Gatto were both teachers in the school system. Postman continued to fight the system from within until he died, Gatto left after winning awards for his teaching and began a new career of lecturing and writing about the pitfalls of school. Both were probably influenced by an Austrian philosopher and Roman Catholic priest named Ivan Illich, whose book <a href="http://ournature.org/~novembre/illich/1970_deschooling.html">Deschooling Society</a> focused on schools as the most resilient of institutions for preventing positive change in the world.
+
+> "A second major illusion on which the school system rests is that most learning is the result of teaching. Teaching, it is true, may contribute to certain kinds of learning under certain circumstances. But most people acquire most of their knowledge outside school, and in school only insofar as school, in a few rich countries, has become their place of confinement during an increasing part of their lives--Ivan Illich
+
+Illich provides not only a scathing critique of institutionalized schooling, but also recommendations for change, some of which are now being implemented. With the technology tools we have at our disposal today, people can afford to connect with each other and make real change, as we'll <a href="#on_beyond_school_1">see below</a>.
+
+## Who am I?
+
+> "Everyday, millions of innocent children are unwillingly part of a terrible dictatorship. The government takes them away from their families and brings them to cramped, crowded buildings where they are treated as slaves in terrible conditions. For seven hours a day, they are indoctrinated to love their current conditions and support their government and society. As if this was not enough, they are often held for another two hours to exert themselves almost to the point of physical exhaustion, and sometimes injury. Then, when at home, during the short few hours which they are permitted to see their families they are forced to do additional mind-numbing work which they finish and return the following day. This isn't some repressive government in some far-off country. It's happening right here: we call it school--Aaron Schwartz
+
+Who am I to talk about the future of school?  I've quoted some old white guys on why today's school needs to change, but I haven't said anything about where I'm coming from with all of this.  I am a product of those schools. I moved a lot growing up, and we were poor, but sometimes lived with rich(er)friends. I attended public schools, private schools, hippie "free" schools, Catholic school, east-coast school, west-coast school, deep-South school, small schools and big schools.  I had some wonderful teachers, some mediocre teachers, and a handful of teachers so awful I still can't believe they are allowed near children.
+
+Mostly I did very well in school without trying too hard. I was often called an underachiever. Sometimes I was called a class clown and told "don't get smart," which was amusing, given the context. I hated school, by and large.  Once, around sixth grade or so, I woke with a spontaneous nose bleed and my mom let me stay home from school.  I hit myself in the nose every morning for a week trying to repeat the experience, with no luck. That's how much I hated school.
+
+Since most of my teachers were good or ignorable, aside from a handful of really bad ones over the years, I don't blame the teachers for my hating school so much. I moved so much that I was usually the New Kid, which made things difficult, and I was a "nerd," which also made things difficult. Most of my problems and fears came from the other students, who were also products of the schools we went to. We were taught from an early age to label and be labeled: "smart," "jock," "underachiever," and ruder things.
+
+I did get one thing of value from moving between all of these schools. I learned from an early age that 90% of it was bullshit. I learned how to play the game. I learned that it really doesn't go on your permanent record (although modern technology may change that). I learned most of all, that most learning happens outside of the school, and only inadvertently within the school walls. That you don't learn to read and write well by diagramming sentences, or to balance a checking account by using number lines. School is the boring place that kids are kept so their parents can go to their boring jobs, and where they learn to cope with boring rote work so that someday (if they're lucky) they can have boring jobs too.  By high school I'd attended thirteen schools, and that was the lesson I'd learned most.
+
+My high school closed during my third year there, it dropped out on me and I didn't re-enlist. I took the GED, which was pathetically easy, and later attended a technical college and university.  Eventually, I received a master's degree without encountering anything which fundamentally altered my perceptions of school. I did learn things while in university, but again, it was mostly a matter of wanting to learn and finding things to learn, rather than absorbing knowledge from a teacher lecturing at the front of the class. Those classes were a bad joke.
+
+I am a computer programmer, and I hire computer programmers. The best predictor of their skills is not their job history or their education, but whether they have helped with open source projects, or program on their own time, as a hobby. Because if they program for the love of doing it, they are going to be the kind of people who love learning and can find it for themselves, without waiting for the teacher at the blackboard to deliver it.
+
+I did not study education in school. My wife is nearing her Ph.D. in Philosophy of Education. She reads about all of the attempts that have been made over the years to make schools better, mostly by well-meaning people (but not always). I cannot read those things, I find it too depressing.
+
+Finally, I am a parent. I have two kids, and yes, they go to school. I find my job as a parent is to minimize the damage school can do, and maximize the good aspects. I don't count on school to teach my kids, they are learning all the time, from me, from books, from the internet, from other kids, sometimes even from teachers (it does happen). But mostly, school can be a place to make friends, to learn to deal with duties and people you don't always get along with, and to have access to resources we don't have at home (wood shop, metal shop, gym).  Overall, the best school experiences appear to be when they get out of school, when they work in a community garden, or attend a play. Also, in our experience with the kids Montessori schools seem to be a healthy approach, as far as schools go.
+
+## If not school, then what?
+
+In thinking about what could be better than today's schools, I am troubled by even calling it "school."  I attended an arts program in Seattle for some time called the "Factory for Visual Arts," but "factory" doesn't feel like an improvement on "school." Near my home there is a similar arts program called the "Arts Umbrella," which is a little better, but "Learning Umbrella" doesn't really tell me anything.
+
+Looking back at other industries which were forced into change by changing technology, it's clear that this is not a new problem. Horseless carriages had nothing to do with either horses or carriages, except that they replaced them. Moving pictures were an entirely new thing, but needed to be described in some way that people could understand, and indeed it was a long time before they broke out of the idea that they were simply a way of recording plays and the medium really came into its own. Radio is named for the waves it was transmitted on, not for what really was: stories broadcast into our homes.  So I will stick with School of the Future for now, even though I'm not really talking about school, or the future.  It gives a metaphor to hang on to.
+
+There are several paths to the future of school. Students can learn at their own pace, using teachers they find in the community using a matching service. School can carry on much as it does now, but interface more with the community, sending kids out to community gardens, to volunteer service, to ecosystem restoration. Students can work with adults to learn skills in the real world, as apprentices, but with the understanding that they will have multiple apprenticeships over the years. Students can tune into online courses, for free or for a small sum, to view lectures and do coursework. Physical schools can be organized, permanently or temporarily, for courses that are not taught elsewhere, and for students to meet in person. All of these are happening now, at least in experimental form, and more experiments will be coming up alongside them. None are the single future path, but all will be part of the big fractal future. There is no one right answer.
+
+More on these ideas in practice in the section <a href="#on_beyond_school">On Beyond School</a>
+
+## The future of schools (is now)
+
+> "To change something, build a new model that makes the existing model obsolete." --R. Buckminster Fuller
+
+Here is what my older kid thinks a school of the future should be:
+
+> We need better schools, schools that prepare kids for their lives in the unknown.
+> 
+> A school should…
+> 
+> * Be a place where kids can come to learn because they want to.
+> * Be a place where kids can come to interact with other kids and learn from each other.
+> * Allow kids to develop their skills and passions.
+> *Have teachers who are able to help kids find their skills and passions.
+> * Be a place to try new things.
+> * Be a place where kids are not afraid to make mistakes.
+> * Be a place where a kid can start making a difference in the world.
+> * Be mostly run by kids.
+> 
+> A school should not…
+> 
+> * Cause stress.
+> * Be a place where kids are bullied.
+> * Be the center of a kid's life. (You go to elementary school to learn how to get through high school, which is to learn how to get a job and/or go to university, and you work, work, work and then you die. Any questions?)
+> * Prevent kids from reaching their full potential in any way.
+> * Make learning into a chore, and teach kids to hate it.
+> --Seth Elza
+
+I have my own list that I've been sketching out, for what I imagine the school of the future to be.  It largely resolves around making resources accessible, having places to meet as needed, and interfacing with the community. It does **not** make any assumptions about the student's age, educational level, or socio-economic status.
+
+A school built for the future should:
+
+* Grow much of its own food
+* Have a Fab Lab, be able to make whatever it needs
+* Make computer training ubiquitous, computer literacy is crucial
+* Have martial arts as part of the curriculum
+* Make practical economics part of the curriculum
+* Have a storefront
+* Have a restaurant/coffeehouse
+* Have a bookstore/library
+* Have its own micro-currency
+* Use community outreach extensively, with sister institutions, partner businesses, etc.
+* Have its own publishing imprint
+* Have a music label and recording studio
+* Make the boundary between student and non-student flexible, permeable, and transparent
+
+This isn't a school to be attended, it is a school to be used, a school that can serve as a anchoring point for a resilient community, a place where lifelong, overlapping apprenticeships can take place.  I'd like to talk about each of these points in turn.
+
+### Grow much of its own food
+
+Schools that have <a href="http://www.organicconsumers.org/school/school-lunch.cfm">added organic gardens</a> have found students care more about what they eat, eat better, and learn about sustainable ecosystems.
+
+> The garden suggests there might be a place where we can meet nature halfway. --Michael Pollan
+
+### Have a <a href="http://en.wikipedia.org/wiki/Fab_lab">Fab Lab</a>
+
+We live in a world where we can manufacture anything imaginable. This can be high tech, with 3D printers and laser cutters, medium tech with welding and machine tools (engine block machine-shop), or low tech with pottery and weaving. Learning how to use these tools is empowering, and a form of modern literacy.
+
+### Make computer training ubiquitous
+
+> "It goes against the grain of modern education to teach children to program. What fun is there in making plans, acquiring discipline in organizing thoughts, devoting attention to detail and learning to be self-critical?" --Alan Perlis
+
+Most computer training teaches you to work the way the computer wants you to work. Better to teach how to make the computer work for you, how to use the computer to produce art and tools, how to use it to communicate effectively.
+
+### Have martial arts as part of the curriculum
+
+I firmly believe that martial arts, learning basic self defence and self discipline, is something students of any age can benefit from. My personal favourite is Aikido, because the philosophy is non-violent, turning the opponent's energy against themselves, but other styles have benefits too.
+
+### Make practical economics part of the curriculum
+
+Well, insofar as there even <strong>is</strong> a curriculum. Too many people have not learned how to balance a checkbook, or how much money their credit cards really cost them. Learning to manage money sanely is one of the basic survival skills in this world. We live in an economic society, and learning what that means and how to swim in its waters is not really taught in schools now.
+
+### Have a storefront
+
+This can help make the school self-sustaining, allow students to make some money selling things they've made. It can also provide real-world economic experience for students to learn how retailing works. Finally, it can be one part of a good interface to the community.  The storefront itself can be Humourous. At <a href="http://www.826valencia.org/">826 Valencia</a> their storefront sells supplies for time travellers. Its counterpart in New York City sells superhero supplies. Another sells pirate supplies. I suggest selling mad scientist supplies.
+
+### Have a restaurant/coffeehouse
+
+For similar reasons to the storefront, having a coffeehouse and/or restaurant would be good for the school. Besides learning the economics and business routines of a restaurant, students can also learn to cook and take care of customers. Food is such a basic element of our lives, and so often overlooked. By focusing on providing good food, cooked with local ingredients (some grown by the students) and providing discounts to students, you complete a circle that many people have never known they are a part of.
+
+### Have a bookstore/library
+
+Books are essential to the learning process. A good source of books becomes a community of its own, with readings, reading groups, and discussion to help the books come alive. Books written by the students should become a focal point for the book space. This can also be a space where students from other schools come to get help with homework and tutoring.
+
+### Have its own micro-currency
+
+Local currencies, like <a href="http://www.ithacahours.com/">Ithaca Hours</a>, Comox Valley <a href="http://thetyee.ca/News/2009/08/14/ComoxValleyCurrency/">Community Way Dollars</a>, and <a href="http://www.saltspringdollars.com/">Salt Spring Dollars</a> keep money flowing in the community, rather than going out to national and multinational corporations.
+
+### Use community outreach extensively, with sister institutions, partner businesses, etc.
+
+It is important for any community hub to network with other community hubs.  Buy food from local farmers. Share resources and knowledge with other schools. Neighbours helping neighbours.
+
+### Have its own publishing imprint
+
+Students should be encouraged that they can write their own books, tell their own stories.  The school can help bring to print student books in a variety of ways, with small run press and print on demand.
+
+### Have a music label and recording studio
+
+Making music is another basic human drive, and being able to share music is too important to be left to the toxic recording industry. The tools for making, recording, and sharing music with others should be easily accessible, with help available to make it non-threatening to learn and use.
+
+### Make the boundary between student and non-student flexible, permeable, and transparent
+
+The terms student and teacher break down in the school of the future.  There are participants, who care enough about the school to dedicate time and resources to it, who want to learn and share what they've learned. That is the essence of community.
+
+Overall, these are interlocking goals, each helping to support and sustain the others. The important things are to teach real skills that students can see the relevance of and apply to improve their own lives and the lives of those around them, while providing a permeable membrane with the community so that there is a constant exchange of energy, ideas, creativity, and support.
+
+> Learning is finding out what you already know. Doing is demonstrating that you know it. Teaching is reminding others that they know just as well as you. You are all learners, doers, and teachers. --Richard Bach
+
+## On Beyond School
+
+> "By the time I got to school, I had already read a couple hundred books. I knew in the first grade that they were lying to me because I had already been exposed to other points of view. School is basically about one point of view -- the one the teacher has or the textbooks have." --Alan Kay
+
+This essay grew out of a series of notes and links I've been collecting for some time, with a few recent trigger points along the way.
+
+I have been reading <a href="http://makezine.com/">Make Magazine</a> and while every issue has great projects and inspirational ideas, the first issue had a short article on <a href="http://www.make-digital.com/make/vol01/?pg=25&amp;pm=1&amp;u1=friend">Fab Labs</a> that demonstrated how utterly the landscape has changed for school (and everything else).  Computer technology has radically altered businesses of every kind, but now it is altering physical reality, and learning to harness this process will be crucial in making it a net social benefit.
+
+Also, this summer I found a copy of Seymour Papert's <a href="http://www.amazon.ca/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746">Mindstorms: Children, Computers, And Powerful Ideas,</a> which I'd been meaning to read for some time. I finally read it and have been thinking about the implications ever since. I think that with the recent growth of electronic books, Papert's ideas (strongly influenced by the Constructivist principles of Piaget) are finally ready for widespread adoption. He wanted learning to take place immersively, just like language does. For language, we live in a world of language, and we absorb it naturally. For math, things are more difficult, but on the computer we can build a Math World that can be explored and worked in so that the concepts are absorbed in much the same way as language. This extends to much more than math, of course. I envision new e-book readers which have active content, that is, while you read on a subject, there is a window where you can actually play with that subject, work with the concepts, and push on the boundaries. I think a lot of what we now consider education can be better done with this kind of exploration.
+
+I have been following <a href="http://vinay.howtolivewiki.com/blog/about">Vinay Gupta's</a> writings on open-source infrastructure (among other things) and while I got a lot out of his videos at the <a href="http://otherexcuses.blogspot.com/2009/01/temporary-school-of-thought-round-up.html">Temporary School of Thought</a>, I was really grabbed by Dougald Hine's talk on <a href="http://files.howtolivewiki.com/2009_01_10_dougald_hine_deschooling_society_temporary_school_of_thought.mp3">Deschooling Everything</a> (mp3 audio), which began by summarizing Ivan Illich's work, especially his book <a  href="http://ournature.org/~novembre/illich/1970_deschooling.html">Deschooling Society</a>. I had read Illich's <a  href="http://www.primitivism.com/needs-illich.htm">Towards a History of Needs</a>, which I felt was basically valid criticism, but with no proposed solutions. So I'd been meaning for years to read Deschooling, but hadn't gotten to it. After listening to Dougald I pulled it off the shelf and read it (reading John Taylor Gatto's <a href="http://www.johntaylorgatto.com/bookstore/dumbdnblum1.htm">Dumbing us Down: The Hidden Curriculum of Compulsory Schooling</a> at the same time, the two books interleave pretty well).
+
+Deschooling was not just a critique, but had very concrete suggestions for change, and Dougald (and friends) has taken some of Illich's suggestions to make the <a href="http://schoolofeverything.com/about">School of Everything</a>.
+
+As I was pulling together my notes and links for this essay, Laura Blankenship <a href="http://twitter.com/lblanken/status/4143723003">pointed</a> to an article about <a href="http://www.straighterline.com/">StraighterLine</a> offering <a href="http://www.washingtonmonthly.com/college_guide/feature/college_for_99_a_month.php?page=all">college for $99 a month</a>, and the legal troubles they faced, with the comment, "Over time, colleges and universities have built sturdy walls and deep moats around their academic city-states."  I responded, "The walls and moats of Academia will hold back the Internet just as well as castles dealt with jet fighters."
+
+Indeed, as Michael Wesch so aptly demonstrates in his videos, most recently at the University of Manitoba on <a href="http://umanitoba.ca/ist/production/streaming/podcast_wesch.html">The Future of Education</a> (I highly recommend watching all his videos, they are amazing and eye-opening), schooling is being changed by modern technology without its cooperation. Indeed, even when educational institutions cooperate, it is not clear whether this helps them stay relevant.  I think that programs like <span class="caps">MIT</span>'s <a href="http://ocw.mit.edu/OcwWeb/web/home/home/index.htm">OpenCourseware</a> (part of the <a href="http://www.ocwconsortium.org/members/consortium-members.html">OpenCourseware Consortium</a>) is an important part of the future, I don't know that <span class="caps">MIT</span> as it stands now is part of the same future. I am happy that I can download university lectures through iTunes U., making content from dozens of universities only a click away, and I think that will be a crucial part of future learning, and like Craigslist, it demonetizes education.
+
+Small, focused, fast, even temporary schools will thrive in this ecosystem, but I don't see how there will be the money to support huge infrastructures, campuses, stadiums, sports teams, administration, and other overhead to learning. It's mammals vs. dinosaurs again.
+
+There are more great resources for taking control of your own learning than I could possibly point to, and more coming every day, from <a href="http://en.wikibooks.org/wiki/Main_Page">WikiBooks</a> to <a href="http://textbookrevolution.org/index.php/Main_Page">Textbook Revolution</a>, from the <a href="http://blog.makezine.com/science_room/">Make Science Room</a> to <a href="http://academicearth.org/">Academic Earth</a>. There are free, public domain resources like the <a href="http://archive.org/">Internet Archive</a> to the many commercial-but-mostly-free services of <a href="http://www.google.com/educators/index.html">Google for Educators</a>.
+
+Two important resources I do want to call out are groups of people who are actually out there living these ideas and ideals, taking risks, experimenting, and making changes.  I mentioned earlier the <a href="http://www.826valencia.org/">826 Valencia</a> project, which has inspired many successful project like it around the world, best summarized in Dave Egger's <span class="caps">TED</span> talk, <a href="http://www.ted.com/talks/dave_eggers_makes_his_ted_prize_wish_once_upon_a_school.html">Once Upon a School</a>. More information is available at the Once Upon a School <a href="http://onceuponaschool.org/">site</a>.
+
+The other resource is one I am particularly excited about, because in many ways they are following similar ideas to the ones I discuss here, but instead of dreaming and writing about it, they've been spending the last five years doing it, making it happen. I'm talking about the <a href="http://www.creativetechnology.org/">W2 Community Media Arts</a> centre, here in Vancouver on the downtown east side. It will feature open spaces, a TV studio, FM radio studio, Fab Lab, coffeeshop, a letterpress, space for social media entrepeneurs, and much more. I had no idea how far along this project was, or how ambitious its scope, until I met April and Irwin at Barcamp last week. I am excited to find some way to be a part of the W2 project and make more of these ideas a reality, which in turn helped me to find a way to collect my haphazard notes into this essay. I hope you've found something useful in it.
+
+> "Person who says it cannot be done must not interrupt person already doing it."--Chinese Proverb
+
+
+
+

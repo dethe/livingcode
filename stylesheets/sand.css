@@ -1,0 +1,215 @@
+
+/* Generic styles */
+.clear        { clear:both; }
+.left         { float:left; }
+.right        { float:right; }
+img.left      { margin-right:1em; margin-bottom:1.8em; }
+img.right     { margin-left:1em; margin-bottom:1.8em; }
+.text-right   { text-align:right; }
+.half         { width:45%; /* Not exactly half to account for paddings, margins etc. */ }
+
+.hidden{ /* Hide stuff without resorting to display:none; */
+	visibility:hidden;
+	width:0!important;
+	height:0!important;
+	line-height:0!important;
+	padding:0!important;
+	margin:0!important;
+}
+
+/* Begin styling the page */
+body{
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 13pt;
+    line-height: 1.4;
+    background-color: #7C85A5;
+}
+
+p,li,h1,h2,h3,h4,h5,h6,pre,blockquote{
+    margin-bottom: .6em;
+}
+
+nav li{
+    margin-bottom: .3em;
+}
+
+code{
+    font-family: 'Panic Sans', Monaco, fixed;
+    font-size: 10pt;
+}
+
+a{ text-decoration: none; }
+a:hover {text-decoration: underline; }
+
+pre code{
+    overflow: auto;
+    width: 600px;
+    position: relative;
+    left: 20px;
+    background-color: #FDFDFE;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#body_wrapper{
+    width: 960px;
+    overflow: hidden;
+    margin: 0px auto; /* center content */
+    text-align: left;
+/*    background-color: #4080c0;*/
+}
+
+#sidebar{
+    width: 214px;
+    float: left;
+    font-family: Helvetica, Arial, san-serif;
+    font-size: 10pt;
+    line-height: 1.2em;
+}
+
+.ad {
+    width: 214px; /* 234 - 10*2 */
+    /*height: 55px;*/ /* 60 - (10 * 2) + 15 */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #404040;
+    background-color: #52516C;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.ad img{
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 0px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ad h2{
+    font-weight: normal;
+}
+
+.ad a{
+    float: right;
+}
+
+.ad a.buy{
+    float: left;
+}
+
+#sidebar li{
+    list-style: none;
+}
+
+ul.inline, ul.inline li{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header, nav, aside, article{
+    padding: 20px;
+    margin-bottom: 1.2em;
+    border: 1px solid #404040;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;   
+}
+
+header{
+    background: transparent url(/images/stone_spiral.jpg) no-repeat 60% center;
+}
+header hgroup{
+    color: #2A3518;
+    text-align: center;
+}
+header h1{
+    font-size: 300%;
+}
+header h2{
+    font-size: 150%;
+    color: #FDFDFE;
+    font-style: oblique;
+}
+nav h1, aside h1{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+nav article{
+    padding: 0px;
+    margin-bottom: 1.2em;
+    border: 0px;
+}
+
+#content{
+    width: 680px;
+    float: right;
+}
+
+#content article{
+    width: 540px;
+    float: left;
+    background-color: #FDFDFE;
+    color: #100F0F;
+    overflow: visible;
+}
+
+#content img{
+    max-width: 500px;
+}
+
+article blockquote{
+    width: 540px;
+    position: relative;
+    left: 80px;
+    padding: 15px;
+    background-color: #FDFDFE;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-style: italic;
+}
+a{ color: #00008B; }
+a:hover{color: #485628; }
+a:visited{color: #875F3A; }
+a:active{color: #5F2D29; }
+
+a.nav{
+    padding: 8px;
+    border: 1px solid #404040;
+    background-color: #8c8ab8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#sidebar nav, #sidebar aside{
+    background-color: #52516C;
+    color: #FDFDFE;
+}
+
+
+/* Tag Cloud */
+
+.tag12{font-size: 100%;}
+.tag13{font-size: 110%;}
+.tag14{font-size: 120%;}
+.tag15{font-size: 130%;}
+.tag16{font-size: 140%;}
+.tag17{font-size: 150%;}
+.tag18{font-size: 160%;}
+.tag19{font-size: 170%;}
+.tag20{font-size: 180%;}
+
